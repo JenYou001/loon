@@ -1,6 +1,5 @@
-#!name = 哔哩哔哩去广告（精简版）
-#!desc = 广告过滤、阻止备用域名及指定的P2P/STUN域名；不含远程脚本
-#!loon_version = 3.5.1(978)
+#!name = 哔哩哔哩去广告（本地 gRPC）
+#!desc = 过滤开屏、首页、Story及搜索结果广告；阻止备用域名和指定P2P/STUN域名
 #!tag = Bilibili,去广告
 
 [Rule]
@@ -37,5 +36,9 @@ response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/i the
 # 过滤 Story 流广告
 response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/i then response.json.jq("if .data.items then .data.items |= map(select((.ad_info == null) and (.card_goto | IN(\"vertical_ad_av\", \"vertical_ad_live\", \"vertical_ad_picture\") | not))) end")
 
+[Script]
+# 本地 Protobuf 脚本：过滤搜索结果中的广告卡片
+response if ${url} ~= /^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$/i then script("bilibili.protobuf.response.js", `{"displayUpList":"hide","purifyComment":false,"sponsorBlock":false,"logLevel":"error"}`) with tag="哔哩哔哩搜索广告过滤", requires_body=true, binary_body_mode=true
+
 [MITM]
-hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, line3-h5-mobile-api.biligame.com
+hostname = grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, line3-h5-mobile-api.biligame.com
