@@ -45,7 +45,6 @@ DOMAIN-SUFFIX,wxapp.tc.qq.com,DIRECT
 DOMAIN,weixin110.qq.com,DIRECT
 USER-AGENT,MicroMessenger*,DIRECT
 USER-AGENT,WeChat*,DIRECT
-# 已去掉 IP-ASN,132203（避免误伤其它腾讯云服务）
 
 # ========== 滴滴出行 ==========
 DOMAIN-SUFFIX,didichuxing.com,DIRECT
@@ -70,11 +69,8 @@ DOMAIN-SUFFIX,yangkeduo.com,DIRECT
 # ========== BOSS直聘 ==========
 DOMAIN-SUFFIX,zhipin.com,DIRECT
 DOMAIN-SUFFIX,bosszhipin.com,DIRECT
-# 已去掉 DOMAIN-KEYWORD,zhipin
 
 # ========== 七猫小说 ==========
 DOMAIN-SUFFIX,qimao.com,DIRECT
 DOMAIN-SUFFIX,wtzw.com,DIRECT
 DOMAIN-SUFFIX,qm989.com,DIRECT
-# 已去掉 DOMAIN-KEYWORD,qimao
-# api-bc/api-ks/cdn/xiaoshuo 等子域已被上面 SUFFIX 覆盖
