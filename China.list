@@ -66,3 +66,7 @@ DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
 DOMAIN-SUFFIX,qm989.com
+
+# ========== 多邻国 ==========
+DOMAIN-SUFFIX,duolingo.com
+DOMAIN-SUFFIX,duolingo.cn
