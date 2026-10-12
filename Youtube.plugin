@@ -3,7 +3,6 @@
 #!date=2026-04-05
 #!category=🐹 Ezrea7 Enhance
 #!author=Maasea[https://github.com/Maasea], ZenmoFeiShi[https://github.com/ZenmoFeiShi/Qx]
-#!icon=https://raw.githubusercontent.com/Ezrea7/Rules/main/Icons/AppIcons/Image/App/YouTube.png
 
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?&ctier=L(&.+?),ctier,(.+) 302 https://$1$2$3
