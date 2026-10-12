@@ -2,7 +2,6 @@
 #!desc=阻止常见的 HTTPDNS 服务器
 #!author=VirgilClyne
 #!homepage=https://github.com/VirgilClyne/GetSomeFries/wiki/🚫-HTTPDNS
-#!tag=🍟 Fries
 
 [Rule]
 # Alibaba
