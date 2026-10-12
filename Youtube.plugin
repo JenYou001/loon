@@ -5,17 +5,17 @@
 #!homepage=https://github.com/ZenmoFeiShi/Qx/blob/main/youtube.response.js
 
 [Rewrite]
-# 原规则捕获组与 $1$2$3 不匹配，先停用；确认替换逻辑后再启用
-^https?:\/\/([\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?&ctier=L)(&.+?),ctier,(.+)$ 302 https://$1$2$3
+# 该规则原捕获组与替换逻辑可能不稳定，先停用，避免误重定向或视频请求异常。
+# ^https?:\/\/([\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?&ctier=L)(&.+?),ctier,(.+)$ 302 https://$1$2$3
 
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad reject-200
+^https?:\/\/[^\s]*\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad reject-200
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads reject-200
 ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) reject-200
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext reject-200
 
 [Script]
-# 先将 YouTube.js 导入 Loon 本地脚本，且文件名须与此处一致
-http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path=YouTube.js, requires-body=true, binary-body-mode=true, timeout=60, tag=YouTube去广告
+# YouTube.js 文件名已与仓库内实际文件一致，且脚本需要处理响应体，所以启用 requires-body=true。
+http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path=Youtube.js, requires-body=true
 
 [MITM]
 hostname = *.googlevideo.com, redirector*.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com
