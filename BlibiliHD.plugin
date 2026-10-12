@@ -10,6 +10,11 @@ sponsorBlock = switch, false, type=boolean, tag=关闭非广告片段跳过
 logLevel = select, "error", "warn", "info", "debug", "off", type=string, tag=日志等级
 
 [Rule]
+# 阻止B站备用域名访问
+DOMAIN, api.biliapi.com, REJECT
+DOMAIN, app.biliapi.com, REJECT
+DOMAIN, api.biliapi.net, REJECT
+DOMAIN, app.biliapi.net, REJECT
 # 仅拦截 chat.bilibili.com 及其子域名中，包含以下关键词的域名
 AND, ((DOMAIN-SUFFIX, chat.bilibili.com), (OR, ((DOMAIN-KEYWORD, stun), (DOMAIN-KEYWORD, tracker), (DOMAIN-KEYWORD, p2p)))), REJECT
 
