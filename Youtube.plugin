@@ -1,5 +1,6 @@
 #!name=YouTube去广告隐藏Shorts
 #!desc=适用于 YouTube 去广告
+#!https://github.com/ZenmoFeiShi/Qx/blob/main/youtube.response.js
 
 [Rewrite]
 # 原规则捕获组与 $1$2$3 不匹配，先停用；确认替换逻辑后再启用
