@@ -1,0 +1,22 @@
+#!name=YouTube去广告隐藏Shorts
+#!desc=适用于 YouTube 去广告
+#!date=2026-04-05
+#!tag=🐹 Ezrea7 Enhance
+#!author=Maasea[https://github.com/Maasea], ZenmoFeiShi[https://github.com/ZenmoFeiShi/Qx]
+#!icon=https://raw.githubusercontent.com/Ezrea7/Rules/main/Icons/AppIcons/Image/App/YouTube.png
+
+[Rewrite]
+# 原规则捕获组与 $1$2$3 不匹配，先停用；确认替换逻辑后再启用
+# ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?&ctier=L(&.+?),ctier,(.+) 302 https://$1$2$3
+
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad reject-200
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads reject-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) reject-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext reject-200
+
+[Script]
+# 先将 YouTube.js 导入 Loon 本地脚本，且文件名须与此处一致
+http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path=YouTube.js, requires-body=true, binary-body-mode=true, timeout=60, tag=YouTube去广告
+
+[MITM]
+hostname = *.googlevideo.com, redirector*.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com
