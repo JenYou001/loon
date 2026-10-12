@@ -1,9 +1,14 @@
 #!name = 🚫Block HTTPDNS Plus
-#!desc = 拦截常见 HTTPDNS；公共 DoH 和微信整域拦截默认关闭
+#!desc = 封锁常见 HTTPDNS / 公共 DoH / DoT / 解解析服务；保留 AdGuardCloud 私有 DoH（adguard-dns.com）可用
 #!author = Custom merge
 #!type = normal
 
 [Rule]
+# --- Private DoH allowlist: keep your AdGuardCloud service working ---
+# 如果你的私有 DoH 域名不是 adguard-dns.com，请在这里添加其准确域名或后缀。
+DOMAIN-SUFFIX,adguard-dns.com,DIRECT
+DOMAIN-SUFFIX,dns.adguard-dns.com,DIRECT
+
 # --- WeChat / Tencent ---
 DOMAIN,dns.weixin.qq.com,REJECT
 DOMAIN,dns.weixin.qq.com.cn,REJECT
@@ -153,20 +158,33 @@ DOMAIN,httpdns.push.oppomobile.com,REJECT
 DOMAIN,hd.xiaojukeji.com,REJECT
 IP-CIDR,81.71.61.216/32,REJECT,no-resolve
 
-# --- Optional public DoH blocks; enable only if intended ---
-DOMAIN,doh.pub,REJECT
-DOMAIN,dns.alidns.com,REJECT
-DOMAIN,dns.google,REJECT
-DOMAIN,cloudflare-dns.com,REJECT
-DOMAIN,dns.quad9.net,REJECT
+# --- Public DoH / DoT / DNS providers (common resolver services) ---
+DOMAIN-SUFFIX,dns.google,REJECT
+DOMAIN-SUFFIX,dns.google.com,REJECT
+DOMAIN-SUFFIX,cloudflare-dns.com,REJECT
+DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com,REJECT
+DOMAIN-SUFFIX,mozilla.cloudflare-dns.com,REJECT
+DOMAIN-SUFFIX,dns.quad9.net,REJECT
 DOMAIN-SUFFIX,dns.nextdns.io,REJECT
+DOMAIN-SUFFIX,doh.pub,REJECT
+DOMAIN-SUFFIX,dns.alidns.com,REJECT
+DOMAIN-SUFFIX,dns.alidns.com.cn,REJECT
+DOMAIN-SUFFIX,public.dns.iij.jp,REJECT
+DOMAIN-SUFFIX,dns.twnic.tw,REJECT
+DOMAIN-SUFFIX,opendns.com,REJECT
+DOMAIN-SUFFIX,dns.opendns.com,REJECT
+DOMAIN-SUFFIX,dns.controld.com,REJECT
+DOMAIN-SUFFIX,dnsforge.de,REJECT
+DOMAIN-SUFFIX,dnsforfamily.com,REJECT
+DOMAIN-SUFFIX,dns.sb,REJECT
+DOMAIN-SUFFIX,dnswarden.com,REJECT
 
-# --- Optional strict WeChat block; blocks entire hosts ---
+# --- Strict WeChat block; keep if you want to disable WeChat's special DNS paths ---
 DOMAIN,short.weixin.qq.com,REJECT
 DOMAIN,hkextshort.weixin.qq.com,REJECT
 
 [Url Rewrite]
-# HTTP-only endpoint paths; HTTPS needs MITM
+# HTTP endpoint paths; block common HTTPDNS and doH request patterns.
 ^http:\/\/119\.29\.29\.29\/d reject
 ^http:\/\/180\.76\.76\.112\/v\d\/ reject
 ^http:\/\/180\.76\.76\.220\/v\d\/resolve reject
@@ -198,11 +216,16 @@ DOMAIN,hkextshort.weixin.qq.com,REJECT
 ^http:\/\/106\.55\.220\.18:8053\/httpdns\/ reject
 ^http:\/\/139\.196\.12\.179:8053\/httpdns\/ reject
 
-# Alibaba Cloud DNS DoH JSON API; optional, enable if intended
+# --- Generic DoH / HTTPDNS path blocking (conservative) ---
+^https?:\/\/[^\/]+\/(?:resolve|d|dns-query|query|v\d+\/resolve|v\d+\/dns-query) reject
+^https?:\/\/[^\/]+\/resolve\? reject
+^https?:\/\/[^\/]+\/dns-query\? reject
+
+# --- Alibaba Cloud JSON API; optional ---
 # ^https?:\/\/223\.5\.5\.5\/resolve(?:\?.*)? reject
 # ^https?:\/\/223\.6\.6\.6\/resolve(?:\?.*)? reject
 
-# Alipay HTTPDNS: return an empty JSON object
+# --- Alipay HTTPDNS: return empty JSON object ---
 ^https?:\/\/amdc\.alipay\.com\/query mock-response-body data-type=json data="{}" status-code=200
 
 [Mitm]
