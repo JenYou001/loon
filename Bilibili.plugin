@@ -1,4 +1,4 @@
-#!name = 哔哩哔哩去广告（本地 gRPC）
+#!name = 哔哩哔哩去广告（本地GRPC）
 #!desc = 过滤开屏、首页、Story及搜索结果广告；阻止备用域名和指定P2P/STUN域名
 #!tag = Bilibili,去广告
 
