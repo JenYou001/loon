@@ -2,8 +2,6 @@
 #!desc = 精简版：过滤部分广告与推广，并拦截指定 STUN/P2P 域名
 #!author = TomCatXue
 #!homepage = https://github.com/TomCatXue/MyCookieCenter
-#!date = 2026-10-12
-#!loon_version = 3.5.1(983)
 
 [Argument]
 displayUpList = select, "auto", "show", "hide", type=string, tag=动态列表显示方式
