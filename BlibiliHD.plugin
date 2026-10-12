@@ -1,16 +1,17 @@
 #!name = 哔哩哔哩｜去广告与防追踪
-#!desc = 精简版：去除已知广告卡片、开屏与推广，并拦截原配置中的 STUN/P2P 请求
+#!desc = 精简版：过滤部分广告与推广，并拦截指定 STUN/P2P 域名
 #!author = Local
-#!version = 2.8.2-clean
+#!date = 2026-10-12
+#!loon_version = 3.5.1(983)
 
 [Argument]
-displayUpList = select, "auto", "show", "hide", tag = 动态列表显示方式
-purifyComment = switch, true, tag = 过滤评论置顶广告
-sponsorBlock = switch, false, tag = 关闭非广告片段跳过
-logLevel = select, "error", "warn", "info", "debug", "off", tag = 日志等级
+displayUpList = select, "auto", "show", "hide", type=string, tag=动态列表显示方式
+purifyComment = switch, true, type=boolean, tag=过滤评论置顶广告
+sponsorBlock = switch, false, type=boolean, tag=关闭非广告片段跳过
+logLevel = select, "error", "warn", "info", "debug", "off", type=string, tag=日志等级
 
 [Rule]
-# 仅保留原配置中针对 STUN / tracker / P2P 的拦截
+# 仅拦截 chat.bilibili.com 及其子域名中，包含以下关键词的域名
 AND, ((DOMAIN-SUFFIX, chat.bilibili.com), (OR, ((DOMAIN-KEYWORD, stun), (DOMAIN-KEYWORD, tracker), (DOMAIN-KEYWORD, p2p)))), REJECT
 
 [Rewrite]
@@ -21,8 +22,10 @@ request if ${url} ~= /^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-int
 request if ${url} ~= /^https:\/\/line3-h5-mobile-api\.biligame\.com\/game\/live\/large_card_material\?/i then reject_dict(200)
 
 # 开屏广告
-response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list\?/i then response.body.mock("text", "{\"code\":0,\"message\":\"OK\",\"ttl\":1,\"data\":{\"max_time\":0,\"min_interval\":31536000,\"pull_interval\":31536000,\"keep_ids\":[],\"show\":[],\"list\":[{}],\"splash_request_id\":\"\"}}", 200)
-response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(show|event\/list2)\?/i then response.json.jq(".data |= with_entries(if .key | IN(\"show\", \"event_list\") then .value = [] else . end)")
+response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list\?/i then response.body.mock("text", "{\"code\":0,\"message\":\"OK\",\"ttl\":1,\"data\":{\"max_time\":0,\"min_interval\":31536000,\"pull_interval\":31536000,\"keep_ids\":[],\"show\":[],\"list\":[],\"splash_request_id\":\"\"}}", 200)
+
+# 开屏展示与活动列表：仅在 data 为对象时清空指定字段
+response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(show|event\/list2)\?/i then response.json.jq("if (.data | type) == \"object\" then .data |= with_entries(if (.key == \"show\" or .key == \"event_list\") then .value = [] else . end) else . end")
 
 # 活动入口及会员广告素材
 response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?/i then response.body.mock("text", "{\"code\":-404,\"message\":\"-404\",\"ttl\":1,\"data\":null}", 200)
@@ -31,18 +34,18 @@ response if ${url} ~= /^https:\/\/api\.bilibili\.com\/x\/vip\/ads\/materials\?/i
 # 播放页开通会员横幅
 response if ${url} ~= /^https:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive\?/i then response.body.mock("text", "{\"code\":0,\"data\":{\"closeType\":\"close_win\",\"container\":[],\"showTime\":\"\"},\"message\":\"success\"}", 200)
 
-# 首页广告卡片：仅移除明确标记为广告或横幅的项目，保留其他普通内容
-response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/i then response.json.jq("if .data.items then .data.items |= map(select((.banner_item == null) and (.ad_info == null))) end")
+# 首页广告/横幅卡片：仅处理 items 为数组的响应
+response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/i then response.json.jq("if (.data.items | type) == \"array\" then .data.items |= map(select((.banner_item == null) and (.ad_info == null))) else . end")
 
 # Story 竖屏流广告卡片
-response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/i then response.json.jq("if .data.items then .data.items |= map(select((.ad_info == null) and (.card_goto | IN(\"vertical_ad_av\", \"vertical_ad_live\", \"vertical_ad_picture\") | not))) end")
+response if ${url} ~= /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/i then response.json.jq("if (.data.items | type) == \"array\" then .data.items |= map(select((.ad_info == null) and (.card_goto != \"vertical_ad_av\") and (.card_goto != \"vertical_ad_live\") and (.card_goto != \"vertical_ad_picture\"))) else . end")
 
 [Script]
-# 直播页广告过滤
-response if ${url} ~= /^https:\/\/api\.live\.bilibili\.com\/xlive\/(?:app-interface\/v2\/index\/feed|app-room\/v1\/index\/getInfoBy(?:Room|User))\?/i then script("https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.json.js") with tag="[哔哩哔哩]直播广告过滤", timeout=10, requires_body=true
+# 直播页广告过滤：使用本地脚本资源
+response if ${url} ~= /^https:\/\/api\.live\.bilibili\.com\/xlive\/(?:app-interface\/v2\/index\/feed|app-room\/v1\/index\/getInfoBy(?:Room|User))\?/i then script("bilibili.json.js") with tag="[哔哩哔哩]直播广告过滤", timeout=10, requires_body=true
 
-# Protobuf 接口：仅覆盖首页/动态、搜索结果、视频相关内容和评论广告过滤
-response if ${url} ~= /^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|RelatesFeed|AIRelateAsync))|polymer\.app\.search\.v1\.Search\/SearchAll|main\.community\.reply\.v1\.Reply\/MainList)$/i then script("https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.response.js", {${displayUpList}, ${purifyComment}, ${sponsorBlock}, ${logLevel}}) with tag="[哔哩哔哩]广告过滤", timeout=10, requires_body=true, binary_body_mode=true
+# Protobuf 接口过滤：使用本地脚本资源
+response if ${url} ~= /^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|RelatesFeed|AIRelateAsync))|polymer\.app\.search\.v1\.Search\/SearchAll|main\.community\.reply\.v1\.Reply\/MainList)$/i then script("bilibili.protobuf.response.js", {${displayUpList}, ${purifyComment}, ${sponsorBlock}, ${logLevel}}) with tag="[哔哩哔哩]广告过滤", timeout=10, requires_body=true, binary_body_mode=true
 
 [MITM]
 hostname = grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, line3-h5-mobile-api.biligame.com
