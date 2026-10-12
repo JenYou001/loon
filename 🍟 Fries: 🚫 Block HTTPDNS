@@ -154,15 +154,16 @@ DOMAIN,hd.xiaojukeji.com,REJECT
 IP-CIDR,81.71.61.216/32,REJECT,no-resolve
 
 # --- Optional public DoH blocks; enable only if intended ---
-# DOMAIN,doh.pub,REJECT
-# DOMAIN,dns.alidns.com,REJECT
-# DOMAIN,dns.google,REJECT
-# DOMAIN,cloudflare-dns.com,REJECT
-# DOMAIN,doh.dns.apple.com,REJECT
+DOMAIN,doh.pub,REJECT
+DOMAIN,dns.alidns.com,REJECT
+DOMAIN,dns.google,REJECT
+DOMAIN,cloudflare-dns.com,REJECT
+DOMAIN,dns.quad9.net,REJECT
+DOMAIN-SUFFIX,dns.nextdns.io,REJECT
 
 # --- Optional strict WeChat block; blocks entire hosts ---
-# DOMAIN,short.weixin.qq.com,REJECT
-# DOMAIN,hkextshort.weixin.qq.com,REJECT
+DOMAIN,short.weixin.qq.com,REJECT
+DOMAIN,hkextshort.weixin.qq.com,REJECT
 
 [Url Rewrite]
 # HTTP-only endpoint paths; HTTPS needs MITM
