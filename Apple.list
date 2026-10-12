@@ -81,6 +81,29 @@ DOMAIN,playground-assets-cdn.apple.com
 DOMAIN,playground-cdn.apple.com
 DOMAIN,sylvan.apple.com
 
+# Developer / App Store Connect
+DOMAIN-SUFFIX,developer.apple.com
+DOMAIN-SUFFIX,appstoreconnect.apple.com
+DOMAIN,api.appstoreconnect.apple.com
+DOMAIN-SUFFIX,itc.apple.com
+
+# Purchase / Receipt validation / Sandbox
+DOMAIN,buy.itunes.apple.com
+DOMAIN,sandbox.itunes.apple.com
+
+# iCloud / Backup / Restore (explicit)
+DOMAIN-SUFFIX,backup.icloud.com
+
+# Push / APNs (explicit)
+DOMAIN,api.push.apple.com
+
+# Apple Pay / Payment gateways
+DOMAIN,apple-pay-gateway.apple.com
+DOMAIN-SUFFIX,apple-pay.apple.com
+
+# Problem reporting / purchase issues
+DOMAIN,reportaproblem.apple.com
+
 # Siri, Search, News and Apple Intelligence
 DOMAIN,guzzoni.apple.com
 DOMAIN-SUFFIX,smoot.apple.com
@@ -138,7 +161,6 @@ DOMAIN,vpp.itunes.apple.com
 DOMAIN,api.ent.apple.com
 DOMAIN,api.edu.apple.com
 DOMAIN,api-business.apple.com
-DOMAIN,api-school.apple.com
 DOMAIN,upload.appleschoolcontent.com
 DOMAIN,ws.school.apple.com
 DOMAIN,pg-bootstrap.itunes.apple.com
