@@ -1,6 +1,7 @@
 #!name=YouTube去广告隐藏Shorts
 #!desc=适用于 YouTube 去广告
 #!author=@maasea @ZenmoFeiShi
+#!homepage=https://github.com/Maasea/sgmodule
 #!homepage=https://github.com/ZenmoFeiShi/Qx/blob/main/youtube.response.js
 
 [Rewrite]
