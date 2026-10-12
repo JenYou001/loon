@@ -10,27 +10,26 @@ DOMAIN,time-ios.apple.com
 DOMAIN,time.apple.com
 DOMAIN,time-macos.apple.com
 
-# Apple Account
+# Apple Account / Identity
 DOMAIN,account.apple.com
 DOMAIN,appleid.apple.com
 DOMAIN,appleid.cdn-apple.com
 DOMAIN,idmsa.apple.com
 DOMAIN,gsa.apple.com
+DOMAIN,account.itunes.apple.com
+DOMAIN,init.itunes.apple.com
 
-# Push notifications
+# Push / APNs
 DOMAIN-SUFFIX,push.apple.com
+DOMAIN,api.push.apple.com
 
-# iCloud, iCloud Mail and related services
-DOMAIN-SUFFIX,apple-cloudkit.com
-DOMAIN-SUFFIX,apple-livephotoskit.com
-DOMAIN-SUFFIX,cdn-apple.com
-DOMAIN-SUFFIX,gc.apple.com
+# iCloud — core services / sync / backup / mail / CloudKit / Find My
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud.apple.com
 DOMAIN-SUFFIX,icloud-content.com
-DOMAIN-SUFFIX,iwork.apple.com
-DOMAIN-SUFFIX,apple-dns.net
-DOMAIN,apple-native-relay.apple.com
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-livephotoskit.com
+DOMAIN-SUFFIX,backup.icloud.com
 DOMAIN,gateway.icloud.com
 DOMAIN,probe.icloud.com
 DOMAIN,pong.icloud.com
@@ -41,6 +40,13 @@ DOMAIN,mask-api.icloud.com
 DOMAIN,setup.icloud.com
 DOMAIN,imap.mail.me.com
 DOMAIN,smtp.mail.me.com
+DOMAIN,caldav.icloud.com
+DOMAIN,carddav.icloud.com
+DOMAIN,contacts.icloud.com
+DOMAIN,ckdatabase.icloud.com
+DOMAIN,ckutility.icloud.com
+DOMAIN,find.icloud.com
+DOMAIN,com.apple.mobileme.fmip1
 
 # Software updates and restore
 DOMAIN,appldnld.apple.com
@@ -80,29 +86,31 @@ DOMAIN,download.developer.apple.com
 DOMAIN,playground-assets-cdn.apple.com
 DOMAIN,playground-cdn.apple.com
 DOMAIN,sylvan.apple.com
+DOMAIN,apps.itunes.apple.com
+DOMAIN,bag.itunes.apple.com
+DOMAIN,payments-book.itunes.apple.com
+DOMAIN,play.itunes.apple.com
 
 # Developer / App Store Connect
 DOMAIN-SUFFIX,developer.apple.com
 DOMAIN-SUFFIX,appstoreconnect.apple.com
 DOMAIN,api.appstoreconnect.apple.com
 DOMAIN-SUFFIX,itc.apple.com
+DOMAIN,itunesconnect.apple.com
 
-# Purchase / Receipt validation / Sandbox
+# TestFlight / Beta
+DOMAIN,testflight.apple.com
+DOMAIN,api.testflight.apple.com
+DOMAIN,beta.apple.com
+
+# Purchase / Receipt validation / Sandbox / StoreKit
 DOMAIN,buy.itunes.apple.com
 DOMAIN,sandbox.itunes.apple.com
-
-# iCloud / Backup / Restore (explicit)
-DOMAIN-SUFFIX,backup.icloud.com
-
-# Push / APNs (explicit)
-DOMAIN,api.push.apple.com
-
-# Apple Pay / Payment gateways
-DOMAIN,apple-pay-gateway.apple.com
-DOMAIN-SUFFIX,apple-pay.apple.com
-
-# Problem reporting / purchase issues
+DOMAIN,appreview.itunes.apple.com
+DOMAIN,api.storekit.itunes.apple.com
+DOMAIN,api.storekit-sandbox.itunes.apple.com
 DOMAIN,reportaproblem.apple.com
+DOMAIN,securemetrics.apple.com
 
 # Siri, Search, News and Apple Intelligence
 DOMAIN,guzzoni.apple.com
@@ -111,9 +119,6 @@ DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,cp4.cloudflare.com
-
-# Weather
-DOMAIN,weatherkit.apple.com
 
 # Maps and location
 DOMAIN,maps.apple.com
@@ -136,9 +141,14 @@ DOMAIN,ocsp.apple.com
 DOMAIN,ocsp.digicert.com
 DOMAIN,ocsp2.apple.com
 DOMAIN,valid.apple.com
+DOMAIN,rr.apple.com
+DOMAIN,devicecheck.apple.com
+DOMAIN,devicecheck-sandbox.apple.com
+DOMAIN,appattest.apple.com
 
 # Diagnostics
 DOMAIN,diagassets.apple.com
+DOMAIN,serverstatus.apple.com
 
 # Beta updates and Feedback Assistant
 DOMAIN,bpapi.apple.com
@@ -161,6 +171,7 @@ DOMAIN,vpp.itunes.apple.com
 DOMAIN,api.ent.apple.com
 DOMAIN,api.edu.apple.com
 DOMAIN,api-business.apple.com
+DOMAIN,api-school.apple.com
 DOMAIN,upload.appleschoolcontent.com
 DOMAIN,ws.school.apple.com
 DOMAIN,pg-bootstrap.itunes.apple.com
@@ -169,16 +180,17 @@ DOMAIN,cls-ingest.itunes.apple.com
 DOMAIN-SUFFIX,business.apple.com
 DOMAIN-SUFFIX,school.apple.com
 DOMAIN-SUFFIX,vertexsmb.com
-DOMAIN,www.apple.com
 DOMAIN,lcdn-registration.apple.com
 DOMAIN,suconfig.apple.com
 DOMAIN,xp-cdn.apple.com
 DOMAIN,lcdn-locator.apple.com
-DOMAIN,serverstatus.apple.com
+DOMAIN,www.apple.com
 
-# Tap to Pay / ID Verifier / submissions
+# Tap to Pay / ID Verifier / submissions / Apple Pay
 DOMAIN,pos-device.apple.com
 DOMAIN,smp-device-content.apple.com
 DOMAIN,idv.cdn-apple.com
 DOMAIN,idv-prod1.apple.com
 DOMAIN,iphonesubmissions.apple.com
+DOMAIN,apple-pay-gateway.apple.com
+DOMAIN-SUFFIX,apple-pay.apple.com
