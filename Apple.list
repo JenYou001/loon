@@ -16,10 +16,14 @@ DOMAIN,appleid.apple.com
 DOMAIN,appleid.cdn-apple.com
 DOMAIN,idmsa.apple.com
 DOMAIN,gsa.apple.com
+DOMAIN,gsa-gpk.apple.com
 DOMAIN,account.itunes.apple.com
 DOMAIN,init.itunes.apple.com
 DOMAIN,signin.apple.com
 DOMAIN,ids.apple.com
+
+# Apple backend / compatibility / gateway
+DOMAIN,swallow.apple.com
 
 # Push / APNs
 DOMAIN-SUFFIX,push.apple.com
