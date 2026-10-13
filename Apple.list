@@ -24,6 +24,7 @@ DOMAIN,ids.apple.com
 
 # Apple backend / compatibility / gateway
 DOMAIN,swallow.apple.com
+DOMAIN,cl3.apple.com
 
 # Push / APNs
 DOMAIN-SUFFIX,push.apple.com
