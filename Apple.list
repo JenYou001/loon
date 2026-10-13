@@ -21,6 +21,8 @@ DOMAIN,account.itunes.apple.com
 DOMAIN,init.itunes.apple.com
 DOMAIN,signin.apple.com
 DOMAIN,ids.apple.com
+DOMAIN,apps.apple.com
+DOMAIN,apps-marketplace.apple.com
 
 # Apple backend / compatibility / gateway
 DOMAIN,swallow.apple.com
@@ -77,7 +79,6 @@ DOMAIN,fcs-keys-pub-prod.cdn-apple.com
 DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,mzstatic.com
-DOMAIN-SUFFIX,apps-marketplace.apple.com
 DOMAIN-SUFFIX,music.apple.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN,ppq.apple.com
@@ -115,6 +116,7 @@ DOMAIN,api.storekit.itunes.apple.com
 DOMAIN,api.storekit-sandbox.itunes.apple.com
 DOMAIN,reportaproblem.apple.com
 DOMAIN,securemetrics.apple.com
+DOMAIN,payments-book.itunes.apple.com
 
 # Siri, Search, News and Apple Intelligence
 DOMAIN,guzzoni.apple.com
