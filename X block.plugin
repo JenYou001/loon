@@ -1,0 +1,21 @@
+#!name=X block
+#!desc=屏蔽 X / Twitter 推广内容（需开启 MITM 并信任 Loon 证书）
+#!openUrl=https://x.com
+#!author=GitHub Copilot
+#!homepage=https://github.com/JenYou001/loon
+#!icon=https://raw.githubusercontent.com/JenYou001/loon/main/icon.png
+
+[Rule]
+DOMAIN,ads.twitter.com,REJECT
+DOMAIN,ads-api.twitter.com,REJECT
+DOMAIN,ads.twimg.com,REJECT
+DOMAIN,syndication.twitter.com,REJECT
+DOMAIN,analytics.twitter.com,REJECT
+DOMAIN,app-measurement.com,REJECT
+DOMAIN,ads.doubleclick.net,REJECT
+
+[Script]
+http-response ^https?:\/\/api\.twitter\.com\/(1\.1\/timeline\/|2\/(timeline|home|feed)\/).* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/JenYou001/loon/main/x-twitter-adblock.js, timeout=60
+
+[MITM]
+hostname = api.twitter.com
