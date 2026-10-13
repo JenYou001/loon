@@ -1,13 +1,18 @@
-#!name=X block - Reference Based
-#!desc=参考 CleanYourTwitter / Twitter Ad Hider 等公开去广告思路，过滤 X/Twitter 明确广告内容（Loon, MITM required）
+#!name=X App Adblock - Reference Based
+#!desc=参考 fmz200 / CleanYourTwitter / Twitter Ad Hider 的公开思路，针对 X/Twitter 原生 App 的广告对象做过滤（MITM required）
 #!author=GitHub Copilot
 #!homepage=https://github.com/JenYou001/loon
 
 [Rule]
+DOMAIN-SUFFIX,ads-twitter.com,REJECT
+DOMAIN-SUFFIX,p.twitter.com,REJECT
+DOMAIN-SUFFIX,scribe.twitter.com,REJECT
+DOMAIN-SUFFIX,syndication.twitter.com,REJECT
+DOMAIN-SUFFIX,syndication-o.twitter.com,REJECT
+DOMAIN-SUFFIX,urls.api.twitter.com,REJECT
 DOMAIN,ads.twitter.com,REJECT
 DOMAIN,ads-api.twitter.com,REJECT
 DOMAIN,ads.twimg.com,REJECT
-DOMAIN,syndication.twitter.com,REJECT
 DOMAIN,analytics.twitter.com,REJECT
 DOMAIN,ads.doubleclick.net,REJECT
 DOMAIN,pagead2.googlesyndication.com,REJECT
