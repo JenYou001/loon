@@ -4,48 +4,68 @@
     return $done({});
   }
 
-  function isPromotedLike(value) {
-    if (!value || typeof value !== 'object') {
-      return false;
+  function hasPromoMarker(value) {
+    if (!value || typeof value !== 'object') return false;
+
+    const stack = [value];
+    const seen = new WeakSet();
+
+    while (stack.length) {
+      const current = stack.pop();
+      if (!current || typeof current !== 'object') continue;
+      if (seen.has(current)) continue;
+      seen.add(current);
+
+      if (Array.isArray(current)) {
+        for (const item of current) stack.push(item);
+        continue;
+      }
+
+      for (const [key, val] of Object.entries(current)) {
+        const keyLower = String(key).toLowerCase();
+        if (/(^|_|-)(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|marketing|campaign|placement|creative)/i.test(keyLower)) {
+          return true;
+        }
+        if (typeof val === 'string' && /(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|marketing|campaign|placement|creative)/i.test(val)) {
+          return true;
+        }
+        if (val && typeof val === 'object') stack.push(val);
+      }
     }
-    const s = JSON.stringify(value);
-    return /promoted|sponsored|admetadata|promoted_metadata|promoted_content|promotedTweet|native_ad|advertisement/i.test(s);
+
+    return false;
   }
 
-  function stripPromoted(node) {
-    if (!node || typeof node !== 'object') {
-      return node;
-    }
+  function filterNode(node) {
+    if (!node || typeof node !== 'object') return node;
 
     if (Array.isArray(node)) {
-      const result = [];
+      const out = [];
       for (const item of node) {
-        if (isPromotedLike(item)) {
-          continue;
-        }
-        const cleaned = stripPromoted(item);
-        if (cleaned !== undefined) {
-          result.push(cleaned);
+        const clean = filterNode(item);
+        if (clean !== undefined && clean !== null && !hasPromoMarker(clean)) {
+          out.push(clean);
         }
       }
-      return result;
+      return out;
     }
 
     for (const key of Object.keys(node)) {
-      const val = node[key];
       const keyLower = String(key).toLowerCase();
+      const val = node[key];
 
-      if (/promoted|sponsored|admetadata|advertisement|native_ad/.test(keyLower)) {
+      if (/(^|_|-)(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|marketing|campaign|placement|creative)/i.test(keyLower)) {
         delete node[key];
         continue;
       }
 
       if (val && typeof val === 'object') {
-        if (isPromotedLike(val)) {
+        const cleaned = filterNode(val);
+        if (hasPromoMarker(cleaned)) {
           delete node[key];
           continue;
         }
-        node[key] = stripPromoted(val);
+        node[key] = cleaned;
       }
     }
 
@@ -55,23 +75,25 @@
   try {
     let obj = JSON.parse(rawBody);
 
-    obj = stripPromoted(obj);
+    if (obj && obj.timeline && obj.timeline.instructions) {
+      obj.timeline.instructions = filterNode(obj.timeline.instructions);
+    }
 
     if (obj && obj.globalObjects && obj.globalObjects.tweets && typeof obj.globalObjects.tweets === 'object') {
       for (const key of Object.keys(obj.globalObjects.tweets)) {
         const tweet = obj.globalObjects.tweets[key];
-        if (isPromotedLike(tweet)) {
+        if (hasPromoMarker(tweet)) {
           delete obj.globalObjects.tweets[key];
         }
       }
     }
 
-    if (obj && obj.timeline && obj.timeline.instructions) {
-      obj.timeline.instructions = stripPromoted(obj.timeline.instructions);
+    if (obj && Array.isArray(obj.data)) {
+      obj.data = obj.data.filter(item => !hasPromoMarker(item));
     }
 
-    if (obj && obj.data && Array.isArray(obj.data)) {
-      obj.data = obj.data.filter(item => !isPromotedLike(item));
+    if (obj && Array.isArray(obj.instructions)) {
+      obj.instructions = filterNode(obj.instructions);
     }
 
     return $done({ body: JSON.stringify(obj) });
