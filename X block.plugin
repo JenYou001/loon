@@ -1,5 +1,5 @@
-#!name=X block Enhanced Stable
-#!desc=屏蔽 X / Twitter 推广条目（更稳版，需开启 MITM 并信任 Loon 证书）
+#!name=X block - Reference Based
+#!desc=参考 CleanYourTwitter / Twitter Ad Hider 等公开去广告思路，过滤 X/Twitter 明确广告内容（Loon, MITM required）
 #!author=GitHub Copilot
 #!homepage=https://github.com/JenYou001/loon
 
