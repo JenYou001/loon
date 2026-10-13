@@ -1,12 +1,7 @@
-#!name = 🚫Block HTTPDNS Plus (Optimized for Loon 3.5.2)
-#!desc = 仅允许私有 AdGuard DoH (adguard-dns.com)，封锁常见公共 DoH / DoT / HTTPDNS；适用于 iOS Loon 3.5.2（MITM / Rewrite / Script 皆可用）
+#!name = Block HTTPDNS Plus
+#!desc = BlockDNS
 #!author = Custom merge
 #!type = normal
-
-# 说明：
-# - 目标：只使用你自己的 AdGuard 私有 DoH（adguard-dns.com），尽可能阻断其它可被阻断的公共解析服务和 HTTPDNS。
-# - 这是严格模式：默认会封锁大部分公共解析服务与常见 HTTPDNS。若因功能误伤，可按注释临时放行。
-# - 若需要对更多 HTTPS DoH 主机做精确 rewrite / mock，请在 [Mitm] 中加入对应 host，并在 iOS 设备中信任 Loon 根证书。
 
 [Rule]
 # ----------------------- 厂商 / HTTPDNS 列表（强制阻断） -----------------------
