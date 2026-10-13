@@ -27,6 +27,8 @@ DOMAIN,apps-marketplace.apple.com
 # Apple backend / compatibility / gateway
 DOMAIN,swallow.apple.com
 DOMAIN,cl3.apple.com
+DOMAIN,weatherkit.apple.com
+DOMAIN,weather-edge.apple.com
 
 # Push / APNs
 DOMAIN-SUFFIX,push.apple.com
