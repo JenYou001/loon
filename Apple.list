@@ -49,6 +49,7 @@ DOMAIN,mask.icloud.com
 DOMAIN,mask-h2.icloud.com
 DOMAIN,mask-api.icloud.com
 DOMAIN,setup.icloud.com
+DOMAIN,mail.icloud.com
 DOMAIN,imap.mail.me.com
 DOMAIN,smtp.mail.me.com
 DOMAIN,com.apple.mobileme.fmip1
@@ -130,6 +131,7 @@ DOMAIN,cp4.cloudflare.com
 
 # Maps and location
 DOMAIN,maps.apple.com
+DOMAIN,mapkit-cdn.apple.com
 DOMAIN-SUFFIX,apple-mapkit.com
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN,iphone-ld.apple.com
