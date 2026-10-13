@@ -18,6 +18,8 @@ DOMAIN,idmsa.apple.com
 DOMAIN,gsa.apple.com
 DOMAIN,account.itunes.apple.com
 DOMAIN,init.itunes.apple.com
+DOMAIN,signin.apple.com
+DOMAIN,ids.apple.com
 
 # Push / APNs
 DOMAIN-SUFFIX,push.apple.com
@@ -40,12 +42,7 @@ DOMAIN,mask-api.icloud.com
 DOMAIN,setup.icloud.com
 DOMAIN,imap.mail.me.com
 DOMAIN,smtp.mail.me.com
-DOMAIN,caldav.icloud.com
-DOMAIN,carddav.icloud.com
-DOMAIN,contacts.icloud.com
-DOMAIN,ckdatabase.icloud.com
-DOMAIN,ckutility.icloud.com
-DOMAIN,find.icloud.com
+DOMAIN,setup.icloud.com
 DOMAIN,com.apple.mobileme.fmip1
 
 # Software updates and restore
@@ -90,6 +87,7 @@ DOMAIN,apps.itunes.apple.com
 DOMAIN,bag.itunes.apple.com
 DOMAIN,payments-book.itunes.apple.com
 DOMAIN,play.itunes.apple.com
+DOMAIN,games.apple.com
 
 # Developer / App Store Connect
 DOMAIN-SUFFIX,developer.apple.com
@@ -97,6 +95,7 @@ DOMAIN-SUFFIX,appstoreconnect.apple.com
 DOMAIN,api.appstoreconnect.apple.com
 DOMAIN-SUFFIX,itc.apple.com
 DOMAIN,itunesconnect.apple.com
+DOMAIN,deliver.itunes.apple.com
 
 # TestFlight / Beta
 DOMAIN,testflight.apple.com
