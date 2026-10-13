@@ -81,6 +81,7 @@ DOMAIN-SUFFIX,music.apple.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN,ppq.apple.com
 DOMAIN,audiocontentdownload.apple.com
+DOMAIN,amp-api.media.apple.com
 DOMAIN,devimages-cdn.apple.com
 DOMAIN,download.developer.apple.com
 DOMAIN,playground-assets-cdn.apple.com
