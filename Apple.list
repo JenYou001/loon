@@ -1,4 +1,3 @@
-# Device setup and activation
 DOMAIN,albert.apple.com
 DOMAIN,captive.apple.com
 DOMAIN,gs.apple.com
@@ -10,7 +9,6 @@ DOMAIN,time-ios.apple.com
 DOMAIN,time.apple.com
 DOMAIN,time-macos.apple.com
 
-# Apple Account / Identity
 DOMAIN,account.apple.com
 DOMAIN,appleid.apple.com
 DOMAIN,appleid.cdn-apple.com
@@ -21,20 +19,16 @@ DOMAIN,account.itunes.apple.com
 DOMAIN,init.itunes.apple.com
 DOMAIN,signin.apple.com
 DOMAIN,ids.apple.com
-DOMAIN,apps.apple.com
 DOMAIN,apps-marketplace.apple.com
 
-# Apple backend / compatibility / gateway
 DOMAIN,swallow.apple.com
 DOMAIN,cl3.apple.com
 DOMAIN,weatherkit.apple.com
 DOMAIN,weather-edge.apple.com
 
-# Push / APNs
-DOMAIN-SUFFIX,push.apple.com
 DOMAIN,api.push.apple.com
+DOMAIN-SUFFIX,push.apple.com
 
-# iCloud — core services / sync / backup / mail / CloudKit / Find My
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud.apple.com
 DOMAIN-SUFFIX,icloud-content.com
@@ -55,7 +49,6 @@ DOMAIN,smtp.mail.me.com
 DOMAIN,com.apple.mobileme.fmip1
 DOMAIN,find.icloud.com
 
-# Software updates and restore
 DOMAIN,appldnld.apple.com
 DOMAIN,appldnld.apple.com.edgesuite.net
 DOMAIN,configuration.apple.com
@@ -78,7 +71,6 @@ DOMAIN,updates-http.cdn-apple.com
 DOMAIN,updates.cdn-apple.com
 DOMAIN,fcs-keys-pub-prod.cdn-apple.com
 
-# App Store, Apple Music, app delivery and validation
 DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,mzstatic.com
@@ -98,7 +90,6 @@ DOMAIN,payments-book.itunes.apple.com
 DOMAIN,play.itunes.apple.com
 DOMAIN,games.apple.com
 
-# Developer / App Store Connect
 DOMAIN-SUFFIX,developer.apple.com
 DOMAIN-SUFFIX,appstoreconnect.apple.com
 DOMAIN,api.appstoreconnect.apple.com
@@ -106,12 +97,10 @@ DOMAIN-SUFFIX,itc.apple.com
 DOMAIN,itunesconnect.apple.com
 DOMAIN,deliver.itunes.apple.com
 
-# TestFlight / Beta
 DOMAIN,testflight.apple.com
 DOMAIN,api.testflight.apple.com
 DOMAIN,beta.apple.com
 
-# Purchase / Receipt validation / Sandbox / StoreKit
 DOMAIN,buy.itunes.apple.com
 DOMAIN,sandbox.itunes.apple.com
 DOMAIN,appreview.itunes.apple.com
@@ -119,9 +108,7 @@ DOMAIN,api.storekit.itunes.apple.com
 DOMAIN,api.storekit-sandbox.itunes.apple.com
 DOMAIN,reportaproblem.apple.com
 DOMAIN,securemetrics.apple.com
-DOMAIN,payments-book.itunes.apple.com
 
-# Siri, Search, News and Apple Intelligence
 DOMAIN,guzzoni.apple.com
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN,apple-relay.apple.com
@@ -129,20 +116,17 @@ DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,cp4.cloudflare.com
 
-# Maps and location
 DOMAIN,maps.apple.com
 DOMAIN,mapkit-cdn.apple.com
 DOMAIN-SUFFIX,apple-mapkit.com
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN,iphone-ld.apple.com
 
-# Universal Links, Safari and encrypted DNS
 DOMAIN,app-site-association.cdn-apple.com
 DOMAIN,app-site-association.networking.apple
 DOMAIN,token.safebrowsing.apple
 DOMAIN,doh.dns.apple.com
 
-# Certificate validation / Device attestation
 DOMAIN,certs.apple.com
 DOMAIN,crl.apple.com
 DOMAIN,crl3.digicert.com
@@ -156,16 +140,13 @@ DOMAIN,devicecheck.apple.com
 DOMAIN,devicecheck-sandbox.apple.com
 DOMAIN,appattest.apple.com
 
-# Diagnostics
 DOMAIN,diagassets.apple.com
 DOMAIN,serverstatus.apple.com
 
-# Beta updates and Feedback Assistant
 DOMAIN,bpapi.apple.com
 DOMAIN,cssubmissions.apple.com
 DOMAIN,fba.apple.com
 
-# Device management / Apple Business and School Manager
 DOMAIN,deviceenrollment.apple.com
 DOMAIN,deviceservices-external.apple.com
 DOMAIN,identity.apple.com
@@ -196,7 +177,6 @@ DOMAIN,xp-cdn.apple.com
 DOMAIN,lcdn-locator.apple.com
 DOMAIN,www.apple.com
 
-# Tap to Pay / ID Verifier / submissions / Apple Pay
 DOMAIN,pos-device.apple.com
 DOMAIN,smp-device-content.apple.com
 DOMAIN,idv.cdn-apple.com
