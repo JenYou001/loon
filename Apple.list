@@ -42,8 +42,8 @@ DOMAIN,mask-api.icloud.com
 DOMAIN,setup.icloud.com
 DOMAIN,imap.mail.me.com
 DOMAIN,smtp.mail.me.com
-DOMAIN,setup.icloud.com
 DOMAIN,com.apple.mobileme.fmip1
+DOMAIN,find.icloud.com
 
 # Software updates and restore
 DOMAIN,appldnld.apple.com
@@ -73,7 +73,6 @@ DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,apps-marketplace.apple.com
-DOMAIN-SUFFIX,appattest.apple.com
 DOMAIN-SUFFIX,music.apple.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN,ppq.apple.com
@@ -131,7 +130,7 @@ DOMAIN,app-site-association.networking.apple
 DOMAIN,token.safebrowsing.apple
 DOMAIN,doh.dns.apple.com
 
-# Certificate validation
+# Certificate validation / Device attestation
 DOMAIN,certs.apple.com
 DOMAIN,crl.apple.com
 DOMAIN,crl3.digicert.com
