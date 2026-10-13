@@ -4,33 +4,40 @@
     return $done({});
   }
 
-  function isPromoText(value) {
+  const AD_KEYS = [
+    'promoted', 'sponsored', 'native_ad', 'admetadata', 'ad_metadata',
+    'advertisement', 'advertiser', 'campaign', 'creative', 'placement',
+    'promotedmetadata', 'promoted_content', 'recommendedforyou', 'recommendation',
+    'whoToFollow', 'who_to_follow', 'injected', 'marketing'
+  ];
+
+  function isAdText(value) {
     if (typeof value !== 'string') return false;
-    const s = value.toLowerCase();
-    return /(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|campaign|creative|placement|marketing|recommended for you|who to follow|you might like)/i.test(s);
+    const text = value.toLowerCase();
+    return AD_KEYS.some(k => text.includes(k.toLowerCase()));
   }
 
-  function hasPromoSignal(node, visited = new WeakSet()) {
-    if (!node || typeof node !== 'object') return false;
-    if (visited.has(node)) return false;
-    visited.add(node);
+  function hasAdMarker(value, seen = new WeakSet()) {
+    if (!value || typeof value !== 'object') return false;
+    if (seen.has(value)) return false;
+    seen.add(value);
 
-    if (Array.isArray(node)) {
-      for (const item of node) {
-        if (hasPromoSignal(item, visited)) return true;
+    if (Array.isArray(value)) {
+      for (const item of value) {
+        if (hasAdMarker(item, seen)) return true;
       }
       return false;
     }
 
-    for (const [key, value] of Object.entries(node)) {
+    for (const [key, inner] of Object.entries(value)) {
       const keyLower = String(key).toLowerCase();
-      if (/(^|_|-)(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|campaign|creative|placement|marketing|recommendation|recommended)(_|$)/i.test(keyLower)) {
+      if (AD_KEYS.some(k => keyLower.includes(k))) {
         return true;
       }
-      if (isPromoText(value)) {
+      if (typeof inner === 'string' && isAdText(inner)) {
         return true;
       }
-      if (value && typeof value === 'object' && hasPromoSignal(value, visited)) {
+      if (inner && typeof inner === 'object' && hasAdMarker(inner, seen)) {
         return true;
       }
     }
@@ -38,21 +45,19 @@
     return false;
   }
 
-  function stripPromo(node, visited = new WeakSet()) {
+  function stripAdNodes(node, seen = new WeakSet()) {
     if (!node || typeof node !== 'object') return node;
-    if (visited.has(node)) return node;
-    visited.add(node);
+    if (seen.has(node)) return node;
+    seen.add(node);
 
     if (Array.isArray(node)) {
       const out = [];
       for (const item of node) {
-        if (!item || typeof item !== 'object') {
+        if (item && typeof item === 'object') {
+          const cleaned = stripAdNodes(item, seen);
+          if (!hasAdMarker(cleaned, new WeakSet())) out.push(cleaned);
+        } else {
           out.push(item);
-          continue;
-        }
-        const clean = stripPromo(item, visited);
-        if (!hasPromoSignal(clean, new WeakSet())) {
-          out.push(clean);
         }
       }
       return out;
@@ -62,23 +67,23 @@
       const val = node[key];
       const keyLower = String(key).toLowerCase();
 
-      if (/(^|_|-)(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|campaign|creative|placement|marketing|recommendation|recommended)(_|$)/i.test(keyLower)) {
+      if (AD_KEYS.some(k => keyLower.includes(k))) {
+        delete node[key];
+        continue;
+      }
+
+      if (typeof val === 'string' && isAdText(val)) {
         delete node[key];
         continue;
       }
 
       if (val && typeof val === 'object') {
-        const clean = stripPromo(val, visited);
-        if (hasPromoSignal(clean, new WeakSet())) {
+        const cleaned = stripAdNodes(val, seen);
+        if (hasAdMarker(cleaned, new WeakSet())) {
           delete node[key];
         } else {
-          node[key] = clean;
+          node[key] = cleaned;
         }
-        continue;
-      }
-
-      if (typeof val === 'string' && isPromoText(val)) {
-        delete node[key];
       }
     }
 
@@ -88,52 +93,51 @@
   try {
     let obj = JSON.parse(rawBody);
 
-    // 处理 timeline / entries / instructions / modules / item list 等常见结构
-    if (obj) {
-      obj = stripPromo(obj);
-    }
+    obj = stripAdNodes(obj);
 
-    // 额外精确清理常见广告容器
-    const candidatePaths = [
-      ['globalObjects', 'tweets'],
-      ['timeline', 'instructions'],
-      ['data'],
-      ['instructions'],
-      ['entries'],
-      ['modules'],
-      ['items']
-    ];
-
-    for (const path of candidatePaths) {
-      let ref = obj;
-      let ok = true;
-      for (const p of path) {
-        if (!ref || typeof ref !== 'object' || !(p in ref)) {
-          ok = false;
-          break;
+    // 处理常见深层广告容器
+    const deepCandidates = ['entries', 'items', 'modules', 'cards', 'media', 'content', 'timeline', 'instructions', 'data'];
+    const removeDeepAds = (node) => {
+      if (!node || typeof node !== 'object') return node;
+      if (Array.isArray(node)) {
+        for (let i = 0; i < node.length; i++) {
+          node[i] = removeDeepAds(node[i]);
+          if (node[i] && typeof node[i] === 'object' && hasAdMarker(node[i], new WeakSet())) {
+            node.splice(i, 1);
+            i--;
+          }
         }
-        ref = ref[p];
+        return node;
       }
-      if (ok && Array.isArray(ref)) {
-        obj = stripPromo(obj);
+      for (const key of Object.keys(node)) {
+        const v = node[key];
+        if (deepCandidates.includes(key.toLowerCase()) || key.toLowerCase().includes('entry') || key.toLowerCase().includes('item') || key.toLowerCase().includes('module') || key.toLowerCase().includes('card') || key.toLowerCase().includes('media')) {
+          if (v && typeof v === 'object') {
+            node[key] = removeDeepAds(v);
+            if (Array.isArray(node[key])) {
+              node[key] = node[key].filter(item => !hasAdMarker(item, new WeakSet()));
+            }
+          }
+        }
       }
-    }
+      return node;
+    };
+
+    obj = removeDeepAds(obj);
 
     if (obj && obj.globalObjects && obj.globalObjects.tweets && typeof obj.globalObjects.tweets === 'object') {
       for (const key of Object.keys(obj.globalObjects.tweets)) {
         const tweet = obj.globalObjects.tweets[key];
-        if (hasPromoSignal(tweet)) {
-          delete obj.globalObjects.tweets[key];
-        }
+        if (hasAdMarker(tweet, new WeakSet())) delete obj.globalObjects.tweets[key];
       }
     }
 
     if (obj && obj.data && Array.isArray(obj.data)) {
-      obj.data = obj.data.filter(item => !hasPromoSignal(item));
+      obj.data = obj.data.filter(item => !hasAdMarker(item, new WeakSet()));
     }
 
     if (obj && obj.instructions && Array.isArray(obj.instructions)) {
-      obj.instructions = obj.instructions.filter(item => !hasPromoSignal(item));
+      obj.instructions = obj.instructions.filter(item => !hasAdMarker(item, new WeakSet()));
     }
 
     return $done({ body: JSON.stringify(obj) });
