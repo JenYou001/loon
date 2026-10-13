@@ -17,6 +17,7 @@ DOMAIN,gsa.apple.com
 DOMAIN,gsa-gpk.apple.com
 DOMAIN,account.itunes.apple.com
 DOMAIN,init.itunes.apple.com
+DOMAIN,init.gc.apple.com
 DOMAIN,signin.apple.com
 DOMAIN,ids.apple.com
 DOMAIN,apps-marketplace.apple.com
