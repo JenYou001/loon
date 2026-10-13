@@ -4,46 +4,54 @@
     return $done({});
   }
 
-  function hasPromoMarker(value) {
-    if (!value || typeof value !== 'object') return false;
+  function isPromoText(value) {
+    if (typeof value !== 'string') return false;
+    const s = value.toLowerCase();
+    return /(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|campaign|creative|placement|marketing|recommended for you|who to follow|you might like)/i.test(s);
+  }
 
-    const stack = [value];
-    const seen = new WeakSet();
+  function hasPromoSignal(node, visited = new WeakSet()) {
+    if (!node || typeof node !== 'object') return false;
+    if (visited.has(node)) return false;
+    visited.add(node);
 
-    while (stack.length) {
-      const current = stack.pop();
-      if (!current || typeof current !== 'object') continue;
-      if (seen.has(current)) continue;
-      seen.add(current);
-
-      if (Array.isArray(current)) {
-        for (const item of current) stack.push(item);
-        continue;
+    if (Array.isArray(node)) {
+      for (const item of node) {
+        if (hasPromoSignal(item, visited)) return true;
       }
+      return false;
+    }
 
-      for (const [key, val] of Object.entries(current)) {
-        const keyLower = String(key).toLowerCase();
-        if (/(^|_|-)(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|marketing|campaign|placement|creative)/i.test(keyLower)) {
-          return true;
-        }
-        if (typeof val === 'string' && /(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|marketing|campaign|placement|creative)/i.test(val)) {
-          return true;
-        }
-        if (val && typeof val === 'object') stack.push(val);
+    for (const [key, value] of Object.entries(node)) {
+      const keyLower = String(key).toLowerCase();
+      if (/(^|_|-)(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|campaign|creative|placement|marketing|recommendation|recommended)(_|$)/i.test(keyLower)) {
+        return true;
+      }
+      if (isPromoText(value)) {
+        return true;
+      }
+      if (value && typeof value === 'object' && hasPromoSignal(value, visited)) {
+        return true;
       }
     }
 
     return false;
   }
 
-  function filterNode(node) {
+  function stripPromo(node, visited = new WeakSet()) {
     if (!node || typeof node !== 'object') return node;
+    if (visited.has(node)) return node;
+    visited.add(node);
 
     if (Array.isArray(node)) {
       const out = [];
       for (const item of node) {
-        const clean = filterNode(item);
-        if (clean !== undefined && clean !== null && !hasPromoMarker(clean)) {
+        if (!item || typeof item !== 'object') {
+          out.push(item);
+          continue;
+        }
+        const clean = stripPromo(item, visited);
+        if (!hasPromoSignal(clean, new WeakSet())) {
           out.push(clean);
         }
       }
@@ -51,21 +59,26 @@
     }
 
     for (const key of Object.keys(node)) {
-      const keyLower = String(key).toLowerCase();
       const val = node[key];
+      const keyLower = String(key).toLowerCase();
 
-      if (/(^|_|-)(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|marketing|campaign|placement|creative)/i.test(keyLower)) {
+      if (/(^|_|-)(promoted|sponsored|admeta|ad_metadata|native_ad|advertisement|campaign|creative|placement|marketing|recommendation|recommended)(_|$)/i.test(keyLower)) {
         delete node[key];
         continue;
       }
 
       if (val && typeof val === 'object') {
-        const cleaned = filterNode(val);
-        if (hasPromoMarker(cleaned)) {
+        const clean = stripPromo(val, visited);
+        if (hasPromoSignal(clean, new WeakSet())) {
           delete node[key];
-          continue;
+        } else {
+          node[key] = clean;
         }
-        node[key] = cleaned;
+        continue;
+      }
+
+      if (typeof val === 'string' && isPromoText(val)) {
+        delete node[key];
       }
     }
 
@@ -75,25 +88,52 @@
   try {
     let obj = JSON.parse(rawBody);
 
-    if (obj && obj.timeline && obj.timeline.instructions) {
-      obj.timeline.instructions = filterNode(obj.timeline.instructions);
+    // 处理 timeline / entries / instructions / modules / item list 等常见结构
+    if (obj) {
+      obj = stripPromo(obj);
+    }
+
+    // 额外精确清理常见广告容器
+    const candidatePaths = [
+      ['globalObjects', 'tweets'],
+      ['timeline', 'instructions'],
+      ['data'],
+      ['instructions'],
+      ['entries'],
+      ['modules'],
+      ['items']
+    ];
+
+    for (const path of candidatePaths) {
+      let ref = obj;
+      let ok = true;
+      for (const p of path) {
+        if (!ref || typeof ref !== 'object' || !(p in ref)) {
+          ok = false;
+          break;
+        }
+        ref = ref[p];
+      }
+      if (ok && Array.isArray(ref)) {
+        obj = stripPromo(obj);
+      }
     }
 
     if (obj && obj.globalObjects && obj.globalObjects.tweets && typeof obj.globalObjects.tweets === 'object') {
       for (const key of Object.keys(obj.globalObjects.tweets)) {
         const tweet = obj.globalObjects.tweets[key];
-        if (hasPromoMarker(tweet)) {
+        if (hasPromoSignal(tweet)) {
           delete obj.globalObjects.tweets[key];
         }
       }
     }
 
-    if (obj && Array.isArray(obj.data)) {
-      obj.data = obj.data.filter(item => !hasPromoMarker(item));
+    if (obj && obj.data && Array.isArray(obj.data)) {
+      obj.data = obj.data.filter(item => !hasPromoSignal(item));
     }
 
-    if (obj && Array.isArray(obj.instructions)) {
-      obj.instructions = filterNode(obj.instructions);
+    if (obj && obj.instructions && Array.isArray(obj.instructions)) {
+      obj.instructions = obj.instructions.filter(item => !hasPromoSignal(item));
     }
 
     return $done({ body: JSON.stringify(obj) });
