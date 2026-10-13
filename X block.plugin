@@ -1,5 +1,5 @@
-#!name=X App Adblock - Reference Based
-#!desc=参考 fmz200 / CleanYourTwitter / Twitter Ad Hider 的公开思路，针对 X/Twitter 原生 App 的广告对象做过滤（MITM required）
+#!name=X App Adblock - Module Remove
+#!desc=移除 X/Twitter 首页和详情页的广告模块，参考公开脚本思路，保留正常内容（MITM required）
 #!author=GitHub Copilot
 #!homepage=https://github.com/JenYou001/loon
 
