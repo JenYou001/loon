@@ -46,7 +46,6 @@ DOMAIN,find.icloud.com
 DOMAIN,backup.icloud.com
 
 DOMAIN,appldnld.apple.com
-DOMAIN,appldnld.apple.com.edgesuite.net
 DOMAIN,configuration.apple.com
 DOMAIN,gdmf.apple.com
 DOMAIN,gdmf-ados.apple.com
@@ -101,9 +100,6 @@ DOMAIN,securemetrics.apple.com
 DOMAIN,guzzoni.apple.com
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN,apple-relay.apple.com
-DOMAIN,apple-relay.cloudflare.com
-DOMAIN,apple-relay.fastly-edge.com
-DOMAIN,cp4.cloudflare.com
 
 DOMAIN,maps.apple.com
 DOMAIN,mapkit-cdn.apple.com
