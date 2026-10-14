@@ -108,7 +108,7 @@ DOMAIN-SUFFIX,ls.apple.com
 DOMAIN,iphone-ld.apple.com
 
 DOMAIN,app-site-association.cdn-apple.com
-DOMAIN,app-site-association.networking.apple.com
+DOMAIN,app-site-association.networking.apple
 DOMAIN,token.safebrowsing.apple.com
 DOMAIN,doh.dns.apple.com
 
