@@ -25,8 +25,8 @@ DOMAIN,apps-marketplace.apple.com
 
 DOMAIN,swallow.apple.com
 DOMAIN,cl3.apple.com
-DOMAIN-SUFFIX,weatherkit.apple.com
-DOMAIN-SUFFIX,weather-edge.apple.com
+DOMAIN,weatherkit.apple.com
+DOMAIN,weather-edge.apple.com
 
 DOMAIN,api.push.apple.com
 DOMAIN-SUFFIX,push.apple.com
