@@ -175,10 +175,6 @@ DOMAIN-SUFFIX,dnsforfamily.com,REJECT
 DOMAIN-SUFFIX,dns.sb,REJECT
 DOMAIN-SUFFIX,dnswarden.com,REJECT
 
-# ----------------------- 严格微信整域（如果你发现微信异常，可注释掉） -----------------------
-DOMAIN,short.weixin.qq.com,REJECT
-DOMAIN,hkextshort.weixin.qq.com,REJECT
-
 [Url Rewrite]
 # HTTP 路径：基础 HTTPDNS / DoH 请求拦截
 ^http:\/\/119\.29\.29\.29\/d reject
@@ -219,6 +215,3 @@ DOMAIN,hkextshort.weixin.qq.com,REJECT
 
 # Alipay HTTPDNS：返回空 JSON（仅在需要时启用 MITM）
 ^https?:\/\/amdc\.alipay\.com\/query mock-response-body data-type=json data="{}" status-code=200
-
-[Mitm]
-hostname = amdc.alipay.com
