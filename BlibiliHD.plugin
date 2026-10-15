@@ -1,5 +1,5 @@
 #!name = 哔哩哔哩｜去广告与防追踪
-#!desc = 精简版：过滤部分广告与推广，并拦截指定 STUN/P2P 域名
+#!desc = 过滤部分广告与推广，并拦截指定 STUN/P2P 域名
 #!author = TomCatXue
 #!homepage = https://github.com/TomCatXue/MyCookieCenter
 
