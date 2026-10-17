@@ -116,11 +116,6 @@ DOMAIN-SUFFIX,telegram-cdn.org
 DOMAIN-SUFFIX,cdn-telegram.org
 DOMAIN-SUFFIX,telegram.space
 DOMAIN-SUFFIX,telegramdownload.com
-DOMAIN-SUFFIX,stel.com
-DOMAIN-SUFFIX,comments.app
-DOMAIN-SUFFIX,contest.com
-DOMAIN-SUFFIX,tg.dev
-DOMAIN-SUFFIX,usercontent.dev
 
 # Telegram IPv4
 IP-CIDR,91.105.192.0/23,no-resolve
