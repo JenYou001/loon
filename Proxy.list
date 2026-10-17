@@ -136,19 +136,13 @@ IP-CIDR,185.76.151.0/24,no-resolve
 # X / Twitter / Grok
 DOMAIN-SUFFIX,x.com
 DOMAIN-SUFFIX,twitter.com
-DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twimg.co
 DOMAIN-SUFFIX,twimg.org
 DOMAIN-SUFFIX,twvid.com
 DOMAIN-SUFFIX,twttr.com
 DOMAIN-SUFFIX,twttr.net
-DOMAIN-SUFFIX,twtrdns.net
 DOMAIN-SUFFIX,tweetdeck.com
-DOMAIN-SUFFIX,pscp.tv
-DOMAIN-SUFFIX,periscope.tv
-DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,x.ai
 
 # GitHub
 DOMAIN-SUFFIX,github.com
@@ -169,6 +163,13 @@ DOMAIN-SUFFIX,oraclecloud.com
 DOMAIN-SUFFIX,oracleimg.com
 DOMAIN-SUFFIX,oraclefoundation.org
 DOMAIN-SUFFIX,ateam-oracle.com
-DOMAIN-SUFFIX,java.com
-DOMAIN-SUFFIX,java.net
-DOMAIN-SUFFIX,sun.com
+
+# Reddit
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redditstatic.com
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,redditspace.com
+DOMAIN-SUFFIX,reddit.app.link
+DOMAIN-SUFFIX,redditinc.com
+DOMAIN-SUFFIX,reddithelp.com
