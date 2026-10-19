@@ -9,6 +9,10 @@ DOMAIN-SUFFIX,biliapi.com
 # ========== 高德 ==========
 DOMAIN-SUFFIX,autonavi.com
 
+# ========== 京东 ==========
+DOMAIN-SUFFIX,jd.com
+DOMAIN-SUFFIX,360buy.com   
+
 # ========== 微信 ==========
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
