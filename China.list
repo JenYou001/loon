@@ -72,3 +72,15 @@ DOMAIN-SUFFIX,qm989.com
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
 DOMAIN-SUFFIX,duolingo.cn
+
+# ========== 闲鱼 ==========
+DOMAIN-SUFFIX,goofish.com
+DOMAIN-SUFFIX,2.taobao.com
+DOMAIN-SUFFIX,alicdn.com
+DOMAIN-SUFFIX,aliyuncs.com
+DOMAIN-SUFFIX,alibaba.com
+DOMAIN,amdc.m.taobao.com
+DOMAIN,aid.m.taobao.com
+DOMAIN,api.2.taobao.com
+DOMAIN,mobilegw.alipay.com
+DOMAIN,tls-goofish.dingtalk.com
