@@ -36,6 +36,12 @@ DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,wx.gtimg.com
 DOMAIN-SUFFIX,wxapp.tc.qq.com
 
+# ========== 波点音乐 ==========
+y.qq.com
+p2ptun.qq.com
+qqmusic.qq.com
+music.tc.qq.com
+
 # ========== 滴滴出行 ==========
 DOMAIN-SUFFIX,didichuxing.com
 DOMAIN-SUFFIX,didiglobal.com
