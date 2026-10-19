@@ -11,7 +11,9 @@ DOMAIN-SUFFIX,autonavi.com
 
 # ========== 京东 ==========
 DOMAIN-SUFFIX,jd.com
-DOMAIN-SUFFIX,360buy.com   
+DOMAIN-SUFFIX,360buy.com
+DOMAIN-SUFFIX,360buyimg.com
+DOMAIN-SUFFIX,jdcdn.com   
 
 # ========== 微信 ==========
 DOMAIN-SUFFIX,weixin.qq.com
@@ -60,6 +62,7 @@ DOMAIN-SUFFIX,duolingo.com
 DOMAIN-SUFFIX,goofish.com
 DOMAIN-SUFFIX,2.taobao.com
 DOMAIN-SUFFIX,alicdn.com
+DOMAIN,acs.m.taobao.com
 DOMAIN,amdc.m.taobao.com
 DOMAIN,aid.m.taobao.com
 DOMAIN,api.2.taobao.com
