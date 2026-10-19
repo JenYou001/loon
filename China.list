@@ -12,26 +12,12 @@ DOMAIN-SUFFIX,autonavi.com
 # ========== 京东 ==========
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,jd.cn
-DOMAIN-SUFFIX,jd.com.cn
-DOMAIN-SUFFIX,360buy.com
-DOMAIN-SUFFIX,360buy.cn
-DOMAIN-SUFFIX,360buyimg.com
-DOMAIN-SUFFIX,jingdong.com
-DOMAIN-SUFFIX,jd.hk
-DOMAIN-SUFFIX,jd.id
-DOMAIN-SUFFIX,jd.ru
-DOMAIN-SUFFIX,jd.shop
-DOMAIN-SUFFIX,jd.co.th
-DOMAIN-SUFFIX,jdl.cn
-DOMAIN-SUFFIX,jdl.com
-DOMAIN-SUFFIX,jdwl.com
-DOMAIN-SUFFIX,jdpay.com
-DOMAIN-SUFFIX,jdcdn.com
-DOMAIN-SUFFIX,jdcache.com
-DOMAIN-SUFFIX,jdcloud.com
-DOMAIN-SUFFIX,paipai.com
 DOMAIN-SUFFIX,3.cn
-DOMAIN-SUFFIX,jdx.com
+DOMAIN-SUFFIX,360buy.com
+DOMAIN-SUFFIX,300hu.com
+DOMAIN-SUFFIX,jcloud-cdn.com
+DOMAIN-SUFFIX,cloud-scdn.com
+DOMAIN-SUFFIX,jdcache.com
 
 # ========== 微信 ==========
 DOMAIN-SUFFIX,weixin.qq.com
