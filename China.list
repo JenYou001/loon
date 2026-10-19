@@ -15,9 +15,11 @@ DOMAIN-SUFFIX,jd.cn
 DOMAIN-SUFFIX,3.cn
 DOMAIN-SUFFIX,360buy.com
 DOMAIN-SUFFIX,300hu.com
-DOMAIN-SUFFIX,jcloud-cdn.com
-DOMAIN-SUFFIX,cloud-scdn.com
-DOMAIN-SUFFIX,jdcache.com
+DOMAIN-SUFFIX,360buy.cn
+DOMAIN-SUFFIX,360buy.com.cn
+DOMAIN-SUFFIX,360buyimg.com
+
+
 
 # ========== 微信 ==========
 DOMAIN-SUFFIX,weixin.qq.com
