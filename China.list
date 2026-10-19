@@ -19,8 +19,6 @@ DOMAIN-SUFFIX,360buy.cn
 DOMAIN-SUFFIX,360buy.com.cn
 DOMAIN-SUFFIX,360buyimg.com
 
-
-
 # ========== 微信 ==========
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
@@ -68,6 +66,7 @@ DOMAIN-SUFFIX,duolingo.com
 DOMAIN-SUFFIX,goofish.com
 DOMAIN-SUFFIX,2.taobao.com
 DOMAIN-SUFFIX,alicdn.com
+DOMAIN-SUFFIX,alibabachengdun.net
 DOMAIN,acs.m.taobao.com
 DOMAIN,amdc.m.taobao.com
 DOMAIN,aid.m.taobao.com
