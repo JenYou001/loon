@@ -8,18 +8,23 @@ DOMAIN-SUFFIX,acgvideo.com
 DOMAIN-SUFFIX,b23.tv
 DOMAIN-SUFFIX,biliapi.com
 
+# ========== 高德 ==========
+DOMAIN-SUFFIX,autonavi.com
+
 # ========== 微信 ==========
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
+DOMAIN-SUFFIX,wxs.qq.com
 DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,servicewechat.com
+DOMAIN-SUFFIX,servicewechat.net
 DOMAIN-SUFFIX,tenpay.com
-DOMAIN-SUFFIX,wxs.qq.com
 DOMAIN-SUFFIX,wechatpay.com
 DOMAIN-SUFFIX,weixinbridge.com
-DOMAIN-SUFFIX,wechatos.net
-DOMAIN-SUFFIX,wechatlegal.net
+DOMAIN-SUFFIX,weixinsxy.com
+DOMAIN-SUFFIX,qpic.cn
+DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,wx.gtimg.com
 DOMAIN-SUFFIX,wxapp.tc.qq.com
 
@@ -29,20 +34,13 @@ DOMAIN-SUFFIX,didiglobal.com
 DOMAIN-SUFFIX,didistatic.com
 DOMAIN-SUFFIX,udache.com
 DOMAIN-SUFFIX,xiaojukeji.com
-DOMAIN-SUFFIX,didi.cn
 DOMAIN-SUFFIX,diditaxi.com
 DOMAIN-SUFFIX,diditaxi.com.cn
-DOMAIN-SUFFIX,didiyun.com
-DOMAIN-SUFFIX,didiyun.org
-DOMAIN-SUFFIX,didiyunapi.com
-DOMAIN-SUFFIX,didiopenapi.com
-DOMAIN-SUFFIX,didimobility.com
 
 # ========== 拼多多 ==========
-DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pinduoduo.com
-DOMAIN-SUFFIX,pinduoduo.net
-DOMAIN-SUFFIX,yangkeduo.com
+DOMAIN-SUFFIX,pddpic.com
+DOMAIN-SUFFIX,pddugc.com
 
 # ========== BOSS直聘 ==========
 DOMAIN-SUFFIX,zhipin.com
@@ -51,20 +49,18 @@ DOMAIN-SUFFIX,bosszhipin.com
 # ========== 七猫小说 ==========
 DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
-DOMAIN-SUFFIX,qm989.com
+DOMAIN-SUFFIX,zongheng.com
 
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
-DOMAIN-SUFFIX,duolingo.cn
 
 # ========== 闲鱼 ==========
 DOMAIN-SUFFIX,goofish.com
 DOMAIN-SUFFIX,2.taobao.com
 DOMAIN-SUFFIX,alicdn.com
-DOMAIN-SUFFIX,aliyuncs.com
-DOMAIN-SUFFIX,alibaba.com
 DOMAIN,amdc.m.taobao.com
 DOMAIN,aid.m.taobao.com
 DOMAIN,api.2.taobao.com
 DOMAIN,mobilegw.alipay.com
 DOMAIN,tls-goofish.dingtalk.com
+DOMAIN,sealine.youku.com
