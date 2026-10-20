@@ -119,6 +119,7 @@ DOMAIN-SUFFIX,tbcache.com
 
 # ========== 闲鱼 ==========
 DOMAIN-SUFFIX,goofish.com
+DOMAIN-SUFFIX,tls-goofish.dingtalk.com
 DOMAIN-SUFFIX,acs.m.goofish.com
 DOMAIN-SUFFIX,g-acs.m.goofish.com
 DOMAIN-SUFFIX,api.2.taobao.com
