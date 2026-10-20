@@ -5,9 +5,21 @@ DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,acgvideo.com
 DOMAIN-SUFFIX,biliapi.com
+DOMAIN-SUFFIX,b23.tv
+DOMAIN-SUFFIX,acg.tv
+DOMAIN-SUFFIX,bilibili.tv
+DOMAIN-SUFFIX,bilibili.net
+DOMAIN-SUFFIX,biliimg.com
+DOMAIN-SUFFIX,bilicdn1.com
+DOMAIN-SUFFIX,bilicdn2.com
+DOMAIN-SUFFIX,bilicdn3.com
+DOMAIN-SUFFIX,bilicdn4.com
+DOMAIN-SUFFIX,bilicdn5.com
+DOMAIN-SUFFIX,hdslb.net
 
 # ========== 高德 ==========
 DOMAIN-SUFFIX,autonavi.com
+DOMAIN-SUFFIX,amap.com
 
 # ========== 京东 ==========
 DOMAIN-SUFFIX,jd.com
@@ -29,18 +41,18 @@ DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,servicewechat.net
 DOMAIN-SUFFIX,tenpay.com
 DOMAIN-SUFFIX,wechatpay.com
+DOMAIN-SUFFIX,wechatpay.cn
 DOMAIN-SUFFIX,weixinbridge.com
-DOMAIN-SUFFIX,weixinsxy.com
 DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,wx.gtimg.com
 DOMAIN-SUFFIX,wxapp.tc.qq.com
 
-# ========== 波点音乐 ==========
-y.qq.com
-p2ptun.qq.com
-qqmusic.qq.com
-music.tc.qq.com
+# ========== QQ波点音乐 ==========
+DOMAIN-SUFFIX,y.qq.com
+DOMAIN-SUFFIX,p2ptun.qq.com
+DOMAIN-SUFFIX,qqmusic.qq.com
+DOMAIN-SUFFIX,music.tc.qq.com
 
 # ========== 滴滴出行 ==========
 DOMAIN-SUFFIX,didichuxing.com
@@ -53,6 +65,7 @@ DOMAIN-SUFFIX,diditaxi.com.cn
 
 # ========== 拼多多 ==========
 DOMAIN-SUFFIX,pinduoduo.com
+DOMAIN-SUFFIX,yangkeduo.com
 DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pddugc.com
 
@@ -63,26 +76,25 @@ DOMAIN-SUFFIX,bosszhipin.com
 # ========== 七猫小说 ==========
 DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
-DOMAIN-SUFFIX,zongheng.com
 
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
 
-# 阿里公共资源
+# ========== 阿里公共资源 ==========
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,alipayobjects.com
 
-# 支付宝
+# ========== 支付宝 ==========
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipay.com.cn
 DOMAIN-SUFFIX,alipay.hk
 
-# 淘宝
+# ========== 淘宝 ==========
 DOMAIN-SUFFIX,taobao.com
 DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,tmall.hk
 DOMAIN-SUFFIX,tb.cn
 DOMAIN-SUFFIX,tbcache.com
 
-# 闲鱼
+# ========== 闲鱼 ==========
 DOMAIN-SUFFIX,goofish.com
