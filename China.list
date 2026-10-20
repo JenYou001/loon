@@ -1,23 +1,35 @@
 # ========== Bilibili ==========
 DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,bilibili.cn
+DOMAIN-SUFFIX,bilibili.cc
+DOMAIN-SUFFIX,bilibili.net
+DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,biliapi.net
-DOMAIN-SUFFIX,hdslb.com
-DOMAIN-SUFFIX,bilivideo.com
-DOMAIN-SUFFIX,acgvideo.com
 DOMAIN-SUFFIX,biliapi.com
+DOMAIN-SUFFIX,hdslb.com
+DOMAIN-SUFFIX,hdslb.net
+DOMAIN-SUFFIX,bilivideo.com
+DOMAIN-SUFFIX,bilivideo.cn
+DOMAIN-SUFFIX,acgvideo.com
 DOMAIN-SUFFIX,b23.tv
 DOMAIN-SUFFIX,acg.tv
-DOMAIN-SUFFIX,bilibili.tv
-DOMAIN-SUFFIX,bilibili.net
 DOMAIN-SUFFIX,biliimg.com
 DOMAIN-SUFFIX,bilicdn1.com
 DOMAIN-SUFFIX,bilicdn2.com
 DOMAIN-SUFFIX,bilicdn3.com
 DOMAIN-SUFFIX,bilicdn4.com
 DOMAIN-SUFFIX,bilicdn5.com
-DOMAIN-SUFFIX,hdslb.net
+DOMAIN-SUFFIX,bili22.cn
+DOMAIN-SUFFIX,bili2233.cn
+DOMAIN-SUFFIX,bili23.cn
+DOMAIN-SUFFIX,bili33.cn
+DOMAIN-SUFFIX,biligame.com
+DOMAIN-SUFFIX,biligame.cn
+DOMAIN-SUFFIX,biligame.net
+DOMAIN-SUFFIX,bilicomic.com
+DOMAIN-SUFFIX,bilicomics.com
 
-# ========== 高德 ==========
+# ========== 高德地图 ==========
 DOMAIN-SUFFIX,autonavi.com
 DOMAIN-SUFFIX,amap.com
 
@@ -31,7 +43,7 @@ DOMAIN-SUFFIX,360buy.cn
 DOMAIN-SUFFIX,360buy.com.cn
 DOMAIN-SUFFIX,360buyimg.com
 
-# ========== 微信 ==========
+# ========== 微信 / 微信支付 ==========
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
 DOMAIN-SUFFIX,wxs.qq.com
@@ -47,8 +59,17 @@ DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,wx.gtimg.com
 DOMAIN-SUFFIX,wxapp.tc.qq.com
+DOMAIN-SUFFIX,iot-tencent.com
+DOMAIN-SUFFIX,lbs.gtimg.com
+DOMAIN-SUFFIX,map.qq.com
+DOMAIN-SUFFIX,wechatlegal.net
+DOMAIN-SUFFIX,wechatos.net
+DOMAIN-SUFFIX,weixinsxy.com
+DOMAIN-SUFFIX,vweixinthumb.tc.qq.com
+DOMAIN-SUFFIX,up-hl.3g.qq.com
+DOMAIN-SUFFIX,yun-hl.3g.qq.com
 
-# ========== QQ波点音乐 ==========
+# ========== QQ音乐 ==========
 DOMAIN-SUFFIX,y.qq.com
 DOMAIN-SUFFIX,p2ptun.qq.com
 DOMAIN-SUFFIX,qqmusic.qq.com
@@ -80,7 +101,7 @@ DOMAIN-SUFFIX,wtzw.com
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
 
-# ========== 阿里公共资源 ==========
+# ========== 阿里系业务资源 ==========
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,alipayobjects.com
 
@@ -89,7 +110,7 @@ DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipay.com.cn
 DOMAIN-SUFFIX,alipay.hk
 
-# ========== 淘宝 ==========
+# ========== 淘宝 / 天猫 ==========
 DOMAIN-SUFFIX,taobao.com
 DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,tmall.hk
@@ -98,3 +119,9 @@ DOMAIN-SUFFIX,tbcache.com
 
 # ========== 闲鱼 ==========
 DOMAIN-SUFFIX,goofish.com
+DOMAIN-SUFFIX,acs.m.goofish.com
+DOMAIN-SUFFIX,g-acs.m.goofish.com
+DOMAIN-SUFFIX,api.2.taobao.com
+DOMAIN-SUFFIX,gw.alicdn.com
+DOMAIN-SUFFIX,ossgw.alicdn.com
+DOMAIN-SUFFIX,img.alicdn.com
