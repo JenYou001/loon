@@ -68,43 +68,21 @@ DOMAIN-SUFFIX,zongheng.com
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
 
+# 阿里公共资源
+DOMAIN-SUFFIX,alicdn.com
+DOMAIN-SUFFIX,alipayobjects.com
+
 # 支付宝
 DOMAIN-SUFFIX,alipay.com
+DOMAIN-SUFFIX,alipay.com.cn
 DOMAIN-SUFFIX,alipay.hk
-DOMAIN-SUFFIX,alipaydns.com
-DOMAIN-SUFFIX,alipaylog.com
-DOMAIN-SUFFIX,alipaymo.com
-DOMAIN-SUFFIX,alipayobjects.com
-DOMAIN-SUFFIX,alipayplus.com
 
 # 淘宝
 DOMAIN-SUFFIX,taobao.com
 DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,tmall.hk
 DOMAIN-SUFFIX,tb.cn
-DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,tbcache.com
 
 # 闲鱼
 DOMAIN-SUFFIX,goofish.com
-DOMAIN,alivc-aio.cn-hangzhou.log.aliyuncs.com
-DOMAIN,amdc.m.taobao.com
-DOMAIN,orange-dc.alibaba.com
-DOMAIN,umc.danuoyi.alicdn.com
-DOMAIN,aid.m.taobao.com
-DOMAIN,dorangesource.alicdn.com
-DOMAIN,tls-goofish.dingtalk.com
-DOMAIN,yixiu-abtest.alicdn.com
-DOMAIN,mobilegw.alipay.com
-DOMAIN,alilang-intranet.alibaba-inc.com
-DOMAIN,abtest.alibaba.com
-DOMAIN,video-sdk-cert-cdn.aliyuncs.com
-DOMAIN,gw.alicdn.com
-DOMAIN,ossgw.alicdn.com
-DOMAIN,img.alicdn.com
-DOMAIN,sisrole.alicdn.com
-DOMAIN,sealine.youku.com
-DOMAIN,vpp-license-proxy.aliyuncs.com
-DOMAIN,cloud-config-service.rtc.aliyuncs.com
-DOMAIN,api.2.taobao.com
-DOMAIN,ifs.tanx.com
