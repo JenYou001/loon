@@ -38,12 +38,17 @@ DOMAIN-SUFFIX,amap.com
 # ========== 京东 ==========
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,jd.cn
-DOMAIN,3.cn
+DOMAIN-SUFFIX,jd.hk
 DOMAIN-SUFFIX,360buy.com
 DOMAIN-SUFFIX,300hu.com
 DOMAIN-SUFFIX,360buy.cn
 DOMAIN-SUFFIX,360buy.com.cn
 DOMAIN-SUFFIX,360buyimg.com
+DOMAIN-SUFFIX,jcloudcs.com
+DOMAIN-SUFFIX,jdcloud.com
+DOMAIN-SUFFIX,jdpay.com
+DOMAIN-SUFFIX,paipai.com
+DOMAIN,3.cn
 
 # ========== 微信 / 微信支付 ==========
 DOMAIN-SUFFIX,weixin.qq.com
