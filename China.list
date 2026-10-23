@@ -107,8 +107,15 @@ DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
 
-# ========== 多邻国 ==========
+# ========== 多邻国 - Direct方案 ==========
 DOMAIN-SUFFIX,duolingo.com
+DOMAIN-SUFFIX,duolingo.cn
+DOMAIN,api.duolingo.com
+DOMAIN,d2.duolingo.com
+DOMAIN,staticcdn.duolingo.com
+DOMAIN,stories-cdn.duolingo.com
+DOMAIN,simg-ssl.duolingo.com
+DOMAIN,d2gn8s6bxkgx37.cloudfront.net
 
 # ========== 阿里系业务资源 ==========
 DOMAIN-SUFFIX,alicdn.com
@@ -116,6 +123,7 @@ DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,alibabausercontent.com
 DOMAIN-SUFFIX,mcdn.aliyun.com
 DOMAIN-SUFFIX,gcsstatic.com
+DOMAIN-SUFFIX,kunlungr.com
 
 # ========== 支付宝 ==========
 DOMAIN-SUFFIX,alipay.com
