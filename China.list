@@ -66,7 +66,6 @@ DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,wx.gtimg.com
 DOMAIN-SUFFIX,wxapp.tc.qq.com
-DOMAIN-SUFFIX,iot-tencent.com
 DOMAIN-SUFFIX,lbs.gtimg.com
 DOMAIN-SUFFIX,map.qq.com
 DOMAIN-SUFFIX,wechatlegal.net
@@ -115,12 +114,6 @@ DOMAIN-SUFFIX,wtzw.com
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
 DOMAIN-SUFFIX,duolingo.cn
-DOMAIN,api.duolingo.com
-DOMAIN,d2.duolingo.com
-DOMAIN,staticcdn.duolingo.com
-DOMAIN,stories-cdn.duolingo.com
-DOMAIN,simg-ssl.duolingo.com
-DOMAIN,d2gn8s6bxkgx37.cloudfront.net
 
 # ========== 阿里系业务资源 ==========
 DOMAIN-SUFFIX,alicdn.com
@@ -128,16 +121,13 @@ DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,alibabausercontent.com
 DOMAIN-SUFFIX,mcdn.aliyun.com
 DOMAIN-SUFFIX,gcsstatic.com
-DOMAIN-SUFFIX,kunlungr.com
-DOMAIN-SUFFIX,alibabachengdun.net:443
+DOMAIN-SUFFIX,alibabachengdun.net
 
 # ========== 支付宝 ==========
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipay.com.cn
 DOMAIN-SUFFIX,alipay.hk
-DOMAIN-SUFFIX,ant.com
 DOMAIN-SUFFIX,antfin.com
-DOMAIN-SUFFIX,alipaydev.com
 
 # ========== 淘宝 / 天猫 ==========
 DOMAIN-SUFFIX,taobao.com
@@ -153,7 +143,6 @@ DOMAIN-SUFFIX,tmallimg.com
 DOMAIN-SUFFIX,goofish.com
 DOMAIN,tls-goofish.dingtalk.com
 DOMAIN-SUFFIX,mtopupload.com
-DOMAIN-SUFFIX,ossgw.alicdn.com
 
 # ========== 转转 ==========
 DOMAIN-SUFFIX,zhuanzhuan.com
