@@ -1,6 +1,8 @@
 # ========== Bilibili ==========
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,bilibili.cn
+DOMAIN-SUFFIX,bilibili.tv
+DOMAIN-SUFFIX,bilibili.net
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,hdslb.com
@@ -25,6 +27,9 @@ DOMAIN-SUFFIX,biligame.cn
 DOMAIN-SUFFIX,biligame.net
 DOMAIN-SUFFIX,bilicomic.com
 DOMAIN-SUFFIX,bilicomics.com
+DOMAIN-SUFFIX,bilibilipay.com
+DOMAIN-SUFFIX,bilibilipay.cn
+DOMAIN-SUFFIX,biliintl.com
 
 # ========== 高德地图 ==========
 DOMAIN-SUFFIX,autonavi.com
@@ -33,7 +38,7 @@ DOMAIN-SUFFIX,amap.com
 # ========== 京东 ==========
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,jd.cn
-DOMAIN-SUFFIX,3.cn
+DOMAIN,3.cn
 DOMAIN-SUFFIX,360buy.com
 DOMAIN-SUFFIX,300hu.com
 DOMAIN-SUFFIX,360buy.cn
@@ -65,12 +70,18 @@ DOMAIN-SUFFIX,weixinsxy.com
 DOMAIN-SUFFIX,vweixinthumb.tc.qq.com
 DOMAIN-SUFFIX,up-hl.3g.qq.com
 DOMAIN-SUFFIX,yun-hl.3g.qq.com
+DOMAIN,wxgateway.com
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
+DOMAIN,dldir1.qq.com
+DOMAIN,wup.imtt.qq.com
 
 # ========== QQ音乐 ==========
-DOMAIN-SUFFIX,y.qq.com
+DOMAIN,y.qq.com
 DOMAIN-SUFFIX,p2ptun.qq.com
 DOMAIN-SUFFIX,qqmusic.qq.com
 DOMAIN-SUFFIX,music.tc.qq.com
+DOMAIN-SUFFIX,qmusic.tc.qq.com
+DOMAIN-SUFFIX,imgcache.qq.com
 
 # ========== 滴滴出行 ==========
 DOMAIN-SUFFIX,didichuxing.com
@@ -110,17 +121,25 @@ DOMAIN-SUFFIX,gcsstatic.com
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipay.com.cn
 DOMAIN-SUFFIX,alipay.hk
+DOMAIN-SUFFIX,ant.com
+DOMAIN-SUFFIX,antfin.com
+DOMAIN-SUFFIX,alipaydev.com
 
 # ========== 淘宝 / 天猫 ==========
 DOMAIN-SUFFIX,taobao.com
+DOMAIN-SUFFIX,taobao.com.cn
 DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,tmall.hk
 DOMAIN-SUFFIX,tb.cn
 DOMAIN-SUFFIX,tbcache.com
+DOMAIN-SUFFIX,tbimg.com
+DOMAIN-SUFFIX,tmallimg.com
 
 # ========== 闲鱼 ==========
 DOMAIN-SUFFIX,goofish.com
 DOMAIN,tls-goofish.dingtalk.com
+DOMAIN-SUFFIX,mtopupload.com
+DOMAIN-SUFFIX,ossgw.alicdn.com
 
 # ========== 转转 ==========
 DOMAIN-SUFFIX,zhuanzhuan.com
@@ -140,4 +159,4 @@ DOMAIN-SUFFIX,58res.com
 DOMAIN-SUFFIX,58store.com
 DOMAIN-SUFFIX,58tong.com
 DOMAIN-SUFFIX,58w.com
-DOMAIN-SUFFIX,58xiaoju.com   
+DOMAIN-SUFFIX,58xiaoju.com
