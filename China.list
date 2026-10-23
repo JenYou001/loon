@@ -107,7 +107,7 @@ DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
 
-# ========== 多邻国 - Direct方案 ==========
+# ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
 DOMAIN-SUFFIX,duolingo.cn
 DOMAIN,api.duolingo.com
