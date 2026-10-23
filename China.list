@@ -127,3 +127,19 @@ DOMAIN-SUFFIX,api.2.taobao.com
 DOMAIN-SUFFIX,gw.alicdn.com
 DOMAIN-SUFFIX,ossgw.alicdn.com
 DOMAIN-SUFFIX,img.alicdn.com
+
+# ========== 转转 ==========
+DOMAIN-SUFFIX,zhuanzhuan.com,DIRECT
+DOMAIN-SUFFIX,zhuan-zhuan.cn,DIRECT
+DOMAIN-SUFFIX,zhuanspirit.com,DIRECT
+DOMAIN-SUFFIX,zhuancorp.com,DIRECT
+
+# ========== 58同城系 ==========
+DOMAIN-SUFFIX,58.com,DIRECT
+DOMAIN-SUFFIX,58cdn.com,DIRECT
+DOMAIN-SUFFIX,58img.com,DIRECT
+DOMAIN-SUFFIX,58res.com,DIRECT
+DOMAIN-SUFFIX,58store.com,DIRECT
+DOMAIN-SUFFIX,58tong.com,DIRECT
+DOMAIN-SUFFIX,58w.com,DIRECT
+DOMAIN-SUFFIX,58xiaoju.com,DIRECT   
