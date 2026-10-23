@@ -102,6 +102,9 @@ DOMAIN-SUFFIX,duolingo.com
 # ========== 阿里系业务资源 ==========
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,alipayobjects.com
+DOMAIN-SUFFIX,alibabausercontent.com
+DOMAIN-SUFFIX,mcdn.aliyun.com
+DOMAIN-SUFFIX,gcsstatic.com
 
 # ========== 支付宝 ==========
 DOMAIN-SUFFIX,alipay.com
