@@ -1,9 +1,6 @@
 # ========== Bilibili ==========
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,bilibili.cn
-DOMAIN-SUFFIX,bilibili.cc
-DOMAIN-SUFFIX,bilibili.net
-DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,hdslb.com
@@ -120,13 +117,7 @@ DOMAIN-SUFFIX,tbcache.com
 
 # ========== 闲鱼 ==========
 DOMAIN-SUFFIX,goofish.com
-DOMAIN-SUFFIX,tls-goofish.dingtalk.com
-DOMAIN-SUFFIX,acs.m.goofish.com
-DOMAIN-SUFFIX,g-acs.m.goofish.com
-DOMAIN-SUFFIX,api.2.taobao.com
-DOMAIN-SUFFIX,gw.alicdn.com
-DOMAIN-SUFFIX,ossgw.alicdn.com
-DOMAIN-SUFFIX,img.alicdn.com
+DOMAIN,tls-goofish.dingtalk.com
 
 # ========== 转转 ==========
 DOMAIN-SUFFIX,zhuanzhuan.com
@@ -136,10 +127,11 @@ DOMAIN-SUFFIX,zhuancorp.com
 
 # ========== 58同城系 ==========
 DOMAIN-SUFFIX,58.com
-DOMAIN-SUFFIX,58cdn.com
+DOMAIN-SUFFIX,58.com.cn
+DOMAIN-SUFFIX,58cdn.com.cn
 DOMAIN-SUFFIX,58img.com
 DOMAIN-SUFFIX,58res.com
 DOMAIN-SUFFIX,58store.com
 DOMAIN-SUFFIX,58tong.com
 DOMAIN-SUFFIX,58w.com
-DOMAIN-SUFFIX,58xiaoju.com
+DOMAIN-SUFFIX,58xiaoju.com   
