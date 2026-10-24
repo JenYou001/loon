@@ -105,6 +105,12 @@ DOMAIN-SUFFIX,pddugc.com
 # ========== BOSS直聘 ==========
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,bosszhipin.com
+DOMAIN-SUFFIX,bosszhipin.cn
+DOMAIN-SUFFIX,bosszhipin.com.cn
+DOMAIN-SUFFIX,bosszp.cn
+DOMAIN-SUFFIX,weizhipin.com
+DOMAIN-SUFFIX,dianzhangzhipin.com
+DOMAIN,fenzhi.com   
 
 # ========== 七猫小说 ==========
 DOMAIN-SUFFIX,qimao.com
