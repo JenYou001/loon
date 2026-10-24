@@ -103,6 +103,7 @@ DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pddugc.com
 
 # ========== BOSS直聘 ==========
+# BOSS直聘
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,bosszhipin.cn
@@ -110,7 +111,15 @@ DOMAIN-SUFFIX,bosszhipin.com.cn
 DOMAIN-SUFFIX,bosszp.cn
 DOMAIN-SUFFIX,weizhipin.com
 DOMAIN-SUFFIX,dianzhangzhipin.com
-DOMAIN,fenzhi.com   
+DOMAIN,fenzhi.com
+
+# 极验
+DOMAIN-SUFFIX,geetest.com
+DOMAIN-SUFFIX,geetest.net
+DOMAIN-SUFFIX,geetest.org
+
+# 网易易盾
+DOMAIN-SUFFIX,yidun.com   
 
 # ========== 七猫小说 ==========
 DOMAIN-SUFFIX,qimao.com
