@@ -103,15 +103,23 @@ DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pddugc.com
 
 # ========== BOSS直聘 ==========
-# BOSS直聘
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,bosszhipin.cn
 DOMAIN-SUFFIX,bosszhipin.com.cn
 DOMAIN-SUFFIX,bosszp.cn
+
+# ===== 子品牌 =====
 DOMAIN-SUFFIX,weizhipin.com
 DOMAIN-SUFFIX,dianzhangzhipin.com
+DOMAIN-SUFFIX,kanzhun.com
 DOMAIN,fenzhi.com
+
+# ===== 安全验证 =====
+DOMAIN-SUFFIX,geetest.com
+DOMAIN-SUFFIX,geetest.net
+DOMAIN-SUFFIX,geetest.org
+DOMAIN-SUFFIX,yidun.com
 
 # 极验
 DOMAIN-SUFFIX,geetest.com
