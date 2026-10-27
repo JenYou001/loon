@@ -108,6 +108,8 @@ DOMAIN-SUFFIX,tb.cn
 DOMAIN-SUFFIX,tbcache.com
 DOMAIN-SUFFIX,tbimg.com
 DOMAIN-SUFFIX,tmallimg.com
+DOMAIN-SUFFIX,1688.com
+DOMAIN-SUFFIX,1688.com.cn
 
 # ========== 闲鱼 ==========
 DOMAIN-SUFFIX,goofish.com
@@ -125,4 +127,7 @@ DOMAIN-SUFFIX,58cdn.com
 DOMAIN-SUFFIX,58img.com
 DOMAIN-SUFFIX,58res.com
 DOMAIN-SUFFIX,58store.com
-DOMAIN-SUFFIX,58xiaoju.com   
+DOMAIN-SUFFIX,58xiaoju.com
+
+# ========== 铁路12306 ==========
+DOMAIN-SUFFIX,12306.cn
