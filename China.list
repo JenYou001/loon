@@ -1,8 +1,6 @@
 # ========== Bilibili ==========
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,bilibili.cn
-DOMAIN-SUFFIX,bilibili.tv
-DOMAIN-SUFFIX,bilibili.net
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,hdslb.com
@@ -18,18 +16,7 @@ DOMAIN-SUFFIX,bilicdn2.com
 DOMAIN-SUFFIX,bilicdn3.com
 DOMAIN-SUFFIX,bilicdn4.com
 DOMAIN-SUFFIX,bilicdn5.com
-DOMAIN-SUFFIX,bili22.cn
-DOMAIN-SUFFIX,bili2233.cn
-DOMAIN-SUFFIX,bili23.cn
-DOMAIN-SUFFIX,bili33.cn
-DOMAIN-SUFFIX,biligame.com
-DOMAIN-SUFFIX,biligame.cn
-DOMAIN-SUFFIX,biligame.net
-DOMAIN-SUFFIX,bilicomic.com
-DOMAIN-SUFFIX,bilicomics.com
 DOMAIN-SUFFIX,bilibilipay.com
-DOMAIN-SUFFIX,bilibilipay.cn
-DOMAIN-SUFFIX,biliintl.com
 
 # ========== 高德地图 ==========
 DOMAIN-SUFFIX,autonavi.com
@@ -37,67 +24,41 @@ DOMAIN-SUFFIX,amap.com
 
 # ========== 京东 ==========
 DOMAIN-SUFFIX,jd.com
-DOMAIN-SUFFIX,jd.cn
-DOMAIN-SUFFIX,jd.hk
-DOMAIN-SUFFIX,360buy.com
-DOMAIN-SUFFIX,300hu.com
-DOMAIN-SUFFIX,360buy.cn
-DOMAIN-SUFFIX,360buy.com.cn
 DOMAIN-SUFFIX,360buyimg.com
-DOMAIN-SUFFIX,jcloudcs.com
-DOMAIN-SUFFIX,jdcloud.com
-DOMAIN-SUFFIX,jdpay.com
-DOMAIN-SUFFIX,paipai.com
 DOMAIN,3.cn
 
 # ========== 微信 / 微信支付 ==========
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
-DOMAIN-SUFFIX,wxs.qq.com
-DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,weixin.com
+DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,servicewechat.net
-DOMAIN-SUFFIX,tenpay.com
-DOMAIN-SUFFIX,wechatpay.com
-DOMAIN-SUFFIX,wechatpay.cn
 DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,wx.gtimg.com
-DOMAIN-SUFFIX,wxapp.tc.qq.com
-DOMAIN-SUFFIX,lbs.gtimg.com
-DOMAIN-SUFFIX,map.qq.com
-DOMAIN-SUFFIX,wechatlegal.net
-DOMAIN-SUFFIX,wechatos.net
-DOMAIN-SUFFIX,weixinsxy.com
-DOMAIN-SUFFIX,vweixinthumb.tc.qq.com
-DOMAIN-SUFFIX,up-hl.3g.qq.com
-DOMAIN-SUFFIX,yun-hl.3g.qq.com
-DOMAIN,wxgateway.com
-DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
-DOMAIN,dldir1.qq.com
-DOMAIN,wup.imtt.qq.com
+DOMAIN-SUFFIX,tenpay.com
+DOMAIN-SUFFIX,wechatpay.com
+DOMAIN-SUFFIX,wechatpay.cn
 
 # ========== QQ音乐 ==========
 DOMAIN,y.qq.com
-DOMAIN-SUFFIX,p2ptun.qq.com
-DOMAIN-SUFFIX,qqmusic.qq.com
+DOMAIN-SUFFIX,music.qq.com
+DOMAIN-SUFFIX,qqmusic.com
 DOMAIN-SUFFIX,music.tc.qq.com
 DOMAIN-SUFFIX,qmusic.tc.qq.com
 DOMAIN-SUFFIX,imgcache.qq.com
 
 # ========== 滴滴出行 ==========
 DOMAIN-SUFFIX,didichuxing.com
-DOMAIN-SUFFIX,didiglobal.com
 DOMAIN-SUFFIX,didistatic.com
 DOMAIN-SUFFIX,udache.com
 DOMAIN-SUFFIX,xiaojukeji.com
-DOMAIN-SUFFIX,diditaxi.com
+DOMAIN-SUFFIX,didi.cn
 DOMAIN-SUFFIX,diditaxi.com.cn
 
 # ========== 拼多多 ==========
 DOMAIN-SUFFIX,pinduoduo.com
-DOMAIN-SUFFIX,pinduoduo.net
 DOMAIN-SUFFIX,yangkeduo.com
 DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pddugc.com
@@ -108,26 +69,13 @@ DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,bosszhipin.cn
 DOMAIN-SUFFIX,bosszhipin.com.cn
 DOMAIN-SUFFIX,bosszp.cn
-
-# ===== 子品牌 =====
 DOMAIN-SUFFIX,weizhipin.com
 DOMAIN-SUFFIX,dianzhangzhipin.com
 DOMAIN-SUFFIX,kanzhun.com
 DOMAIN,fenzhi.com
-
-# ===== 安全验证 =====
 DOMAIN-SUFFIX,geetest.com
-DOMAIN-SUFFIX,geetest.net
-DOMAIN-SUFFIX,geetest.org
-DOMAIN-SUFFIX,yidun.com
-
-# 极验
-DOMAIN-SUFFIX,geetest.com
-DOMAIN-SUFFIX,geetest.net
-DOMAIN-SUFFIX,geetest.org
-
-# 网易易盾
-DOMAIN-SUFFIX,yidun.com   
+DOMAIN-SUFFIX,geevisit.com
+DOMAIN-SUFFIX,dun.163.com
 
 # ========== 七猫小说 ==========
 DOMAIN-SUFFIX,qimao.com
@@ -135,27 +83,26 @@ DOMAIN-SUFFIX,wtzw.com
 
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
-DOMAIN-SUFFIX,duolingo.cn
 
 # ========== 阿里系业务资源 ==========
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,alibabausercontent.com
-DOMAIN-SUFFIX,mcdn.aliyun.com
-DOMAIN-SUFFIX,gcsstatic.com
+DOMAIN-SUFFIX,alibaba.com
+DOMAIN-SUFFIX,aliyun.com
+DOMAIN-SUFFIX,aliapp.org
+DOMAIN-SUFFIX,alibabachengdun.com
 DOMAIN-SUFFIX,alibabachengdun.net
 
 # ========== 支付宝 ==========
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipay.com.cn
-DOMAIN-SUFFIX,alipay.hk
 DOMAIN-SUFFIX,antfin.com
 
 # ========== 淘宝 / 天猫 ==========
 DOMAIN-SUFFIX,taobao.com
 DOMAIN-SUFFIX,taobao.com.cn
 DOMAIN-SUFFIX,tmall.com
-DOMAIN-SUFFIX,tmall.hk
 DOMAIN-SUFFIX,tb.cn
 DOMAIN-SUFFIX,tbcache.com
 DOMAIN-SUFFIX,tbimg.com
@@ -164,24 +111,17 @@ DOMAIN-SUFFIX,tmallimg.com
 # ========== 闲鱼 ==========
 DOMAIN-SUFFIX,goofish.com
 DOMAIN,tls-goofish.dingtalk.com
-DOMAIN-SUFFIX,mtopupload.com
 
 # ========== 转转 ==========
 DOMAIN-SUFFIX,zhuanzhuan.com
-DOMAIN-SUFFIX,zhuan-zhuan.cn
 DOMAIN-SUFFIX,zhuanspirit.com
 DOMAIN-SUFFIX,zhuancorp.com
 DOMAIN-SUFFIX,zhuanstatic.com
-DOMAIN-SUFFIX,zhuaninc.com
-DOMAIN-SUFFIX,zhuanspirit.cn
 
 # ========== 58同城系 ==========
 DOMAIN-SUFFIX,58.com
-DOMAIN-SUFFIX,58.com.cn
-DOMAIN-SUFFIX,58cdn.com.cn
+DOMAIN-SUFFIX,58cdn.com
 DOMAIN-SUFFIX,58img.com
 DOMAIN-SUFFIX,58res.com
 DOMAIN-SUFFIX,58store.com
-DOMAIN-SUFFIX,58tong.com
-DOMAIN-SUFFIX,58w.com
-DOMAIN-SUFFIX,58xiaoju.com
+DOMAIN-SUFFIX,58xiaoju.com   
