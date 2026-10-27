@@ -1,6 +1,7 @@
+# ========== Apple（代理）==========
 DOMAIN-SUFFIX,apple.com
-DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,apple-livephotoskit.com
 DOMAIN-SUFFIX,apple-mapkit.com
@@ -8,6 +9,14 @@ DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,aaplimg.com
+
+# Apple 邮件
 DOMAIN,imap.mail.me.com
 DOMAIN,smtp.mail.me.com
-DOMAIN,app-site-association.networking.apple   
+
+# .apple 顶级域
+DOMAIN,app-site-association.networking.apple
+DOMAIN,token.safebrowsing.apple
+DOMAIN,maps.apple
+DOMAIN,services.apple
