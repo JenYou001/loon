@@ -1,9 +1,8 @@
 # ========== Bilibili ==========
-DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
-DOMAIN-SUFFIX,mcdn.bilivideo.com,REJECT
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,hdslb.com
+DOMAIN-SUFFIX,grpc.biliapi.net
 
 # ========== 高德地图 ==========
 DOMAIN-SUFFIX,autonavi.com
