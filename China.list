@@ -1,8 +1,17 @@
 # ========== Bilibili ==========
+# 主站 & API
 DOMAIN-SUFFIX,bilibili.com
-DOMAIN-SUFFIX,bilivideo.com
+DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,biliapi.com
+# 视频 & 直播 CDN
+DOMAIN-SUFFIX,bilivideo.com      
+DOMAIN-SUFFIX,bilivideo.cn
 DOMAIN-SUFFIX,hdslb.com
-DOMAIN-SUFFIX,grpc.biliapi.net
+DOMAIN-SUFFIX,acgvideo.com
+# 国际版 App
+DOMAIN-SUFFIX,bilibili.tv
+DOMAIN-SUFFIX,biliintl.com
+DOMAIN-SUFFIX,bstarstatic.com
 
 # ========== 高德地图 ==========
 DOMAIN-SUFFIX,autonavi.com
