@@ -1,22 +1,48 @@
 # ========== Bilibili ==========
+# 主站 / API
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,bilibili.cn
+DOMAIN-SUFFIX,bilibili.tv
+DOMAIN-SUFFIX,bilibili.cc
+DOMAIN-SUFFIX,bilibili.co
+DOMAIN-SUFFIX,bilibili.net
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,biliapi.com
-DOMAIN-SUFFIX,hdslb.com
-DOMAIN-SUFFIX,hdslb.net
+DOMAIN-SUFFIX,bilibilipay.com
+DOMAIN-SUFFIX,bilibilipay.cn
+
+# 视频 CDN
 DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,bilivideo.cn
 DOMAIN-SUFFIX,acgvideo.com
-DOMAIN-SUFFIX,b23.tv
-DOMAIN-SUFFIX,acg.tv
-DOMAIN-SUFFIX,biliimg.com
-DOMAIN-SUFFIX,bilicdn1.com
-DOMAIN-SUFFIX,bilicdn2.com
-DOMAIN-SUFFIX,bilicdn3.com
-DOMAIN-SUFFIX,bilicdn4.com
-DOMAIN-SUFFIX,bilicdn5.com
-DOMAIN-SUFFIX,bilibilipay.com
+DOMAIN,upos-hz-mirrorakam.akamaized.net
+DOMAIN,upos-sz-mirrorakam.akamaized.net
+DOMAIN,upos-bstar-mirrorakam.akamaized.net
+DOMAIN,upos-bstar1-mirrorakam.akamaized.net
+DOMAIN,uposdash-302-bilivideo.yfcdn.net
+
+# 图片 / 静态资源
+DOMAIN-SUFFIX,hdslb.com
+DOMAIN-SUFFIX,hdslb.net
+DOMAIN-SUFFIX,hdslb.org
+DOMAIN-SUFFIX,im9.com
+DOMAIN-SUFFIX,yo9.com
+DOMAIN-SUFFIX,bstarstatic.com
+DOMAIN,p-bstarstatic.akamaized.net
+DOMAIN,s-bstarstatic.akamaized.net
+DOMAIN-SUFFIX,mincdn.com
+
+# DNS 调度
+DOMAIN-SUFFIX,smtcdns.net
+
+# 大风云
+DOMAIN-SUFFIX,bigfun.cn
+DOMAIN-SUFFIX,bigfunapp.cn
+
+# 国际版
+DOMAIN-SUFFIX,biliintl.com
+DOMAIN-SUFFIX,biliintl.co
+DOMAIN,dreamcast.hk
 
 # ========== 高德地图 ==========
 DOMAIN-SUFFIX,autonavi.com
