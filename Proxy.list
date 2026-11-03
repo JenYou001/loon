@@ -1,10 +1,10 @@
-# Adguard
+# ========== AdGuard ==========
 DOMAIN-SUFFIX,adguard-dns.com
 DOMAIN-SUFFIX,adguard-dns.io
 DOMAIN-SUFFIX,adguardaccount.com
 DOMAIN-SUFFIX,adguardcdn.com
 
-# Google
+# ========== Google ==========
 DOMAIN-SUFFIX,google.com
 DOMAIN-SUFFIX,google.com.hk
 DOMAIN-SUFFIX,google.com.tw
@@ -28,7 +28,6 @@ DOMAIN-SUFFIX,google.nl
 DOMAIN-SUFFIX,google.co.nz
 DOMAIN-SUFFIX,google.co.za
 DOMAIN-SUFFIX,google.co.id
-DOMAIN-SUFFIX,google.ru
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,googleusercontent.com
@@ -43,8 +42,9 @@ DOMAIN-SUFFIX,blogger.com
 DOMAIN-SUFFIX,blogspot.com
 DOMAIN-SUFFIX,google.dev
 DOMAIN-SUFFIX,google.cloud
+DOMAIN-SUFFIX,doubleclick.net
 
-# DuckDuckGo / Duck.ai
+# ========== DuckDuckGo ==========
 DOMAIN-SUFFIX,duckduckgo.com
 DOMAIN-SUFFIX,duckduckgo.org
 DOMAIN-SUFFIX,duck.com
@@ -54,17 +54,14 @@ DOMAIN-SUFFIX,ddg.gg
 DOMAIN-SUFFIX,dukgo.com
 DOMAIN-SUFFIX,duck.ai
 
-# Brave / Brave Search
+# ========== Brave ==========
 DOMAIN-SUFFIX,brave.com
 DOMAIN-SUFFIX,bravesoftware.com
-DOMAIN-SUFFIX,brave.software
 
-# YouTube
+# ========== YouTube ==========
 DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,youtube.com.hk
 DOMAIN-SUFFIX,youtube.com.tw
-DOMAIN-SUFFIX,youtube.hk
-DOMAIN-SUFFIX,youtube.tw
 DOMAIN-SUFFIX,youtube.co.uk
 DOMAIN-SUFFIX,youtube.ca
 DOMAIN-SUFFIX,youtube.com.au
@@ -82,26 +79,21 @@ DOMAIN-SUFFIX,youtube.fr
 DOMAIN-SUFFIX,youtube.it
 DOMAIN-SUFFIX,youtube.es
 DOMAIN-SUFFIX,youtube.nl
-DOMAIN-SUFFIX,youtube.ru
 DOMAIN-SUFFIX,youtube.co.nz
 DOMAIN-SUFFIX,youtube.co.za
 DOMAIN-SUFFIX,youtube.co.id
 DOMAIN-SUFFIX,youtube.co.th
+DOMAIN-SUFFIX,youtube
 DOMAIN-SUFFIX,youtu.be
 DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,youtube-nocookie.com
 DOMAIN-SUFFIX,youtubeeducation.com
-DOMAIN-SUFFIX,youtubefanfest.com
-DOMAIN-SUFFIX,youtubegaming.com
-DOMAIN-SUFFIX,youtubego.com
 DOMAIN-SUFFIX,youtubekids.com
-DOMAIN-SUFFIX,youtubemobilesupport.com
-DOMAIN-SUFFIX,withyoutube.com
-DOMAIN-SUFFIX,wide-youtube.l.google.com
-DOMAIN-SUFFIX,youtube-ui.l.google.com
+DOMAIN,wide-youtube.l.google.com
+DOMAIN,youtube-ui.l.google.com
 
-# Telegram
+# ========== Telegram ==========
 DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,telegram.me
 DOMAIN-SUFFIX,telegram.dog
@@ -116,8 +108,6 @@ DOMAIN-SUFFIX,telegram-cdn.org
 DOMAIN-SUFFIX,cdn-telegram.org
 DOMAIN-SUFFIX,telegram.space
 DOMAIN-SUFFIX,telegramdownload.com
-
-# Telegram IPv4
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/22,no-resolve
@@ -127,19 +117,30 @@ IP-CIDR,91.108.20.0/22,no-resolve
 IP-CIDR,91.108.56.0/22,no-resolve
 IP-CIDR,149.154.160.0/20,no-resolve
 IP-CIDR,185.76.151.0/24,no-resolve
+IP-CIDR,95.161.64.0/20,no-resolve
+IP-CIDR6,2001:67c:4e8::/48,no-resolve
+IP-CIDR6,2001:b28:f23c::/48,no-resolve
 
-# X / Twitter / Grok
+# ========== X / Twitter / Grok ==========
 DOMAIN-SUFFIX,x.com
 DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,t.co
+DOMAIN-SUFFIX,gh.io
 DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twimg.co
 DOMAIN-SUFFIX,twimg.org
 DOMAIN-SUFFIX,twvid.com
 DOMAIN-SUFFIX,twttr.com
 DOMAIN-SUFFIX,twttr.net
+DOMAIN-SUFFIX,twtrdns.net
 DOMAIN-SUFFIX,tweetdeck.com
+DOMAIN-SUFFIX,ads-twitter.com
+DOMAIN-SUFFIX,cms-twdigitalassets.com
+DOMAIN-SUFFIX,twitteroauth.com
+DOMAIN-SUFFIX,twitterstat.us
+DOMAIN-SUFFIX,grok.com
 
-# GitHub
+# ========== GitHub ==========
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,githubassets.com
@@ -151,32 +152,39 @@ DOMAIN-SUFFIX,githubstatus.com
 DOMAIN-SUFFIX,githubapp.com
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,ghcr.io
+DOMAIN-SUFFIX,gh.io
+DOMAIN-SUFFIX,git.io
 
-# Oracle / Java
+# ========== Oracle / Java ==========
 DOMAIN-SUFFIX,oracle.com
 DOMAIN-SUFFIX,oraclecloud.com
 DOMAIN-SUFFIX,oracleimg.com
 DOMAIN-SUFFIX,oraclefoundation.org
 DOMAIN-SUFFIX,ateam-oracle.com
 
-# Reddit
+# ========== Reddit ==========
 DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,redditstatic.com
 DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,redditmedia.com
 DOMAIN-SUFFIX,redditspace.com
-DOMAIN-SUFFIX,reddit.app.link
+DOMAIN,reddit.app.link
 DOMAIN-SUFFIX,redditinc.com
 DOMAIN-SUFFIX,reddithelp.com
 
-# spotify
+# ========== Spotify ==========
 DOMAIN-SUFFIX,spotify.com
 DOMAIN-SUFFIX,scdn.co
-DOMAIN-SUFFIX,spoti.fi
 DOMAIN-SUFFIX,pscdn.co
+DOMAIN-SUFFIX,spoti.fi
 DOMAIN-SUFFIX,spotifycdn.com
 DOMAIN-SUFFIX,spotifycdn.net
 DOMAIN-SUFFIX,spotify.link
+DOMAIN-SUFFIX,spotify.design
+DOMAIN-SUFFIX,spotifycharts.com
+DOMAIN-SUFFIX,spotify-everywhere.com
+DOMAIN-SUFFIX,tospotify.com
+DOMAIN-SUFFIX,byspotify.com
 DOMAIN,audio-ak-spotify-com.akamaized.net
 DOMAIN,audio4-ak-spotify-com.akamaized.net
 DOMAIN,heads-ak-spotify-com.akamaized.net
