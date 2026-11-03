@@ -86,6 +86,7 @@ DOMAIN-SUFFIX,wtzw.com
 
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
+DOMAIN-SUFFIX,duolingo.cn
 
 # ========== 阿里系业务资源 ==========
 DOMAIN-SUFFIX,alicdn.com
