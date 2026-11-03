@@ -125,7 +125,6 @@ IP-CIDR6,2001:b28:f23c::/48,no-resolve
 DOMAIN-SUFFIX,x.com
 DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,t.co
-DOMAIN-SUFFIX,gh.io
 DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twimg.co
 DOMAIN-SUFFIX,twimg.org
