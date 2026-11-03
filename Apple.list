@@ -8,7 +8,6 @@ DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,me.com
-DOMAIN,maps.apple
 # iCloud 功能
 DOMAIN-SUFFIX,apple-livephotoskit.com
 DOMAIN-SUFFIX,apple-dns.net          # Private Relay（不开可删）
@@ -16,4 +15,7 @@ DOMAIN-SUFFIX,apple-dns.net          # Private Relay（不开可删）
 DOMAIN,app-site-association.networking.apple
 DOMAIN,token.safebrowsing.apple      # Safari 安全浏览（不用 Safari 可删）
 # 低频
+DOMAIN,maps.apple
 DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,apple.news
+DOMAIN-SUFFIX,apple.tv
