@@ -20,21 +20,35 @@ DOMAIN-SUFFIX,amap.com
 # ========== 京东 ==========
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,360buyimg.com
-DOMAIN,3.cn
+DOMAIN-SUFFIX,jdcdn.com
 
 # ========== 微信 / 微信支付 ==========
+# 核心
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
+DOMAIN-SUFFIX,wxs.qq.com
 DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,servicewechat.com
-DOMAIN-SUFFIX,servicewechat.net
+# 图片 & 头像 CDN
 DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,wx.gtimg.com
+DOMAIN-SUFFIX,lbs.gtimg.com
+# 小程序 & H5
+DOMAIN-SUFFIX,wxapp.tc.qq.com
+DOMAIN-SUFFIX,weixinbridge.com
+# 支付
 DOMAIN-SUFFIX,tenpay.com
 DOMAIN-SUFFIX,wechatpay.com
 DOMAIN-SUFFIX,wechatpay.cn
+# 安全 & 合规
+DOMAIN-SUFFIX,weixinsxy.com
+DOMAIN-SUFFIX,wechatlegal.net
+DOMAIN,btrace.qq.com        # 崩溃上报
+DOMAIN,dldir1.qq.com        # 文件/资源 CDN 下载
+DOMAIN,vweixinf.tc.qq.com   # 视频号
+DOMAIN,weixin110.qq.com     # 安全中心   
 
 # ========== QQ音乐 ==========
 DOMAIN,y.qq.com
