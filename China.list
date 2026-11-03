@@ -1,14 +1,11 @@
 # ========== Bilibili ==========
-# 主站 & API
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,biliapi.com
-# 视频 & 直播 CDN
-DOMAIN-SUFFIX,bilivideo.com      
+DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,bilivideo.cn
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,acgvideo.com
-# 国际版 App
 DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,biliintl.com
 DOMAIN-SUFFIX,bstarstatic.com
@@ -21,38 +18,34 @@ DOMAIN-SUFFIX,amap.com
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,360buyimg.com
 DOMAIN-SUFFIX,jdcdn.com
+DOMAIN-SUFFIX,jdcloud-oss.com
 
 # ========== 微信 / 微信支付 ==========
-# 核心
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
 DOMAIN-SUFFIX,wxs.qq.com
 DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,servicewechat.com
-# 图片 & 头像 CDN
 DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,wx.gtimg.com
 DOMAIN-SUFFIX,lbs.gtimg.com
-# 小程序 & H5
 DOMAIN-SUFFIX,wxapp.tc.qq.com
 DOMAIN-SUFFIX,weixinbridge.com
-# 支付
 DOMAIN-SUFFIX,tenpay.com
 DOMAIN-SUFFIX,wechatpay.com
 DOMAIN-SUFFIX,wechatpay.cn
-# 安全 & 合规
 DOMAIN-SUFFIX,weixinsxy.com
 DOMAIN-SUFFIX,wechatlegal.net
-DOMAIN,btrace.qq.com        # 崩溃上报
-DOMAIN,dldir1.qq.com        # 文件/资源 CDN 下载
-DOMAIN,vweixinf.tc.qq.com   # 视频号
-DOMAIN,weixin110.qq.com     # 安全中心   
+DOMAIN,btrace.qq.com
+DOMAIN,dldir1.qq.com
+DOMAIN,vweixinf.tc.qq.com
+DOMAIN,weixin110.qq.com
 
 # ========== QQ音乐 ==========
-DOMAIN,y.qq.com
-DOMAIN-SUFFIX,music.qq.com
+DOMAIN-SUFFIX,y.qq.com
+DOMAIN-SUFFIX,qqmusic.qq.com
 DOMAIN-SUFFIX,qqmusic.com
 DOMAIN-SUFFIX,music.tc.qq.com
 DOMAIN-SUFFIX,qmusic.tc.qq.com
@@ -85,7 +78,7 @@ DOMAIN-SUFFIX,kanzhun.com
 DOMAIN,fenzhi.com
 DOMAIN-SUFFIX,geetest.com
 DOMAIN-SUFFIX,geevisit.com
-DOMAIN-SUFFIX,dun.163.com
+DOMAIN,dun.163.com
 
 # ========== 七猫小说 ==========
 DOMAIN-SUFFIX,qimao.com
@@ -127,16 +120,24 @@ DOMAIN,tls-goofish.dingtalk.com
 # ========== 转转 ==========
 DOMAIN-SUFFIX,zhuanzhuan.com
 DOMAIN-SUFFIX,zhuanspirit.com
+DOMAIN-SUFFIX,zhuanspirit.cn
 DOMAIN-SUFFIX,zhuancorp.com
 DOMAIN-SUFFIX,zhuanstatic.com
+DOMAIN-SUFFIX,zhuaninc.com
+DOMAIN-SUFFIX,zhuan-zhuan.cn
 
 # ========== 58同城系 ==========
 DOMAIN-SUFFIX,58.com
-DOMAIN-SUFFIX,58cdn.com
-DOMAIN-SUFFIX,58img.com
-DOMAIN-SUFFIX,58res.com
-DOMAIN-SUFFIX,58store.com
-DOMAIN-SUFFIX,58xiaoju.com
+DOMAIN-SUFFIX,58.com.cn
+DOMAIN-SUFFIX,5858.com
+DOMAIN-SUFFIX,58cdn.com.cn
+DOMAIN-SUFFIX,58corp.com
+DOMAIN-SUFFIX,anjuke.com
+DOMAIN-SUFFIX,fang.com
+DOMAIN-SUFFIX,sofun.com
+DOMAIN-SUFFIX,soufunimg.com
+DOMAIN-SUFFIX,chinahr.com
+DOMAIN-SUFFIX,daojia.com
 
 # ========== 铁路12306 ==========
 DOMAIN-SUFFIX,12306.cn
