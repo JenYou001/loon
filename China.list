@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,bilicdn1.com
 DOMAIN-SUFFIX,bilicdn2.com
 DOMAIN-SUFFIX,biliimg.com
+USER-AGENT,Bilibili*
 
 # ========== 高德地图 ==========
 DOMAIN-SUFFIX,autonavi.com
