@@ -1,184 +1,184 @@
 # ============================================================
-# iOS App 日常使用 — 代理分流白名单（整理版）
-# 整理日期：2026-11-08
+# iOS App 日常使用 — 代理分流白名单（终版 v3）
+# 日期：2026-11-08
 # ============================================================
 
 # ========== AdGuard ==========
-DOMAIN-SUFFIX,adguard-dns.com
-DOMAIN-SUFFIX,adguard-dns.io
-DOMAIN-SUFFIX,adguardaccount.com
-DOMAIN-SUFFIX,adguardcdn.com
+DOMAIN-SUFFIX,adguard-dns.com          # DoH 解析
+DOMAIN-SUFFIX,adguard-dns.io           # 管理面板
+DOMAIN-SUFFIX,adguardaccount.com       # 账户
+DOMAIN-SUFFIX,adguardcdn.com           # 静态资源
 
 # ========== Google ==========
-DOMAIN-SUFFIX,google.com
-DOMAIN-SUFFIX,google.com.hk
-DOMAIN-SUFFIX,google.com.tw
-DOMAIN-SUFFIX,google.co.uk
-DOMAIN-SUFFIX,google.ca
-DOMAIN-SUFFIX,google.com.au
-DOMAIN-SUFFIX,google.co.jp
-DOMAIN-SUFFIX,google.co.in
-DOMAIN-SUFFIX,google.co.kr
-DOMAIN-SUFFIX,google.com.sg
-DOMAIN-SUFFIX,google.com.br
-DOMAIN-SUFFIX,google.com.mx
-DOMAIN-SUFFIX,google.com.tr
-DOMAIN-SUFFIX,google.com.ar
-DOMAIN-SUFFIX,google.com.co
-DOMAIN-SUFFIX,google.de
-DOMAIN-SUFFIX,google.fr
-DOMAIN-SUFFIX,google.it
-DOMAIN-SUFFIX,google.es
-DOMAIN-SUFFIX,google.nl
-DOMAIN-SUFFIX,google.co.nz
-DOMAIN-SUFFIX,google.co.za
-DOMAIN-SUFFIX,google.co.id
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,googlemail.com
-DOMAIN-SUFFIX,gmail.com
-DOMAIN-SUFFIX,ggpht.com
-DOMAIN-SUFFIX,gvt0.com
-DOMAIN-SUFFIX,gvt1.com
-DOMAIN-SUFFIX,gvt2.com
-DOMAIN-SUFFIX,gvt3.com
-DOMAIN-SUFFIX,1e100.net
-DOMAIN-SUFFIX,app-measurement.com
-DOMAIN-SUFFIX,g.co
-DOMAIN-SUFFIX,goo.gl
-DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,google.com               # 主域（搜索/地图/Drive/Photos/Gemini）
+DOMAIN-SUFFIX,google.com.hk            # 区域
+DOMAIN-SUFFIX,google.com.tw            # 区域
+DOMAIN-SUFFIX,google.co.uk             # 区域
+DOMAIN-SUFFIX,google.ca                # 区域
+DOMAIN-SUFFIX,google.com.au            # 区域
+DOMAIN-SUFFIX,google.co.jp             # 区域
+DOMAIN-SUFFIX,google.co.in             # 区域
+DOMAIN-SUFFIX,google.co.kr             # 区域
+DOMAIN-SUFFIX,google.com.sg            # 区域
+DOMAIN-SUFFIX,google.com.br            # 区域
+DOMAIN-SUFFIX,google.com.mx            # 区域
+DOMAIN-SUFFIX,google.com.tr            # 区域
+DOMAIN-SUFFIX,google.com.ar            # 区域
+DOMAIN-SUFFIX,google.com.co            # 区域
+DOMAIN-SUFFIX,google.de                # 区域
+DOMAIN-SUFFIX,google.fr                # 区域
+DOMAIN-SUFFIX,google.it                # 区域
+DOMAIN-SUFFIX,google.es                # 区域
+DOMAIN-SUFFIX,google.nl                # 区域
+DOMAIN-SUFFIX,google.co.nz             # 区域
+DOMAIN-SUFFIX,google.co.za             # 区域
+DOMAIN-SUFFIX,google.co.id             # 区域
+DOMAIN-SUFFIX,googleapis.com           # API（Search/Maps/Drive/ML/Translate）
+DOMAIN-SUFFIX,gstatic.com              # 静态 CDN
+DOMAIN-SUFFIX,googleusercontent.com    # 用户内容（Drive/Photos）
+DOMAIN-SUFFIX,googlevideo.com          # 视频流
+DOMAIN-SUFFIX,googlemail.com           # Gmail 旧域
+DOMAIN-SUFFIX,gmail.com                # Gmail
+DOMAIN-SUFFIX,ggpht.com                # Photos 图片
+DOMAIN-SUFFIX,gvt0.com                 # 视频 CDN 节点 0
+DOMAIN-SUFFIX,gvt1.com                 # 视频 CDN 节点 1
+DOMAIN-SUFFIX,gvt2.com                 # 视频 CDN 节点 2
+DOMAIN-SUFFIX,gvt3.com                 # 视频 CDN 节点 3
+DOMAIN-SUFFIX,1e100.net                # 基础设施
+DOMAIN-SUFFIX,app-measurement.com      # Firebase Analytics
+DOMAIN-SUFFIX,g.co                     # 短链
+DOMAIN-SUFFIX,goo.gl                   # 短链（旧）
 
 # ========== DuckDuckGo ==========
-DOMAIN-SUFFIX,duckduckgo.com
-DOMAIN-SUFFIX,duckduckgo.org
-DOMAIN-SUFFIX,duck.com
-DOMAIN-SUFFIX,duck.co
-DOMAIN-SUFFIX,ddg.co
-DOMAIN-SUFFIX,ddg.gg
-DOMAIN-SUFFIX,duck.ai
-DOMAIN-SUFFIX,quack-dns.com
+DOMAIN-SUFFIX,duckduckgo.com           # 主域
+DOMAIN-SUFFIX,duckduckgo.org           # 备用
+DOMAIN-SUFFIX,duck.com                 # 短域
+DOMAIN-SUFFIX,duck.co                  # 短域
+DOMAIN-SUFFIX,ddg.co                   # 短域
+DOMAIN-SUFFIX,ddg.gg                   # 短域
+DOMAIN-SUFFIX,duck.ai                  # AI
+DOMAIN-SUFFIX,quack-dns.com            # DDG DNS/VPN（仅 VPN 功能需要）
 
 # ========== Brave ==========
-DOMAIN-SUFFIX,brave.com
-DOMAIN-SUFFIX,bravesoftware.com
+DOMAIN-SUFFIX,brave.com                # 主域
+DOMAIN-SUFFIX,bravesoftware.com        # 更新/下载
 
 # ========== YouTube ==========
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,youtube.com.hk
-DOMAIN-SUFFIX,youtube.com.tw
-DOMAIN-SUFFIX,youtube.co.uk
-DOMAIN-SUFFIX,youtube.ca
-DOMAIN-SUFFIX,youtube.com.au
-DOMAIN-SUFFIX,youtube.co.jp
-DOMAIN-SUFFIX,youtube.co.in
-DOMAIN-SUFFIX,youtube.co.kr
-DOMAIN-SUFFIX,youtube.com.sg
-DOMAIN-SUFFIX,youtube.com.br
-DOMAIN-SUFFIX,youtube.com.mx
-DOMAIN-SUFFIX,youtube.com.tr
-DOMAIN-SUFFIX,youtube.com.ar
-DOMAIN-SUFFIX,youtube.com.co
-DOMAIN-SUFFIX,youtube.de
-DOMAIN-SUFFIX,youtube.fr
-DOMAIN-SUFFIX,youtube.it
-DOMAIN-SUFFIX,youtube.es
-DOMAIN-SUFFIX,youtube.nl
-DOMAIN-SUFFIX,youtube.co.nz
-DOMAIN-SUFFIX,youtube.co.za
-DOMAIN-SUFFIX,youtube.co.id
-DOMAIN-SUFFIX,youtube.co.th
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,yt.be
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,youtube-nocookie.com
-DOMAIN-SUFFIX,youtubeeducation.com
-DOMAIN-SUFFIX,youtubekids.com
-DOMAIN,wide-youtube.l.google.com
-DOMAIN,youtube-ui.l.google.com
+DOMAIN-SUFFIX,youtube.com              # 主域
+DOMAIN-SUFFIX,youtube.com.hk           # 区域
+DOMAIN-SUFFIX,youtube.com.tw           # 区域
+DOMAIN-SUFFIX,youtube.co.uk            # 区域
+DOMAIN-SUFFIX,youtube.ca               # 区域
+DOMAIN-SUFFIX,youtube.com.au           # 区域
+DOMAIN-SUFFIX,youtube.co.jp            # 区域
+DOMAIN-SUFFIX,youtube.co.in            # 区域
+DOMAIN-SUFFIX,youtube.co.kr            # 区域
+DOMAIN-SUFFIX,youtube.com.sg           # 区域
+DOMAIN-SUFFIX,youtube.com.br           # 区域
+DOMAIN-SUFFIX,youtube.com.mx           # 区域
+DOMAIN-SUFFIX,youtube.com.tr           # 区域
+DOMAIN-SUFFIX,youtube.com.ar           # 区域
+DOMAIN-SUFFIX,youtube.com.co           # 区域
+DOMAIN-SUFFIX,youtube.de               # 区域
+DOMAIN-SUFFIX,youtube.fr               # 区域
+DOMAIN-SUFFIX,youtube.it               # 区域
+DOMAIN-SUFFIX,youtube.es               # 区域
+DOMAIN-SUFFIX,youtube.nl               # 区域
+DOMAIN-SUFFIX,youtube.co.nz            # 区域
+DOMAIN-SUFFIX,youtube.co.za            # 区域
+DOMAIN-SUFFIX,youtube.co.id            # 区域
+DOMAIN-SUFFIX,youtube.co.th            # 区域
+DOMAIN-SUFFIX,youtu.be                 # 短链
+DOMAIN-SUFFIX,yt.be                    # 短链
+DOMAIN-SUFFIX,ytimg.com                # 缩略图
+DOMAIN-SUFFIX,youtube-nocookie.com     # 嵌入播放器
+DOMAIN-SUFFIX,youtubeeducation.com     # Education
+DOMAIN-SUFFIX,youtubekids.com          # Kids
+DOMAIN,wide-youtube.l.google.com       # 内部 UI
+DOMAIN,youtube-ui.l.google.com         # 内部 UI
 
 # ========== Telegram ==========
-DOMAIN-SUFFIX,telegram.org
-DOMAIN-SUFFIX,telegram.me
-DOMAIN-SUFFIX,telegram.dog
-DOMAIN-SUFFIX,t.me
-DOMAIN-SUFFIX,tx.me
-DOMAIN-SUFFIX,telegra.ph
-DOMAIN-SUFFIX,legra.ph
-DOMAIN-SUFFIX,telegram-cdn.org
-DOMAIN-SUFFIX,cdn-telegram.org
-DOMAIN-SUFFIX,telegramdownload.com
-DOMAIN-SUFFIX,stel.com
-DOMAIN-SUFFIX,tg.dev
-DOMAIN-SUFFIX,telega.one
-DOMAIN-SUFFIX,comments.app
-DOMAIN-SUFFIX,usercontent.dev
-DOMAIN-SUFFIX,quiz.directory
-IP-CIDR,91.105.192.0/23,no-resolve
-IP-CIDR,91.108.4.0/22,no-resolve
-IP-CIDR,91.108.8.0/22,no-resolve
-IP-CIDR,91.108.12.0/22,no-resolve
-IP-CIDR,91.108.16.0/22,no-resolve
-IP-CIDR,91.108.20.0/22,no-resolve
-IP-CIDR,91.108.56.0/22,no-resolve
-IP-CIDR,149.154.160.0/20,no-resolve
-IP-CIDR,185.76.151.0/24,no-resolve
-IP-CIDR,95.161.64.0/20,no-resolve
-IP-CIDR,109.239.140.0/24,no-resolve
-IP-CIDR,139.59.210.98/32,no-resolve
-IP-CIDR,196.55.216.167/32,no-resolve
-IP-CIDR,5.28.192.0/18,no-resolve
+DOMAIN-SUFFIX,telegram.org             # 主域（API/文件/CDN）
+DOMAIN-SUFFIX,telegram.me              # 用户/频道链接
+DOMAIN-SUFFIX,telegram.dog             # Bot 短链
+DOMAIN-SUFFIX,t.me                     # 短链
+DOMAIN-SUFFIX,tx.me                    # 备用短链
+DOMAIN-SUFFIX,telegra.ph               # Telegraph 文章
+DOMAIN-SUFFIX,legra.ph                 # Telegraph 备用
+DOMAIN-SUFFIX,graph.org                # Telegraph 镜像（文章/评论区）
+DOMAIN-SUFFIX,telesco.pe               # 视频消息 CDN（照片/视频/头像）
+DOMAIN-SUFFIX,telegram-cdn.org         # 文件 CDN
+DOMAIN-SUFFIX,cdn-telegram.org         # 文件 CDN 备用
+DOMAIN-SUFFIX,telegramdownload.com     # 大文件下载
+DOMAIN-SUFFIX,stel.com                 # 端点发现（tapv3.stel.com → DC IP）
+DOMAIN-SUFFIX,tg.dev                   # Bot API / 登录回调
+DOMAIN-SUFFIX,comments.app             # 频道评论区
+DOMAIN-SUFFIX,usercontent.dev          # 用户内容
+DOMAIN-SUFFIX,quiz.directory           # Quiz 功能
+IP-CIDR,91.105.192.0/23,no-resolve     # DC 1
+IP-CIDR,91.108.4.0/22,no-resolve       # DC 2
+IP-CIDR,91.108.8.0/22,no-resolve       # DC 3
+IP-CIDR,91.108.12.0/22,no-resolve      # DC 4
+IP-CIDR,91.108.16.0/22,no-resolve      # DC 5
+IP-CIDR,91.108.20.0/22,no-resolve      # DC 6
+IP-CIDR,91.108.56.0/22,no-resolve      # 备用
+IP-CIDR,149.154.160.0/20,no-resolve    # 备用
+IP-CIDR,185.76.151.0/24,no-resolve     # 备用
+IP-CIDR,95.161.64.0/20,no-resolve      # 备用
+IP-CIDR,109.239.140.0/24,no-resolve    # 备用
+IP-CIDR,139.59.210.98/32,no-resolve    # 单节点
+IP-CIDR,196.55.216.167/32,no-resolve   # 单节点
+IP-CIDR,5.28.192.0/18,no-resolve       # 扩展
+IP-CIDR6,2001:67c:4e8::/48,no-resolve  # IPv6
+IP-CIDR6,2001:b28:f23c::/48,no-resolve # IPv6
 
 # ========== X / Twitter / Grok ==========
-DOMAIN-SUFFIX,x.com
-DOMAIN-SUFFIX,twitter.com
-DOMAIN-SUFFIX,t.co
-DOMAIN-SUFFIX,twimg.com
-DOMAIN-SUFFIX,twimg.co
-DOMAIN-SUFFIX,twimg.org
-DOMAIN-SUFFIX,twvid.com
-DOMAIN-SUFFIX,twttr.com
-DOMAIN-SUFFIX,twttr.net
-DOMAIN-SUFFIX,twtrdns.net
-DOMAIN-SUFFIX,twitteroauth.com
-DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.com                    # 主域
+DOMAIN-SUFFIX,twitter.com              # 旧主域
+DOMAIN-SUFFIX,t.co                     # 短链
+DOMAIN-SUFFIX,twimg.com                # 图片 CDN
+DOMAIN-SUFFIX,twimg.co                 # 图片 CDN 备用
+DOMAIN-SUFFIX,twimg.org                # 图片 CDN 备用
+DOMAIN-SUFFIX,twvid.com                # 视频 CDN
+DOMAIN-SUFFIX,twttr.com                # 基础设施
+DOMAIN-SUFFIX,twttr.net                # 基础设施备用
+DOMAIN-SUFFIX,twtrdns.net              # DNS
+DOMAIN-SUFFIX,twitteroauth.com         # OAuth
+DOMAIN-SUFFIX,grok.com                 # Grok AI
 
 # ========== GitHub ==========
-DOMAIN-SUFFIX,github.com
-DOMAIN-SUFFIX,githubusercontent.com
-DOMAIN-SUFFIX,githubassets.com
-DOMAIN-SUFFIX,github.io
-DOMAIN-SUFFIX,github.dev
-DOMAIN-SUFFIX,githubstatus.com
-DOMAIN-SUFFIX,githubapp.com
-DOMAIN-SUFFIX,githubcopilot.com
-DOMAIN-SUFFIX,ghcr.io
-DOMAIN-SUFFIX,gh.io
-DOMAIN-SUFFIX,git.io
+DOMAIN-SUFFIX,github.com               # 主域
+DOMAIN-SUFFIX,githubusercontent.com    # 用户内容
+DOMAIN-SUFFIX,githubassets.com         # 静态资源
+DOMAIN-SUFFIX,github.io                # Pages
+DOMAIN-SUFFIX,github.dev               # 开发工具
+DOMAIN-SUFFIX,githubstatus.com         # 状态页
+DOMAIN-SUFFIX,githubapp.com            # 第三方 App
+DOMAIN-SUFFIX,githubcopilot.com        # Copilot
+DOMAIN-SUFFIX,ghcr.io                  # Container Registry
+DOMAIN-SUFFIX,gh.io                    # 短链
+DOMAIN-SUFFIX,git.io                   # 短链（旧）
 
 # ========== Reddit ==========
-DOMAIN-SUFFIX,reddit.com
-DOMAIN-SUFFIX,redditstatic.com
-DOMAIN-SUFFIX,redd.it
-DOMAIN-SUFFIX,redditmedia.com
-DOMAIN,reddit.app.link
-DOMAIN-SUFFIX,reddithelp.com
+DOMAIN-SUFFIX,reddit.com               # 主域
+DOMAIN-SUFFIX,redditstatic.com         # 静态 CDN
+DOMAIN-SUFFIX,redd.it                  # 短链
+DOMAIN-SUFFIX,redditmedia.com          # 媒体
+DOMAIN,reddit.app.link                 # 深链
+DOMAIN-SUFFIX,reddithelp.com           # 帮助
 
 # ========== Spotify ==========
-DOMAIN-SUFFIX,spotify.com
-DOMAIN-SUFFIX,scdn.co
-DOMAIN-SUFFIX,pscdn.co
-DOMAIN-SUFFIX,spoti.fi
-DOMAIN-SUFFIX,spotifycdn.com
-DOMAIN-SUFFIX,spotifycdn.net
-DOMAIN-SUFFIX,spotify.link
-DOMAIN-SUFFIX,sptfy.com
-DOMAIN-SUFFIX,api-spotify.com
-DOMAIN,audio-ak-spotify-com.akamaized.net
-DOMAIN,audio4-ak-spotify-com.akamaized.net
-DOMAIN,heads-ak-spotify-com.akamaized.net
-DOMAIN,heads4-ak-spotify-com.akamaized.net
-DOMAIN,spotify.com.edgesuite.net
-DOMAIN,spotify.map.fastly.net
-DOMAIN,spotify.map.fastlylb.net   
+DOMAIN-SUFFIX,spotify.com              # 主域（API/播放/账户/搜索）
+DOMAIN-SUFFIX,scdn.co                  # 音频 CDN
+DOMAIN-SUFFIX,pscdn.co                 # 播放列表 CDN
+DOMAIN-SUFFIX,spoti.fi                 # 短链
+DOMAIN-SUFFIX,spotifycdn.com           # 图片/视频 CDN
+DOMAIN-SUFFIX,spotifycdn.net           # 备用 CDN
+DOMAIN-SUFFIX,spotify.link             # 分享链接
+DOMAIN,audio-ak-spotify-com.akamaized.net    # 音频流
+DOMAIN,audio4-ak-spotify-com.akamaized.net   # 音频流备用
+DOMAIN,heads-ak-spotify-com.akamaized.net    # 元数据
+DOMAIN,heads4-ak-spotify-com.akamaized.net   # 元数据备用
+DOMAIN,spotify.com.edgesuite.net       # 旧 Akamai
+DOMAIN,spotify.map.fastly.net          # Fastly
+DOMAIN,spotify.map.fastlylb.net        # Fastly LB   
