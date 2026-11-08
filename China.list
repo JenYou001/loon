@@ -6,7 +6,6 @@ DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,bilivideo.cn
 DOMAIN-SUFFIX,bilivideo.net
 DOMAIN-SUFFIX,hdslb.com
-DOMAIN-SUFFIX,hdslb.org
 DOMAIN-SUFFIX,bilicdn1.com
 DOMAIN-SUFFIX,biliimg.com
 USER-AGENT,Bilibili*
@@ -15,25 +14,13 @@ USER-AGENT,Bilibili*
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,360buyimg.com
 DOMAIN-SUFFIX,jdcdn.com
-DOMAIN-SUFFIX,360buy.com
 USER-AGENT,JD4iPhone*
 USER-AGENT,jdapp;*
 
 # ========== 滴滴出行 ==========
-DOMAIN-SUFFIX,didistatic.com
-DOMAIN-SUFFIX,udache.com
-DOMAIN-SUFFIX,xiaojukeji.com
 DOMAIN-SUFFIX,didi.cn
-DOMAIN-SUFFIX,diditaxi.com.cn
-DOMAIN-SUFFIX,didi-food.com
-DOMAIN-SUFFIX,didiqiche.com
-DOMAIN-SUFFIX,didiopenapi.com
-DOMAIN-SUFFIX,didialift.com
-DOMAIN-SUFFIX,apptaxi.com.cn
-DOMAIN-SUFFIX,cxyule.com
-DOMAIN-SUFFIX,didi.xin
-DOMAIN-SUFFIX,didiapp.net.cn
-DOMAIN-SUFFIX,didimobility.com
+DOMAIN-SUFFIX,didistatic.com
+DOMAIN-SUFFIX,xiaojukeji.com
 
 # ========== 拼多多 ==========
 DOMAIN-SUFFIX,pinduoduo.com
@@ -42,17 +29,10 @@ DOMAIN-SUFFIX,pinduoduo.net
 DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pddugc.com
 DOMAIN-SUFFIX,pddcdn.com
+DOMAIN-SUFFIX,smtcdns.net
 
 # ========== BOSS直聘 ==========
 DOMAIN-SUFFIX,zhipin.com
-DOMAIN-SUFFIX,bosszhipin.com
-DOMAIN-SUFFIX,bosszhipin.cn
-DOMAIN-SUFFIX,bosszhipin.com.cn
-DOMAIN-SUFFIX,bosszp.cn
-DOMAIN-SUFFIX,weizhipin.com
-DOMAIN-SUFFIX,dianzhangzhipin.com
-DOMAIN-SUFFIX,kanzhun.com
-DOMAIN,fenzhi.com
 DOMAIN-SUFFIX,geetest.com
 DOMAIN-SUFFIX,geevisit.com
 DOMAIN,dun.163.com
@@ -63,7 +43,6 @@ DOMAIN-SUFFIX,wtzw.com
 
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
-DOMAIN-SUFFIX,duolingo.cn
 
 # ========== 铁路12306 ==========
 DOMAIN-SUFFIX,12306.cn
