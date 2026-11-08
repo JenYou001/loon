@@ -22,15 +22,24 @@ USER-AGENT,JD4iPhone*
 USER-AGENT,jdapp;*
 
 # ========== 微信 / 微信支付 ==========
-DOMAIN-SUFFIX,weixin.qq.com
-DOMAIN-SUFFIX,weixin.qq.com.cn
-DOMAIN-SUFFIX,wx.qq.com
-DOMAIN-SUFFIX,wxs.qq.com
-DOMAIN-SUFFIX,wechat.com
-DOMAIN-SUFFIX,qpic.cn
-DOMAIN-SUFFIX,qlogo.cn
-DOMAIN-SUFFIX,tenpay.com
-DOMAIN-SUFFIX,wechatpay.cn
+DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+DOMAIN-SUFFIX,weixin.qq.com.cn,DIRECT
+DOMAIN-SUFFIX,wx.qq.com,DIRECT
+DOMAIN-SUFFIX,wxs.qq.com,DIRECT
+DOMAIN-SUFFIX,wechat.com,DIRECT
+DOMAIN-SUFFIX,qpic.cn,DIRECT
+DOMAIN-SUFFIX,qlogo.cn,DIRECT
+DOMAIN-SUFFIX,tenpay.com,DIRECT
+DOMAIN-SUFFIX,wechatpay.cn,DIRECT
+DOMAIN-SUFFIX,wechatpay.com,DIRECT
+DOMAIN-SUFFIX,servicewechat.com,DIRECT
+DOMAIN-SUFFIX,wxapp.tc.qq.com,DIRECT
+DOMAIN-SUFFIX,weixin.com,DIRECT
+DOMAIN-SUFFIX,weixinbridge.com,DIRECT
+DOMAIN,dldir1.qq.com,DIRECT
+DOMAIN,wup.imtt.qq.com,DIRECT
+DOMAIN,wx.gtimg.com,DIRECT
+DOMAIN,lbs.gtimg.com,DIRECT
 USER-AGENT,*MicroMessenger*
 
 # ========== 滴滴出行 ==========
