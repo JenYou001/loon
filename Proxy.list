@@ -6,28 +6,6 @@ DOMAIN-SUFFIX,adguardcdn.com
 
 # ========== Google ==========
 DOMAIN-SUFFIX,google.com
-DOMAIN-SUFFIX,google.com.hk
-DOMAIN-SUFFIX,google.com.tw
-DOMAIN-SUFFIX,google.co.uk
-DOMAIN-SUFFIX,google.ca
-DOMAIN-SUFFIX,google.com.au
-DOMAIN-SUFFIX,google.co.jp
-DOMAIN-SUFFIX,google.co.in
-DOMAIN-SUFFIX,google.co.kr
-DOMAIN-SUFFIX,google.com.sg
-DOMAIN-SUFFIX,google.com.br
-DOMAIN-SUFFIX,google.com.mx
-DOMAIN-SUFFIX,google.com.tr
-DOMAIN-SUFFIX,google.com.ar
-DOMAIN-SUFFIX,google.com.co
-DOMAIN-SUFFIX,google.de
-DOMAIN-SUFFIX,google.fr
-DOMAIN-SUFFIX,google.it
-DOMAIN-SUFFIX,google.es
-DOMAIN-SUFFIX,google.nl
-DOMAIN-SUFFIX,google.co.nz
-DOMAIN-SUFFIX,google.co.za
-DOMAIN-SUFFIX,google.co.id
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,googleusercontent.com
@@ -44,6 +22,17 @@ DOMAIN-SUFFIX,app-measurement.com
 DOMAIN-SUFFIX,g.co
 DOMAIN-SUFFIX,goo.gl
 
+# ========== YouTube ==========
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,yt.be
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,youtubeeducation.com
+DOMAIN-SUFFIX,youtubekids.com
+DOMAIN,wide-youtube.l.google.com
+DOMAIN,youtube-ui.l.google.com
+
 # ========== DuckDuckGo ==========
 DOMAIN-SUFFIX,duckduckgo.com
 DOMAIN-SUFFIX,duckduckgo.org
@@ -57,40 +46,6 @@ DOMAIN-SUFFIX,quack-dns.com
 # ========== Brave ==========
 DOMAIN-SUFFIX,brave.com
 DOMAIN-SUFFIX,bravesoftware.com
-
-# ========== YouTube ==========
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,youtube.com.hk
-DOMAIN-SUFFIX,youtube.com.tw
-DOMAIN-SUFFIX,youtube.co.uk
-DOMAIN-SUFFIX,youtube.ca
-DOMAIN-SUFFIX,youtube.com.au
-DOMAIN-SUFFIX,youtube.co.jp
-DOMAIN-SUFFIX,youtube.co.in
-DOMAIN-SUFFIX,youtube.co.kr
-DOMAIN-SUFFIX,youtube.com.sg
-DOMAIN-SUFFIX,youtube.com.br
-DOMAIN-SUFFIX,youtube.com.mx
-DOMAIN-SUFFIX,youtube.com.tr
-DOMAIN-SUFFIX,youtube.com.ar
-DOMAIN-SUFFIX,youtube.com.co
-DOMAIN-SUFFIX,youtube.de
-DOMAIN-SUFFIX,youtube.fr
-DOMAIN-SUFFIX,youtube.it
-DOMAIN-SUFFIX,youtube.es
-DOMAIN-SUFFIX,youtube.nl
-DOMAIN-SUFFIX,youtube.co.nz
-DOMAIN-SUFFIX,youtube.co.za
-DOMAIN-SUFFIX,youtube.co.id
-DOMAIN-SUFFIX,youtube.co.th
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,yt.be
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,youtube-nocookie.com
-DOMAIN-SUFFIX,youtubeeducation.com
-DOMAIN-SUFFIX,youtubekids.com
-DOMAIN,wide-youtube.l.google.com
-DOMAIN,youtube-ui.l.google.com
 
 # ========== Telegram ==========
 DOMAIN-SUFFIX,telegram.org
