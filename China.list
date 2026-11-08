@@ -15,11 +15,6 @@ DOMAIN-SUFFIX,bilicdn5.com
 DOMAIN-SUFFIX,biliimg.com
 USER-AGENT,Bilibili*
 
-# ========== 高德地图 ==========
-DOMAIN-SUFFIX,autonavi.com
-DOMAIN-SUFFIX,amap.com
-DOMAIN-SUFFIX,gaode.com
-
 # ========== 京东 ==========
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,360buyimg.com
@@ -73,28 +68,6 @@ DOMAIN-SUFFIX,wtzw.com
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
 DOMAIN-SUFFIX,duolingo.cn
-
-# ========== 转转 ==========
-DOMAIN-SUFFIX,zhuanzhuan.com
-DOMAIN-SUFFIX,zhuanspirit.com
-DOMAIN-SUFFIX,zhuanspirit.cn
-DOMAIN-SUFFIX,zhuancorp.com
-DOMAIN-SUFFIX,zhuanstatic.com
-DOMAIN-SUFFIX,zhuaninc.com
-DOMAIN-SUFFIX,zhuan-zhuan.cn
-
-# ========== 58同城系 ==========
-DOMAIN-SUFFIX,58.com
-DOMAIN-SUFFIX,58.com.cn
-DOMAIN-SUFFIX,5858.com
-DOMAIN-SUFFIX,58cdn.com.cn
-DOMAIN-SUFFIX,58corp.com
-DOMAIN-SUFFIX,anjuke.com
-DOMAIN-SUFFIX,fang.com
-DOMAIN-SUFFIX,sofun.com
-DOMAIN-SUFFIX,soufunimg.com
-DOMAIN-SUFFIX,chinahr.com
-DOMAIN-SUFFIX,daojia.com
 
 # ========== 铁路12306 ==========
 DOMAIN-SUFFIX,12306.cn
