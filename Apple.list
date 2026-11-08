@@ -1,5 +1,4 @@
 # ========== Apple ==========
-# 核心系统
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,icloud.com
@@ -8,20 +7,13 @@ DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,me.com
-DOMAIN-SUFFIX,appstore.com
-# 地图 & 地理服务
 DOMAIN-SUFFIX,apple-mapkit.com
-# iCloud / CloudKit
 DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,apple-livephotoskit.com
 DOMAIN-SUFFIX,apple-dns.net
-# 系统机制
 DOMAIN,app-site-association.networking.apple
 DOMAIN,token.safebrowsing.apple
-# 低频
-DOMAIN,maps.apple
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,apple.tv
-DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,appsto.re
