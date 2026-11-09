@@ -1,4 +1,4 @@
-# ========== Apple ==========
+# ==================== Apple（21）====================
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,icloud.com
@@ -7,13 +7,16 @@ DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,mac.com
+DOMAIN-SUFFIX,iwork.com
 DOMAIN-SUFFIX,apple-mapkit.com
 DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,apple-livephotoskit.com
 DOMAIN-SUFFIX,apple-dns.net
-DOMAIN,app-site-association.networking.apple
-DOMAIN,token.safebrowsing.apple
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,apple.tv
+DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,appsto.re
+DOMAIN,app-site-association.networking.apple
+DOMAIN,token.safebrowsing.apple
