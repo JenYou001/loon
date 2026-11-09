@@ -1,98 +1,87 @@
-# ========== 微信 ==========
+# ==================== 微信（22）====================
 DOMAIN-SUFFIX,weixin.qq.com
-DOMAIN-SUFFIX,weixin.qq.com.cn
 DOMAIN-SUFFIX,wx.qq.com
 DOMAIN-SUFFIX,wxs.qq.com
-DOMAIN-SUFFIX,wechat.com
-DOMAIN-SUFFIX,weixin.com
+DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,weixinbridge.com
 DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,tenpay.com
 DOMAIN-SUFFIX,wechatpay.cn
-DOMAIN-SUFFIX,wechatpay.com
-DOMAIN-SUFFIX,servicewechat.com
-DOMAIN-SUFFIX,wxapp.tc.qq.com
-DOMAIN-SUFFIX,wx.gtimg.com
-DOMAIN-SUFFIX,lbs.gtimg.com
-DOMAIN-SUFFIX,map.qq.com
-DOMAIN-SUFFIX,wechatos.net
-DOMAIN-SUFFIX,vweixinthumb.tc.qq.com
-DOMAIN-SUFFIX,weixinsxy.com
+DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,weixin.com
+DOMAIN,wx.gtimg.com
+DOMAIN,wximg.qq.com
+DOMAIN,weixin110.qq.com
+DOMAIN,btrace.qq.com
+DOMAIN,dldir1.qq.com
+DOMAIN,wup.imtt.qq.com
+DOMAIN,wxapp.tc.qq.com
+DOMAIN,vweixinf.tc.qq.com
+DOMAIN,weixinc2c.tc.qq.com
+DOMAIN,slife.xy-asia.com
 
-# ========== 阿里系 ==========
-DOMAIN-SUFFIX,alicdn.com
-DOMAIN-SUFFIX,alipayobjects.com
-DOMAIN-SUFFIX,alibabausercontent.com
-DOMAIN-SUFFIX,alibaba.com
-DOMAIN-SUFFIX,aliapp.org
-DOMAIN-SUFFIX,alibabachengdun.com
-DOMAIN-SUFFIX,alipay.com
-DOMAIN-SUFFIX,antfin.com
-DOMAIN-SUFFIX,taobao.com
-DOMAIN-SUFFIX,tmall.com
-DOMAIN-SUFFIX,tb.cn
-DOMAIN-SUFFIX,tbcache.com
-DOMAIN-SUFFIX,1688.com
-DOMAIN-SUFFIX,goofish.com
-DOMAIN-SUFFIX,xianyu.com
-DOMAIN-SUFFIX,amap.com
-
-# ========== 京东 ==========
-DOMAIN-SUFFIX,jd.com
-DOMAIN-SUFFIX,360buyimg.com
-DOMAIN-SUFFIX,jdcdn.com
-DOMAIN-SUFFIX,3.cn
-
-# ========== 拼多多 ==========
-DOMAIN-SUFFIX,pinduoduo.com
-DOMAIN-SUFFIX,yangkeduo.com
-DOMAIN-SUFFIX,pinduoduo.net
-DOMAIN-SUFFIX,pddpic.com
-DOMAIN-SUFFIX,pddugc.com
-DOMAIN-SUFFIX,pddcdn.com
-DOMAIN-SUFFIX,smtcdns.net
-
-# ========== 滴滴 ==========
-DOMAIN-SUFFIX,didi.cn
-DOMAIN-SUFFIX,didistatic.com
-DOMAIN-SUFFIX,xiaojukeji.com
-
-# ========== B站 ==========
+# ==================== Bilibili（17）====================
 DOMAIN-SUFFIX,bilibili.com
-DOMAIN-SUFFIX,biliapi.com
-DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,bilivideo.cn
-DOMAIN-SUFFIX,bilivideo.net
-DOMAIN-SUFFIX,hdslb.com
+DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,bilicdn1.com
-DOMAIN-SUFFIX,biliimg.com
+DOMAIN-SUFFIX,b23.tv
+DOMAIN-SUFFIX,bilibili.cn
+DOMAIN-SUFFIX,bilibiligame.cn
+DOMAIN-SUFFIX,bigfun.cn
+DOMAIN-SUFFIX,acgvideo.com
+DOMAIN-SUFFIX,jcloud-cdn.com
+DOMAIN-SUFFIX,cdnhwc1.com
+DOMAIN-SUFFIX,cdnhwc2.com
+DOMAIN-SUFFIX,cdnhwc3.com
+DOMAIN-SUFFIX,ksyuncdn.com
 
-# ========== BOSS直聘 ==========
-# 自有域名
+# ==================== 阿里系（11）====================
+DOMAIN-SUFFIX,taobao.com
+DOMAIN-SUFFIX,alicdn.com
+DOMAIN-SUFFIX,tmall.com
+DOMAIN-SUFFIX,alipay.com
+DOMAIN-SUFFIX,aliapp.org
+DOMAIN-SUFFIX,alibaba.com
+DOMAIN-SUFFIX,goofish.com
+DOMAIN-SUFFIX,1688.com
+DOMAIN-SUFFIX,tbcache.com
+DOMAIN-SUFFIX,tbcdn.cn
+DOMAIN-SUFFIX,alikunlun.com
+
+# ==================== 京东（6）====================
+DOMAIN-SUFFIX,jd.com
+DOMAIN-SUFFIX,360buyimg.com
+DOMAIN-SUFFIX,3.cn
+DOMAIN-SUFFIX,jd.hk
+DOMAIN-SUFFIX,jdpay.com
+DOMAIN-SUFFIX,jdcloud.com
+
+# ==================== BOSS直聘（4）====================
 DOMAIN-SUFFIX,zhipin.com
-DOMAIN-SUFFIX,bosszhipin.com
-DOMAIN-SUFFIX,bosszp.cn
-DOMAIN-SUFFIX,weizhipin.com
-DOMAIN-SUFFIX,dianzhangzhipin.com
-# 极验验证码
 DOMAIN-SUFFIX,geetest.com
 DOMAIN-SUFFIX,geevisit.com
 DOMAIN-SUFFIX,gsensebot.com
-DOMAIN,dn-staticdown.qbox.me
-# 网易易盾风控
-DOMAIN,dun.163.com
 
-# ========== 七猫小说 ==========
+# ==================== 拼多多（5）====================
+DOMAIN-SUFFIX,pinduoduo.com
+DOMAIN-SUFFIX,yangkeduo.com
+DOMAIN-SUFFIX,pddpic.com
+DOMAIN-SUFFIX,pinduoduo.net
+DOMAIN-SUFFIX,pdd.net
+
+# ==================== 多邻国（2）====================
+DOMAIN-SUFFIX,duolingo.com
+DOMAIN-SUFFIX,duolingo.cn
+
+# ==================== 七猫小说（3）====================
 DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
 DOMAIN-SUFFIX,qm989.com
 
-# ========== 多邻国 ==========
-DOMAIN-SUFFIX,duolingo.com
-DOMAIN-SUFFIX,duolingo.cn
-DOMAIN,d7mj4aqfscim2.cloudfront.net   
-
-# ========== 铁路12306 ==========
+# ==================== 铁路12306（1）====================
 DOMAIN-SUFFIX,12306.cn
