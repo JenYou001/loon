@@ -1,130 +1,193 @@
-#!name = HTTPDNS 拦截增强版
-#!desc = 基于 Loon 3.5.3 官方语法，聚焦 HTTPDNS / HTTPSDNS / DNS 查询接口与常见解析服务，按网络安全优先原则进行阻断
+#!name = DoH/HTTPDNS 拦截（AdGuard DoH 专用）
+#!desc = 拦截 App 内置 HTTPDNS/DoH 解析端点，强制所有 DNS 解析走系统 AdGuard DoH；不拦截 CDN 调度（AMDC/GSLB）
 #!author = VirgilClyne, 可莉, JenYou001
-#!loon_version = 3.5.3
+#!loon_version = 3.5.3(1007)
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png
+#!tag = 安全,DoH,HTTPDNS,AdGuard
+#!type = normal
 
 [Rule]
-# 1. 通用 HTTPDNS / HTTPSDNS / DNS 查询通道拦截
+# ═══════════════════════════════════════════════════════════
+# 第 1 层：域名关键词（O(1)，零开销）
+# 覆盖所有含 httpdns/httpsdns 关键词的 DNS 解析域名
+# ═══════════════════════════════════════════════════════════
 DOMAIN-KEYWORD,httpdns,REJECT
 DOMAIN-KEYWORD,httpsdns,REJECT
 DOMAIN-KEYWORD,http-dns,REJECT
+DOMAIN-KEYWORD,https-dns,REJECT
 DOMAIN-KEYWORD,dns-query,REJECT
-USER-AGENT,"httpdns*",REJECT
-USER-AGENT,"httpsdns*",REJECT
-USER-AGENT,"Httpdns*",REJECT
-USER-AGENT,"Httpsdns*",REJECT
 
-# 2. 通用 URL 模式拦截（HTTPDNS 常见请求路径）
-URL-REGEX,^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\/v?[0-9]+)?\/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\?,REJECT
-URL-REGEX,^http:\/\/\[[0-9a-fA-F:]+\](?:\/v?[0-9]+)?\/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\?,REJECT
-URL-REGEX,^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):\d+\/httpdns\/,REJECT
-URL-REGEX,^http:\/\/\[[0-9a-fA-F:]+\]:\d+\/httpdns\/,REJECT
-URL-REGEX,^http:\/\/103\.44\.58\.64\/md\?,REJECT
-URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns,REJECT
-URL-REGEX,^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/,REJECT
-URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/47\.246\.103\.9\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/47\.246\.103\.10\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/59\.82\.113\.219\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/103\.37\.155\.60\/fetch,REJECT
-URL-REGEX,^http:\/\/api\.weibo\.cn\/\d+\/httpdns\/config,REJECT
-URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT
-URL-REGEX,^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/v\d\/resolv\?,REJECT
+# ═══════════════════════════════════════════════════════════
+# 第 2 层：精确域名（O(1)，零开销）
+# 仅拦截 DNS 解析类端点
+# ═══════════════════════════════════════════════════════════
 
-# 3. 常见 HTTPDNS 解析域名（精确阻断）
-DOMAIN,httpdns.alicdn.com,REJECT
-DOMAIN,httpdns-api.aliyuncs.com,REJECT
-DOMAIN,httpdns-sc.aliyuncs.com,REJECT
-DOMAIN,resolvers-cn.httpdns.aliyuncs.com,REJECT
-DOMAIN,httpsdns.baidu.com,REJECT
+# ── 微信 ──
+DOMAIN,dns.weixin.qq.com,REJECT
+DOMAIN,dns.weixin.qq.com.cn,REJECT
+DOMAIN,aedns.weixin.qq.com,REJECT
+DOMAIN,short.weixin.qq.com,REJECT
+DOMAIN,hkextshort.weixin.qq.com,REJECT
+
+# ── 腾讯 ──
+DOMAIN,httpdns.kg.qq.com,REJECT
+
+# ── 百度 ──
 DOMAIN,httpdns.baidu.com,REJECT
+DOMAIN,httpsdns.baidu.com,REJECT
 DOMAIN,httpdns.baidubce.com,REJECT
 DOMAIN,httpdns.bcelive.com,REJECT
-DOMAIN,httpdns.bilivideo.com,REJECT
-DOMAIN,httpdns.browser.miui.com,REJECT
-DOMAIN,resolver.msg.xiaomi.net,REJECT
-DOMAIN,httpdns.c.cdnhwc2.com,REJECT
-DOMAIN,httpdns-browser.platform.dbankcloud.cn,REJECT
-DOMAIN,httpdns.huaweicloud.com,REJECT
-DOMAIN,httpdns.platform.dbankcloud.cn,REJECT
-DOMAIN,httpdns.platform.dbankcloud.com,REJECT
-DOMAIN,httpdns1.cc.cdnhwc5.com,REJECT
-DOMAIN,doh.iqiyi.com,REJECT
-DOMAIN,dns.iqiyi.com,REJECT
-DOMAIN,dns.qiyipic.iqiyi.com,REJECT
-DOMAIN,httpdns.n.shifen.com,REJECT
-DOMAIN,dns.jd.com,REJECT
-DOMAIN,httpdns.kg.qq.com,REJECT
-DOMAIN,httpdns.calorietech.com,REJECT
+
+# ── 美团 ──
 DOMAIN,httpdns.meituan.com,REJECT
 DOMAIN,httpdnsmultiapi.meituan.com,REJECT
 DOMAIN,httpdnsmultiapivip.meituan.com,REJECT
+DOMAIN,httpdnsvip.meituan.com,REJECT
+DOMAIN,httpdns.calorietech.com,REJECT
 DOMAIN,dnspod.meituan.httpdns.qcloud.com,REJECT
 DOMAIN,dnspod.meituan.httpdns.start.qcloud.com,REJECT
-DOMAIN,httpdns.immomo.com,REJECT
-DOMAIN,httpdns.yunxinfw.com,REJECT
-DOMAIN,httpdns.yunxindns.com,REJECT
+
+# ── 阿里（仅 DNS 解析，不含 AMDC CDN 调度）──
+DOMAIN,httpdns-api.aliyuncs.com,REJECT
+DOMAIN,httpdns-sc.aliyuncs.com,REJECT
+DOMAIN,resolvers-cn.httpdns.aliyuncs.com,REJECT
+
+# ── 京东 ──
+DOMAIN,dns.jd.com,REJECT
+
+# ── 网易 ──
 DOMAIN,httpdns.n.netease.com,REJECT
 DOMAIN,httpdns-sdk.n.netease.com,REJECT
 DOMAIN,httpdns.music.163.com,REJECT
 DOMAIN,music.httpdns.c.163.com,REJECT
 DOMAIN,lofter.httpdns.c.163.com,REJECT
+
+# ── 小米 ──
+DOMAIN,httpdns.browser.miui.com,REJECT
+DOMAIN,resolver.msg.xiaomi.net,REJECT
+
+# ── 华为 ──
+DOMAIN,httpdns.huaweicloud.com,REJECT
+DOMAIN,httpdns.platform.dbankcloud.cn,REJECT
+DOMAIN,httpdns.platform.dbankcloud.com,REJECT
+DOMAIN,httpdns-browser.platform.dbankcloud.cn,REJECT
+DOMAIN,httpdns.c.cdnhwc2.com,REJECT
+DOMAIN,httpdns1.cc.cdnhwc5.com,REJECT
+
+# ── 爱奇艺 ──
+DOMAIN,doh.iqiyi.com,REJECT
+DOMAIN,dns.iqiyi.com,REJECT
+DOMAIN,dns.qiyipic.iqiyi.com,REJECT
+
+# ── OPPO ──
 DOMAIN,httpdns.ocloud.oppomobile.com,REJECT
 DOMAIN,httpdns.push.oppomobile.com,REJECT
 DOMAIN,httpdns.ocloud.heytapmobi.com,REJECT
 DOMAIN,httpdns.push.heytapmobi.com,REJECT
+
+# ── 微博 ──
 DOMAIN,dns.weibo.cn,REJECT
-DOMAIN,aedns.weixin.qq.com,REJECT
-DOMAIN,dns.weixin.qq.com,REJECT
-DOMAIN,dns.weixin.qq.com.cn,REJECT
-DOMAIN,yyapp-httpdns.gslb.yy.com,REJECT
-DOMAIN,union-httpdns.gslb.yy.com,REJECT
-DOMAIN,yuyin-httpdns.gslb.yy.com,REJECT
-DOMAIN,httpdns-v6.gslb.yy.com,REJECT
-DOMAIN,dns2.q2cdn.com,REJECT
-DOMAIN,xpis-xcdn.youku.com,REJECT
-DOMAIN,pre-xpis-xcdn.youku.com,REJECT
-DOMAIN,xpis-tel-xcdn.youku.com,REJECT
-DOMAIN,xpis-mob-xcdn.youku.com,REJECT
-DOMAIN,httpdns.cctv.com,REJECT
-DOMAIN,doh.ptqy.gitv.tv,REJECT
-DOMAIN,httpdns.danuoyi.tbcache.com,REJECT
-DOMAIN,ucdc.upaas.quark.cn,REJECT
-DOMAIN,dotserver.douyucdn.cn,REJECT
-DOMAIN,hdns.ksyun.com,REJECT
-DOMAIN,cdndns.kwd.inkuai.com,REJECT
-DOMAIN,hdns.k-dyn.com,REJECT
-DOMAIN,kuaishou.httpdns.pro,REJECT
+
+# ── 快手 ──
 DOMAIN,httpdns.kwd.inkuai.com,REJECT
 DOMAIN,apidns.kwd.inkuai.com,REJECT
 DOMAIN,apidns-js.kwd.inkuai.com,REJECT
+DOMAIN,hdns.k-dyn.com,REJECT
+DOMAIN,cdndns.kwd.inkuai.com,REJECT
+DOMAIN,kuaishou.httpdns.pro,REJECT
+DOMAIN,hdns.ksyun.com,REJECT
+
+# ── 其他 ──
+DOMAIN,httpdns.n.shifen.com,REJECT
+DOMAIN,httpdns.immomo.com,REJECT
+DOMAIN,httpdns.yunxinfw.com,REJECT
+DOMAIN,httpdns.yunxindns.com,REJECT
+DOMAIN,httpdns.cctv.com,REJECT
+DOMAIN,doh.ptqy.gitv.tv,REJECT
+DOMAIN,httpdns.volcengineapi.com,REJECT
 DOMAIN,httpdns.zybang.com,REJECT
 DOMAIN,hd.xiaojukeji.com,REJECT
 DOMAIN,serveraddr.service.kugou.com,REJECT
-DOMAIN,twns.p2ptun.qq.com,REJECT
-DOMAIN,tp2p.kg.qq.com,REJECT
-DOMAIN,httpdns.volcengineapi.com,REJECT
-DOMAIN,amdc.alipay.com,REJECT
-DOMAIN,amdc-sibling.alipay.com.cn,REJECT
+DOMAIN,ucdc.upaas.quark.cn,REJECT
+DOMAIN,dotserver.douyucdn.cn,REJECT
+DOMAIN,dns2.q2cdn.com,REJECT
 DOMAIN-SUFFIX,httpdns.pro,REJECT
 
-# 4. 已知 HTTPDNS 相关 IP / IPv6（阻断解析和落点）
-IP-CIDR,203.107.1.0/24,REJECT,no-resolve
+# ═══════════════════════════════════════════════════════════
+# 第 3 层：URL 正则（仅保留有域名但 IP 会变的特定端点）
+# 通用 IP 正则已移除（性能差 + 由 IP-CIDR 层覆盖）
+# ═══════════════════════════════════════════════════════════
+URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns,REJECT
+URL-REGEX,^http:\/\/api\.weibo\.cn\/\d+\/httpdns\/config,REJECT
+URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT
+URL-REGEX,^http:\/\/103\.37\.155\.60\/fetch,REJECT
+
+# ═══════════════════════════════════════════════════════════
+# 第 4 层：IP 段（⚠️ 仅保留确认是 DNS 解析的 IP）
+# CDN 调度 IP 已移除
+# ═══════════════════════════════════════════════════════════
+
+# 百度 HTTPDNS
 IP-CIDR,180.76.76.112/32,REJECT,no-resolve
-IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 IP-CIDR,180.76.76.220/32,REJECT,no-resolve
-IP-CIDR,186.76.76.200/32,REJECT,no-resolve
+
+# 知乎 HTTPDNS
+IP-CIDR,118.89.204.198/23,REJECT,no-resolve
+
+# 美团 HTTPDNS
+IP-CIDR,103.37.155.60/32,REJECT,no-resolve
+
+# 拼多多 HTTPDNS
+IP-CIDR,101.35.204.35/32,REJECT,no-resolve
+IP-CIDR,101.35.212.35/32,REJECT,no-resolve
+IP-CIDR,114.110.96.26/32,REJECT,no-resolve
+IP-CIDR,114.110.97.97/32,REJECT,no-resolve
+IP-CIDR6,240c:409f::3:0:163/128,REJECT,no-resolve
+IP-CIDR6,240c:409f::3:0:359/128,REJECT,no-resolve
+IP-CIDR6,2402:4e00:1411:201:0:9964:ba21:5a41/128,REJECT,no-resolve
+
+# 腾讯 HTTPDNS
+IP-CIDR,103.41.167.237/32,REJECT,no-resolve
+IP-CIDR,182.254.116.117/32,REJECT,no-resolve
+IP-CIDR,182.254.118.119/32,REJECT,no-resolve
+
+# B站 HTTPDNS（仅 DNS 解析 IP，非 CDN 调度）
+IP-CIDR,47.101.175.206/32,REJECT,no-resolve
+IP-CIDR,47.100.123.169/32,REJECT,no-resolve
+IP-CIDR,120.46.169.234/32,REJECT,no-resolve
+IP-CIDR,121.36.72.124/32,REJECT,no-resolve
+IP-CIDR,116.63.10.135/32,REJECT,no-resolve
+IP-CIDR,116.63.10.31/32,REJECT,no-resolve
+IP-CIDR,122.9.7.134/32,REJECT,no-resolve
+IP-CIDR,122.9.13.79/32,REJECT,no-resolve
+IP-CIDR,122.9.15.129/32,REJECT,no-resolve
+IP-CIDR,117.185.228.108/32,REJECT,no-resolve
+IP-CIDR,117.144.238.29/32,REJECT,no-resolve
+IP-CIDR,101.91.140.224/32,REJECT,no-resolve
+IP-CIDR,101.91.140.124/32,REJECT,no-resolve
+IP-CIDR,114.116.215.110/32,REJECT,no-resolve
+IP-CIDR,112.64.218.119/32,REJECT,no-resolve
+IP-CIDR,112.65.200.117/32,REJECT,no-resolve
+
+# 阿里 squery（HTTPDNS 解析）
+IP-CIDR,110.76.8.150/32,REJECT,no-resolve
+IP-CIDR,203.209.230.39/32,REJECT,no-resolve
+IP-CIDR,203.209.245.102/32,REJECT,no-resolve
+IP-CIDR,203.209.245.158/32,REJECT,no-resolve
+IP-CIDR,203.209.247.95/32,REJECT,no-resolve
+IP-CIDR,203.209.250.41/32,REJECT,no-resolve
+IP-CIDR,203.209.250.114/32,REJECT,no-resolve
+IP-CIDR,203.209.251.147/32,REJECT,no-resolve
+IP-CIDR6,2400:b180:6001::18f/128,REJECT,no-resolve
+IP-CIDR6,2400:b200:1005:3000::155/128,REJECT,no-resolve
+IP-CIDR6,2400:b200:1005:3000::1d3/128,REJECT,no-resolve
+IP-CIDR6,2400:b200:5000:b000::c8/128,REJECT,no-resolve
+
+# 其他
+IP-CIDR,103.44.58.64/32,REJECT,no-resolve
+IP-CIDR,203.107.1.0/24,REJECT,no-resolve
 IP-CIDR,101.124.19.122/32,REJECT,no-resolve
 IP-CIDR,103.224.222.208/32,REJECT,no-resolve
-IP-CIDR,103.41.167.237/32,REJECT,no-resolve
-IP-CIDR,103.37.155.60/32,REJECT,no-resolve
-IP-CIDR,118.89.204.198/32,REJECT,no-resolve
-IP-CIDR,119.29.29.98/32,REJECT,no-resolve
-IP-CIDR,119.29.29.99/32,REJECT,no-resolve
-IP-CIDR,202.90.108.13/32,REJECT,no-resolve
-IP-CIDR,202.90.110.46/32,REJECT,no-resolve
 IP-CIDR,39.97.128.148/32,REJECT,no-resolve
 IP-CIDR,39.97.130.51/32,REJECT,no-resolve
 IP-CIDR,39.156.140.30/32,REJECT,no-resolve
@@ -140,16 +203,12 @@ IP-CIDR,43.137.153.151/32,REJECT,no-resolve
 IP-CIDR,43.137.159.31/32,REJECT,no-resolve
 IP-CIDR,43.152.112.101/32,REJECT,no-resolve
 IP-CIDR,43.153.248.120/32,REJECT,no-resolve
-IP-CIDR,47.101.175.206/32,REJECT,no-resolve
-IP-CIDR,47.100.123.169/32,REJECT,no-resolve
 IP-CIDR,59.111.239.61/32,REJECT,no-resolve
 IP-CIDR,59.111.239.62/32,REJECT,no-resolve
 IP-CIDR,60.28.172.100/32,REJECT,no-resolve
 IP-CIDR,61.151.231.157/32,REJECT,no-resolve
 IP-CIDR,81.71.61.216/32,REJECT,no-resolve
 IP-CIDR,101.32.104.104/32,REJECT,no-resolve
-IP-CIDR,101.91.140.224/32,REJECT,no-resolve
-IP-CIDR,101.91.140.124/32,REJECT,no-resolve
 IP-CIDR,106.39.206.21/32,REJECT,no-resolve
 IP-CIDR,106.39.206.25/32,REJECT,no-resolve
 IP-CIDR,106.39.206.70/32,REJECT,no-resolve
@@ -159,26 +218,14 @@ IP-CIDR,111.31.241.140/32,REJECT,no-resolve
 IP-CIDR,111.206.147.156/32,REJECT,no-resolve
 IP-CIDR,111.206.147.210/32,REJECT,no-resolve
 IP-CIDR,111.206.148.27/32,REJECT,no-resolve
-IP-CIDR,112.64.218.119/32,REJECT,no-resolve
-IP-CIDR,112.65.200.117/32,REJECT,no-resolve
-IP-CIDR,114.116.215.110/32,REJECT,no-resolve
 IP-CIDR,115.236.121.51/32,REJECT,no-resolve
 IP-CIDR,115.236.121.195/32,REJECT,no-resolve
-IP-CIDR,116.63.10.135/32,REJECT,no-resolve
-IP-CIDR,116.63.10.31/32,REJECT,no-resolve
 IP-CIDR,116.85.2.41/32,REJECT,no-resolve
 IP-CIDR,116.85.3.39/32,REJECT,no-resolve
 IP-CIDR,116.128.177.249/32,REJECT,no-resolve
 IP-CIDR,116.130.224.150/32,REJECT,no-resolve
 IP-CIDR,116.130.224.205/32,REJECT,no-resolve
-IP-CIDR,117.144.238.29/32,REJECT,no-resolve
-IP-CIDR,117.185.228.108/32,REJECT,no-resolve
 IP-CIDR,117.185.247.73/32,REJECT,no-resolve
-IP-CIDR,120.46.169.234/32,REJECT,no-resolve
-IP-CIDR,121.36.72.124/32,REJECT,no-resolve
-IP-CIDR,122.9.7.134/32,REJECT,no-resolve
-IP-CIDR,122.9.13.79/32,REJECT,no-resolve
-IP-CIDR,122.9.15.129/32,REJECT,no-resolve
 IP-CIDR,123.151.48.171/32,REJECT,no-resolve
 IP-CIDR,123.151.48.193/32,REJECT,no-resolve
 IP-CIDR,123.151.48.208/32,REJECT,no-resolve
@@ -186,8 +233,6 @@ IP-CIDR,123.151.54.50/32,REJECT,no-resolve
 IP-CIDR,123.207.209.142/32,REJECT,no-resolve
 IP-CIDR,139.199.240.84/32,REJECT,no-resolve
 IP-CIDR,180.153.202.85/32,REJECT,no-resolve
-IP-CIDR,182.254.116.117/32,REJECT,no-resolve
-IP-CIDR,182.254.118.119/32,REJECT,no-resolve
 IP-CIDR,182.61.194.7/32,REJECT,no-resolve
 IP-CIDR,183.192.196.31/32,REJECT,no-resolve
 IP-CIDR,203.205.129.102/32,REJECT,no-resolve
@@ -200,86 +245,86 @@ IP-CIDR6,2402:4e00:8030:1::17/128,REJECT,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
 IP-CIDR6,2408:8711:10:10::20/128,REJECT,no-resolve
 IP-CIDR6,2409:8702:4860:10::4d/128,REJECT,no-resolve
-IP-CIDR6,240c:409f::3:0:163/128,REJECT,no-resolve
-IP-CIDR6,240c:409f::3:0:359/128,REJECT,no-resolve
-IP-CIDR6,240c:409f:1000::/128,REJECT,no-resolve
-IP-CIDR6,2402:4e00:1411:201:0:9964:ba21:5a41/128,REJECT,no-resolve
 IP-CIDR6,240e:928:1400:10::25/128,REJECT,no-resolve
 
 [Rewrite]
-# 阿里 / 支付宝
-request if ${url} ~= /^https?:\/\/110\.76\.8\.150\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/203\.209\.230\.39\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/203\.209\.245\.102\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/203\.209\.245\.158\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/203\.209\.247\.95\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/203\.209\.250\.41\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/203\.209\.250\.114\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/203\.209\.251\.147\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/\[2400:B180:6001::18F\]\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/\[2400:B200:1005:3000::155\]\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/\[2400:B200:1005:3000::1D3\]\/squery/i then reject(404)
-request if ${url} ~= /^https?:\/\/\[2400:B200:5000:B000::C8\]\/squery/i then reject(404)
+# ═══════════════════════════════════════════════════════════
+# HTTP 层兜底（503 = 服务不可用，App 会优雅降级到系统 DNS）
+# 当 IP-CIDR 被主配置 GEOIP 抢占时，此层仍有效
+# ═══════════════════════════════════════════════════════════
+
+# 阿里 squery
+request if ${url} ~= /^https?:\/\/110\.76\.8\.150\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/203\.209\.230\.39\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/203\.209\.245\.102\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/203\.209\.245\.158\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/203\.209\.247\.95\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/203\.209\.250\.41\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/203\.209\.250\.114\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/203\.209\.251\.147\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/\[2400:B180:6001::18F\]\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/\[2400:B200:1005:3000::155\]\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/\[2400:B200:1005:3000::1D3\]\/squery/i then reject(503)
+request if ${url} ~= /^https?:\/\/\[2400:B200:5000:B000::C8\]\/squery/i then reject(503)
 
 # 百度
-request if ${url} ~= /^http:\/\/180\.76\.76\.112\/v4\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/180\.76\.76\.220\/v4\/resolve/i then reject(404)
+request if ${url} ~= /^http:\/\/180\.76\.76\.112\/v4\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/180\.76\.76\.220\/v4\/resolve/i then reject(503)
 
-# 哔哩哔哩
-request if ${url} ~= /^http:\/\/47\.101\.175\.206\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/47\.100\.123\.169\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/120\.46\.169\.234\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/121\.36\.72\.124\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/116\.63\.10\.135\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/122\.9\.7\.134\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/117\.185\.228\.108\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/117\.144\.238\.29\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/122\.9\.13\.79\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/122\.9\.15\.129\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/101\.91\.140\.224\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/101\.91\.140\.124\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/114\.116\.215\.110\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/116\.63\.10\.31\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/112\.64\.218\.119\/resolve/i then reject(404)
-request if ${url} ~= /^http:\/\/112\.65\.200\.117\/resolve/i then reject(404)
+# B站
+request if ${url} ~= /^http:\/\/47\.101\.175\.206\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/47\.100\.123\.169\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/120\.46\.169\.234\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/121\.36\.72\.124\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/116\.63\.10\.135\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/116\.63\.10\.31\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/122\.9\.7\.134\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/122\.9\.13\.79\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/122\.9\.15\.129\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/117\.185\.228\.108\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/117\.144\.238\.29\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/101\.91\.140\.224\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/101\.91\.140\.124\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/114\.116\.215\.110\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/112\.64\.218\.119\/resolve/i then reject(503)
+request if ${url} ~= /^http:\/\/112\.65\.200\.117\/resolve/i then reject(503)
 
 # 字节跳动
-request if ${url} ~= /^https?:\/\/.*\.zijieapi\.com\/get_domains\//i then reject(404)
+request if ${url} ~= /^https?:\/\/.*\.zijieapi\.com\/get_domains\//i then reject(503)
 
 # 京东
-request if ${url} ~= /^https?:\/\/dns\.jd\.com\/v6\/b/i then reject(404)
+request if ${url} ~= /^https?:\/\/dns\.jd\.com\/v6\/b/i then reject(503)
 
 # 美团
-request if ${url} ~= /^http:\/\/103\.37\.155\.60\/fetch/i then reject(404)
+request if ${url} ~= /^http:\/\/103\.37\.155\.60\/fetch/i then reject(503)
 
 # 拼多多
-request if ${url} ~= /^http:\/\/101\.35\.204\.35\/d/i then reject(404)
-request if ${url} ~= /^http:\/\/101\.35\.212\.35\/d/i then reject(404)
-request if ${url} ~= /^http:\/\/114\.110\.96\.26\/d/i then reject(404)
-request if ${url} ~= /^http:\/\/114\.110\.97\.97\/d/i then reject(404)
-request if ${url} ~= /^http:\/\/\[240c:409f::3:0:163\]\/d/i then reject(404)
-request if ${url} ~= /^http:\/\/\[240c:409f::3:0:359\]\/d/i then reject(404)
-request if ${url} ~= /^http:\/\/\[2402:4e00:1411:201:0:9964:ba21:5a41\]\/d/i then reject(404)
+request if ${url} ~= /^http:\/\/101\.35\.204\.35\/d/i then reject(503)
+request if ${url} ~= /^http:\/\/101\.35\.212\.35\/d/i then reject(503)
+request if ${url} ~= /^http:\/\/114\.110\.96\.26\/d/i then reject(503)
+request if ${url} ~= /^http:\/\/114\.110\.97\.97\/d/i then reject(503)
+request if ${url} ~= /^http:\/\/\[240c:409f::3:0:163\]\/d/i then reject(503)
+request if ${url} ~= /^http:\/\/\[240c:409f::3:0:359\]\/d/i then reject(503)
+request if ${url} ~= /^http:\/\/\[2402:4e00:1411:201:0:9964:ba21:5a41\]\/d/i then reject(503)
 
 # 腾讯
-request if ${url} ~= /^https?:\/\/119\.29\.29\.29\/d/i then reject(404)
-request if ${url} ~= /^http:\/\/182\.254\.116\.117\/d/i then reject(404)
-request if ${url} ~= /^http:\/\/182\.254\.118\.119\/d/i then reject(404)
-request if ${url} ~= /^http:\/\/103\.41\.167\.237\/v2\/resolv/i then reject(404)
+request if ${url} ~= /^http:\/\/182\.254\.116\.117\/d/i then reject(503)
+request if ${url} ~= /^http:\/\/182\.254\.118\.119\/d/i then reject(503)
+request if ${url} ~= /^http:\/\/103\.41\.167\.237\/v2\/resolv/i then reject(503)
 
 # 微信
-request if ${url} ~= /^https?:\/\/dns\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/newgetdns/i then reject(404)
-request if ${url} ~= /^https?:\/\/dns\.weixin\.qq\.com\.cn\/cgi-bin\/micromsg-bin\/newgetdns/i then reject(404)
-request if ${url} ~= /^https?:\/\/short\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/getcdndns/i then reject(404)
-request if ${url} ~= /^https?:\/\/hkextshort\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/getcdndns/i then reject(404)
+request if ${url} ~= /^https?:\/\/dns\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/newgetdns/i then reject(503)
+request if ${url} ~= /^https?:\/\/dns\.weixin\.qq\.com\.cn\/cgi-bin\/micromsg-bin\/newgetdns/i then reject(503)
+request if ${url} ~= /^https?:\/\/short\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/getcdndns/i then reject(503)
+request if ${url} ~= /^https?:\/\/hkextshort\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/getcdndns/i then reject(503)
 
-# 仅保留实际需要 MITM 的 HTTPS 端点
-request if ${url} ~= /^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$/i then reject(404)
-request if ${url} ~= /^https?:\/\/cdn\.wup\.huya\.com\/monitor\/monitor\.jsp/i then reject(404)
-request if ${url} ~= /^https:\/\/msglb\.91160\.com\/msg\/outer\/broker\/get$/i then reject(404)
-request if ${url} ~= /^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\//i then reject(404)
-request if ${url} ~= /^https:\/\/ucdc\d?-upaas\.uc\.cn\/api\/v\d\/dns_query\?/i then reject(404)
-request if ${url} ~= /^https:\/\/gw-cn\.jiaoliuqu\.com\/taqu-im-broadcast-srv\/v\d\/Comet\/get\?/i then reject(404)
+# HTTPS 端点（需 MITM）
+request if ${url} ~= /^https:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$/i then reject(503)
+request if ${url} ~= /^https:\/\/cdn\.wup\.huya\.com\/monitor\/monitor\.jsp/i then reject(503)
+request if ${url} ~= /^https:\/\/msglb\.91160\.com\/msg\/outer\/broker\/get$/i then reject(503)
+request if ${url} ~= /^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\//i then reject(503)
+request if ${url} ~= /^https:\/\/ucdc\d?-upaas\.uc\.cn\/api\/v\d\/dns_query\?/i then reject(503)
+request if ${url} ~= /^https:\/\/gw-cn\.jiaoliuqu\.com\/taqu-im-broadcast-srv\/v\d\/Comet\/get\?/i then reject(503)
 
 [MITM]
-hostname = appconf.mail.163.com, msglb.91160.com, ucdc-upaas.uc.cn, ucdc2-upaas.uc.cn, gw-cn.jiaoliuqu.com, gslbali.ximalaya.com, cdn.wup.huya.com
+hostname = appconf.mail.163.com, msglb.91160.com, ucdc-upaas.uc.cn, ucdc2-upaas.uc.cn, gw-cn.jiaoliuqu.com, gslbali.ximalaya.com, cdn.wup.huya.com   
