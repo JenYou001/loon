@@ -36,11 +36,13 @@ DOMAIN-SUFFIX,tbcache.com
 DOMAIN-SUFFIX,1688.com
 DOMAIN-SUFFIX,goofish.com
 DOMAIN-SUFFIX,xianyu.com
+DOMAIN-SUFFIX,amap.com
 
 # ========== 京东 ==========
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,360buyimg.com
 DOMAIN-SUFFIX,jdcdn.com
+DOMAIN-SUFFIX,3.cn
 
 # ========== 拼多多 ==========
 DOMAIN-SUFFIX,pinduoduo.com
