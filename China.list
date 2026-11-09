@@ -70,17 +70,29 @@ DOMAIN-SUFFIX,bilicdn1.com
 DOMAIN-SUFFIX,biliimg.com
 
 # ========== BOSS直聘 ==========
+# 自有域名
 DOMAIN-SUFFIX,zhipin.com
+DOMAIN-SUFFIX,bosszhipin.com
+DOMAIN-SUFFIX,bosszp.cn
+DOMAIN-SUFFIX,weizhipin.com
+DOMAIN-SUFFIX,dianzhangzhipin.com
+# 极验验证码
 DOMAIN-SUFFIX,geetest.com
 DOMAIN-SUFFIX,geevisit.com
+DOMAIN-SUFFIX,gsensebot.com
+DOMAIN,dn-staticdown.qbox.me
+# 网易易盾风控
 DOMAIN,dun.163.com
 
 # ========== 七猫小说 ==========
 DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
+DOMAIN-SUFFIX,qm989.com
 
 # ========== 多邻国 ==========
 DOMAIN-SUFFIX,duolingo.com
+DOMAIN-SUFFIX,duolingo.cn
+DOMAIN,d7mj4aqfscim2.cloudfront.net   
 
 # ========== 铁路12306 ==========
 DOMAIN-SUFFIX,12306.cn
