@@ -18,14 +18,11 @@ DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,1e100.net
-DOMAIN-SUFFIX,app-measurement.com
 DOMAIN-SUFFIX,g.co
-DOMAIN-SUFFIX,goo.gl
 
 # ========== YouTube ==========
 DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,youtube-nocookie.com
 DOMAIN-SUFFIX,youtubeeducation.com
@@ -87,8 +84,6 @@ DOMAIN-SUFFIX,x.com
 DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,twimg.com
-DOMAIN-SUFFIX,twimg.co
-DOMAIN-SUFFIX,twimg.org
 DOMAIN-SUFFIX,twvid.com
 DOMAIN-SUFFIX,twttr.com
 DOMAIN-SUFFIX,twttr.net
@@ -114,7 +109,6 @@ DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,redditstatic.com
 DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,redditmedia.com
-DOMAIN,reddit.app.link
 DOMAIN-SUFFIX,reddithelp.com
 
 # ========== Spotify ==========
