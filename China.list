@@ -19,7 +19,6 @@ DOMAIN,wup.imtt.qq.com
 DOMAIN,wxapp.tc.qq.com
 DOMAIN,vweixinf.tc.qq.com
 DOMAIN,weixinc2c.tc.qq.com
-DOMAIN,slife.xy-asia.com
 
 # ==================== Bilibili（17）====================
 DOMAIN-SUFFIX,bilibili.com
@@ -34,11 +33,6 @@ DOMAIN-SUFFIX,bilibili.cn
 DOMAIN-SUFFIX,bilibiligame.cn
 DOMAIN-SUFFIX,bigfun.cn
 DOMAIN-SUFFIX,acgvideo.com
-DOMAIN-SUFFIX,jcloud-cdn.com
-DOMAIN-SUFFIX,cdnhwc1.com
-DOMAIN-SUFFIX,cdnhwc2.com
-DOMAIN-SUFFIX,cdnhwc3.com
-DOMAIN-SUFFIX,ksyuncdn.com
 
 # ==================== 阿里系（11）====================
 DOMAIN-SUFFIX,taobao.com
