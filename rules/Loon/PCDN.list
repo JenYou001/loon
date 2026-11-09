@@ -1,0 +1,89 @@
+# ═══ PCDN 屏蔽 ═══
+
+# ── 特征词（覆盖所有命名规范的 PCDN/MCDN/HCDN/P2P 域名）──
+DOMAIN-KEYWORD,pcdn,REJECT
+DOMAIN-KEYWORD,p2p,REJECT
+DOMAIN-KEYWORD,mcdn,REJECT
+DOMAIN-KEYWORD,hcdn,REJECT
+DOMAIN-KEYWORD,yfp2p,REJECT
+DOMAIN-KEYWORD,302ppio,REJECT
+DOMAIN-KEYWORD,302kodo,REJECT
+
+# ── 通用 PCDN 平台（不含上述特征词的混淆域名）──
+DOMAIN-SUFFIX,bsccdn.net,REJECT
+DOMAIN-SUFFIX,bsclink.cn,REJECT
+DOMAIN-SUFFIX,bsgslb.cn,REJECT
+DOMAIN-SUFFIX,gjfzpt.cn,REJECT
+DOMAIN-SUFFIX,jomodns.cn,REJECT
+DOMAIN-SUFFIX,kuiniuca.com,REJECT
+DOMAIN-SUFFIX,pkoplink.com,REJECT
+DOMAIN-SUFFIX,saxysec.com,REJECT
+DOMAIN-SUFFIX,szbdyd.com,REJECT
+DOMAIN-SUFFIX,uhabo.com,REJECT
+DOMAIN-SUFFIX,xycdn.com,REJECT
+DOMAIN-SUFFIX,onethingpcs.com,REJECT
+DOMAIN-SUFFIX,nexusedgeio.com,REJECT
+DOMAIN-SUFFIX,yfcloud.com,REJECT
+DOMAIN-SUFFIX,yfcdn.net,REJECT
+DOMAIN-SUFFIX,ietheivaicai.com,REJECT
+DOMAIN-SUFFIX,ahdohpiechei.com,REJECT
+DOMAIN-SUFFIX,ppio.cloud,REJECT
+DOMAIN-SUFFIX,pplive-p2p.com,REJECT
+DOMAIN-SUFFIX,kspcdn.com,REJECT
+DOMAIN-SUFFIX,ws-p2p.com,REJECT
+DOMAIN-SUFFIX,yirujs.com,REJECT
+
+# ── B站 ──
+DOMAIN-SUFFIX,mountaintoys.cn,REJECT
+DOMAIN-SUFFIX,smtcdns.net,REJECT
+DOMAIN,mcdn.bilivideo.com,REJECT
+DOMAIN,mcdn.bilivideo.cn,REJECT
+DOMAIN,ppio.bilivideo.com,REJECT
+DOMAIN,kodo.bilivideo.com,REJECT
+
+# ── 腾讯 ──
+DOMAIN,p.tencentmusic.com,REJECT
+DOMAIN,isure6.stream.qqmusic.qq.com,REJECT
+DOMAIN,vlivep2p.tc.qq.com,REJECT
+DOMAIN,hcdn.video.qq.com,REJECT
+DOMAIN,pcdn.video.qq.com,REJECT
+DOMAIN,vodlive.qq.com,REJECT
+DOMAIN,iwan-s.video.qq.com,REJECT
+DOMAIN,cm.l.qq.com,REJECT
+DOMAIN,p2pupdate.gamedl.qq.com,REJECT
+DOMAIN,p2pupgrade.gamedl.qq.com,REJECT
+
+# ── 爱奇艺 ──
+DOMAIN,pdata.video.qiyi.com,REJECT
+DOMAIN,cachecdn.v.iqiyi.com,REJECT
+DOMAIN,meta-cdn.video.iq.com,REJECT
+DOMAIN,data6.video.iqiyi.com,REJECT
+DOMAIN,tpa-hcdn.iqiyi.com,REJECT
+DOMAIN,data-qvs.iqiyi.com,REJECT
+DOMAIN,hcdn.qiyi.com,REJECT
+
+# ── 优酷 ──
+DOMAIN-SUFFIX,atm.youku.com,REJECT
+DOMAIN,pcdn.livelive.cn,REJECT
+DOMAIN,pcdn.volcvideo.com,REJECT
+
+# ── 虎牙 ──
+DOMAIN,p2p.huya.com,REJECT
+
+# ── 斗鱼 ──
+DOMAIN-SUFFIX,stun.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,stun1.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,stun.hitv.com,REJECT
+
+# ── 迅雷 ──
+DOMAIN,down.sandai.net,REJECT
+
+# ── 百度 ──
+DOMAIN,d.pcs.baidu.com,REJECT
+DOMAIN,p.bokecc.com,REJECT
+
+# ── 字节/抖音 ──
+DOMAIN,flive.douyincdn.com,REJECT
+
+# ── 快手 ──
+DOMAIN,pcdn.yximgs.com,REJECT

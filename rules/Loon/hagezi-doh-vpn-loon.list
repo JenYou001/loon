@@ -1,0 +1,34 @@
+# HaGeZi doh-vpn-proxy-bypass converted for Loon 3.5.2
+# Source: https://github.com/hagezi/dns-blocklists/blob/main/adblock/doh-vpn-proxy-bypass.txt
+# Rule format: DOMAIN-SUFFIX,<domain>
+# No strategy field is applied; use your Loon config to decide whether to block/reject or route externally.
+# This is a practical Loon-compatible list derived from the upstream blocklist.
+
+DOMAIN-SUFFIX,cloudflare-dns.com
+DOMAIN-SUFFIX,dns.google
+DOMAIN-SUFFIX,dns.quad9.net
+DOMAIN-SUFFIX,dns.adguard.com
+DOMAIN-SUFFIX,dns-family.adguard.com
+DOMAIN-SUFFIX,dns-unfiltered.adguard.com
+DOMAIN-SUFFIX,dns.adguard-dns.com
+DOMAIN-SUFFIX,family.adguard-dns.com
+DOMAIN-SUFFIX,unfiltered.adguard-dns.com
+DOMAIN-SUFFIX,mozilla.cloudflare-dns.com
+DOMAIN-SUFFIX,doh.opendns.com
+DOMAIN-SUFFIX,odoh.cloudflare-dns.com
+DOMAIN-SUFFIX,security.cloudflare-dns.com
+DOMAIN-SUFFIX,dns.cloudflare.com
+DOMAIN-SUFFIX,dns.google.com
+DOMAIN-SUFFIX,doh.dns.apple.com
+DOMAIN-SUFFIX,dns.apple.com
+DOMAIN-SUFFIX,mask-api.fe.apple-dns.net
+DOMAIN-SUFFIX,mask.icloud.com
+DOMAIN-SUFFIX,dns.twnic.tw
+DOMAIN-SUFFIX,dns.nextdns.io
+DOMAIN-SUFFIX,firefox.settings.services.mozilla.com
+DOMAIN-SUFFIX,mozilla.org
+DOMAIN-SUFFIX,1.1.1.1
+DOMAIN-SUFFIX,one.one.one.one
+DOMAIN-SUFFIX,cloudflare.com
+
+# End of converted list
