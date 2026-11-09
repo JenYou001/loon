@@ -1,0 +1,48 @@
+#!name = 广告平台拦截器
+#!desc = 此插件是所有去广告插件的依赖，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\n\n支持针对常见广告平台规则进行精细拦截。
+#!openUrl =
+#!author = 可莉🅥 [https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告, 依赖
+#!system =
+#!system_version =
+#!loon_version = 3.5.3(1007)
+#!homepage = https://hub.kelee.one
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
+#!date = 2026-11-09 00:00:00
+
+[Rule]
+# ═══════════════════════════════════════════════════════════
+# 通用关键词
+# ═══════════════════════════════════════════════════════════
+DOMAIN-KEYWORD,adstrategy,REJECT
+
+# ═══════════════════════════════════════════════════════════
+# 字节跳动（含穿山甲 Pangle）
+# ═══════════════════════════════════════════════════════════
+# tnc = 字节广告配置下发（DIRECT 让其他插件处理，非拦截）
+AND,((DOMAIN-KEYWORD,tnc),(OR,((DOMAIN-SUFFIX,capcutapi.com),(DOMAIN-SUFFIX,zijieapi.com),(DOMAIN-SUFFIX,isnssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,pangle.io))))
+AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com)),REJECT
+AND,((DOMAIN-KEYWORD,ads),(DOMAIN-KEYWORD,-normal.zijieapi.com)),REJECT
+DOMAIN,lf-ad-ies.bytecdn.cn,REJECT
+DOMAIN,dig.bdurl.net,REJECT
+DOMAIN,extlog.snssdk.com,REJECT
+DOMAIN,mcs.snssdk.com,REJECT
+DOMAIN-SUFFIX,bds.snssdk.com,REJECT
+DOMAIN-SUFFIX,byteadverts.com,REJECT
+DOMAIN-SUFFIX,ctobsnssdk.com,REJECT
+DOMAIN-SUFFIX,pangle.io,REJECT
+DOMAIN-KEYWORD,pangolin,REJECT
+DOMAIN-KEYWORD,pglstatp,REJECT
+DOMAIN-KEYWORD,panplayable-toutiao,REJECT
+DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
+DOMAIN-KEYWORD,-ad.byteoversea.com,REJECT
+DOMAIN-KEYWORD,asiad.byteactivity,REJECT
+
+[Rewrite]
+request if ${url} ~= /^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\//i then reject(404)
+request if ${url} ~= /^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_/i then reject(404)
+request if ${url} ~= /^https:\/\/images\.pinduoduo\.com\/mrk\//i then reject(404)
+request if ${url} ~= /^https:\/\/images\.pinduoduo\.com\/marketing_api\//i then reject(404)
+
+[MITM]
+hostname = video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
