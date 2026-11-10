@@ -11,7 +11,16 @@ DOMAIN-KEYWORD,httpdns,REJECT
 DOMAIN-KEYWORD,httpsdns,REJECT
 DOMAIN-KEYWORD,http-dns,REJECT
 DOMAIN-KEYWORD,https-dns,REJECT
-DOMAIN-KEYWORD,amdc,REJECT
+DOMAIN-KEYWORD,amdc,REJECT-DNS
+
+# === 公共 DoH 端点 ===
+DOMAIN-SUFFIX,dns.google,REJECT
+DOMAIN-SUFFIX,one.one.one.one,REJECT
+DOMAIN-SUFFIX,cloudflare-dns.com,REJECT
+DOMAIN-SUFFIX,doh.pub,REJECT
+DOMAIN-SUFFIX,dns.alidns.com,REJECT
+DOMAIN-SUFFIX,doh.opendns.com,REJECT
+DOMAIN-SUFFIX,dns.quad9.net,REJECT
 
 DOMAIN,dns.weixin.qq.com,REJECT
 DOMAIN,dns.weixin.qq.com.cn,REJECT
@@ -32,9 +41,9 @@ DOMAIN,httpdns.alicdn.com,REJECT
 DOMAIN,httpdns-api.aliyuncs.com,REJECT
 DOMAIN,httpdns-sc.aliyuncs.com,REJECT
 DOMAIN,resolvers-cn.httpdns.aliyuncs.com,REJECT
-DOMAIN,amdc.alipay.com,REJECT
-DOMAIN,amdc-sibling.alipay.com.cn,REJECT
-DOMAIN,amdc.m.taobao.com,REJECT
+DOMAIN,amdc.alipay.com,REJECT-DNS
+DOMAIN,amdc-sibling.alipay.com.cn,REJECT-DNS
+DOMAIN,amdc.m.taobao.com,REJECT-DNS
 DOMAIN,httpdns.danuoyi.tbcache.com,REJECT
 
 DOMAIN,httpdns.meituan.com,REJECT
@@ -109,9 +118,18 @@ DOMAIN,dotserver.douyucdn.cn,REJECT
 DOMAIN,dns2.q2cdn.com,REJECT
 DOMAIN-SUFFIX,httpdns.pro,REJECT
 
+# === 原 MITM hostname 改为 DOMAIN REJECT ===
+DOMAIN,appconf.mail.163.com,REJECT
+DOMAIN,msglb.91160.com,REJECT
+DOMAIN,ucdc-upaas.uc.cn,REJECT
+DOMAIN,ucdc2-upaas.uc.cn,REJECT
+DOMAIN,gw-cn.jiaoliuqu.com,REJECT
+DOMAIN,gslbali.ximalaya.com,REJECT
+DOMAIN,cdn.wup.huya.com,REJECT
+
 URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns,REJECT
 URL-REGEX,^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/,REJECT
-URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,REJECT
+URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,REJECT-DNS
 URL-REGEX,^http:\/\/47\.246\.103\.9\/amdc\/mobileDispatch,REJECT
 URL-REGEX,^http:\/\/47\.246\.103\.10\/amdc\/mobileDispatch,REJECT
 URL-REGEX,^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch,REJECT
@@ -121,6 +139,21 @@ URL-REGEX,^http:\/\/api\.weibo\.cn\/\d+\/httpdns\/config,REJECT
 URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT
 URL-REGEX,^http:\/\/103\.44\.58\.64\/md\?,REJECT
 
+# === 公共 DNS IP 直连 ===
+IP-CIDR,1.1.1.1/32,REJECT,no-resolve
+IP-CIDR,1.0.0.1/32,REJECT,no-resolve
+IP-CIDR,8.8.8.8/32,REJECT,no-resolve
+IP-CIDR,8.8.4.4/32,REJECT,no-resolve
+IP-CIDR,223.5.5.5/32,REJECT,no-resolve
+IP-CIDR,223.6.6.6/32,REJECT,no-resolve
+IP-CIDR,114.114.114.114/32,REJECT,no-resolve
+IP-CIDR,119.29.29.29/32,REJECT,no-resolve
+IP-CIDR6,2001:4860:4860::8888/128,REJECT,no-resolve
+IP-CIDR6,2001:4860:4860::8844/128,REJECT,no-resolve
+IP-CIDR6,2606:4700:4700::1111/128,REJECT,no-resolve
+IP-CIDR6,2400:3200::1/128,REJECT,no-resolve
+
+# === 原有 IP 规则 ===
 IP-CIDR,180.76.76.112/32,REJECT,no-resolve
 IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 IP-CIDR,180.76.76.220/32,REJECT,no-resolve
@@ -155,7 +188,4 @@ IP-CIDR,101.91.140.224/32,REJECT,no-resolve
 IP-CIDR,101.91.140.124/32,REJECT,no-resolve
 IP-CIDR,114.116.215.110/32,REJECT,no-resolve
 IP-CIDR,112.64.218.119/32,REJECT,no-resolve
-IP-CIDR,112.65.200.117/32,REJECT,no-resolve
-
-[MITM]
-hostname = appconf.mail.163.com, msglb.91160.com, ucdc-upaas.uc.cn, ucdc2-upaas.uc.cn, gw-cn.jiaoliuqu.com, gslbali.ximalaya.com, cdn.wup.huya.com
+IP-CIDR,112.65.200.117/32,REJECT,no-resolve   
