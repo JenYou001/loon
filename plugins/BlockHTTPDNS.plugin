@@ -200,4 +200,10 @@ IP-CIDR,112.65.200.117/32,REJECT,no-resolve
 hostname = appconf.mail.163.com, msglb.91160.com, ucdc-upaas.uc.cn, ucdc2-upaas.uc.cn, gw-cn.jiaoliuqu.com, gslbali.ximalaya.com, cdn.wup.huya.com
 
 [Script]
-emptyJson=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js   
+http-response ^https:\/\/appconf\.mail\.163\.com\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
+http-response ^https:\/\/msglb\.91160\.com\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
+http-response ^https:\/\/ucdc-upaas\.uc\.cn\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
+http-response ^https:\/\/ucdc2-upaas\.uc\.cn\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
+http-response ^https:\/\/gw-cn\.jiaoliuqu\.com\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
+http-response ^https:\/\/gslbali\.ximalaya\.com\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
+http-response ^https:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
