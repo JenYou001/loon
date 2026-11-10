@@ -120,15 +120,6 @@ DOMAIN,dotserver.douyucdn.cn,REJECT
 DOMAIN,dns2.q2cdn.com,REJECT
 DOMAIN-SUFFIX,httpdns.pro,REJECT
 
-# === 调度端点 → script-rewrite（返回空JSON） ===
-URL-REGEX,^https://appconf\.mail\.163\.com/.*=emptyJson=type-response
-URL-REGEX,^https://msglb\.91160\.com/.*=emptyJson=type-response
-URL-REGEX,^https://ucdc-upaas\.uc\.cn/.*=emptyJson=type-response
-URL-REGEX,^https://ucdc2-upaas\.uc\.cn/.*=emptyJson=type-response
-URL-REGEX,^https://gw-cn\.jiaoliuqu\.com/.*=emptyJson=type-response
-URL-REGEX,^https://gslbali\.ximalaya\.com/.*=emptyJson=type-response
-URL-REGEX,^https://cdn\.wup\.huya\.com/launch/queryHttpDns=emptyJson=type-response
-
 URL-REGEX,^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/,REJECT
 URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,REJECT-DNS
 URL-REGEX,^http:\/\/47\.246\.103\.9\/amdc\/mobileDispatch,REJECT
