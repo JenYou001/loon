@@ -1,4 +1,4 @@
-# ==================== 微信（20）====================
+# ==================== 微信（稳定版）====================
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
 DOMAIN-SUFFIX,wxs.qq.com
@@ -12,16 +12,16 @@ DOMAIN-SUFFIX,wechatpay.com
 DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,wx.gtimg.com
-DOMAIN-SUFFIX,wxapp.tc.qq.com
-DOMAIN,wximg.qq.com
+DOMAIN-SUFFIX,wximg.qq.com
 DOMAIN,weixin110.qq.com
 DOMAIN,btrace.qq.com
 DOMAIN,dldir1.qq.com
 DOMAIN,wup.imtt.qq.com
 DOMAIN,vweixinf.tc.qq.com
 DOMAIN,weixinc2c.tc.qq.com
+DOMAIN,wxapp.tc.qq.com
 
-# ==================== Bilibili（17）====================
+# ==================== Bilibili（稳定版）====================
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,hdslb.net
@@ -38,12 +38,16 @@ DOMAIN-SUFFIX,bilicdn5.com
 DOMAIN-SUFFIX,biliimg.com
 DOMAIN-SUFFIX,b23.tv
 DOMAIN-SUFFIX,acgvideo.com
+DOMAIN-SUFFIX,bilibili.co
+DOMAIN-SUFFIX,bilibili.tv
+DOMAIN-SUFFIX,bilibili.cn
 
-# ==================== 阿里系（11）====================
+# ==================== 阿里系（稳定版）====================
 DOMAIN-SUFFIX,taobao.com
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,alipay.com
+DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,aliapp.org
 DOMAIN-SUFFIX,alibaba.com
 DOMAIN-SUFFIX,goofish.com
@@ -51,36 +55,38 @@ DOMAIN-SUFFIX,1688.com
 DOMAIN-SUFFIX,tbcache.com
 DOMAIN-SUFFIX,tbcdn.cn
 DOMAIN-SUFFIX,alikunlun.com
+DOMAIN-SUFFIX,tb.cn
 
-# ==================== 京东（6）====================
+# ==================== 京东（稳定版）====================
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,360buyimg.com
 DOMAIN-SUFFIX,3.cn
 DOMAIN-SUFFIX,jd.hk
 DOMAIN-SUFFIX,jdpay.com
 DOMAIN-SUFFIX,jdcloud.com
+DOMAIN-SUFFIX,jdstatic.com
 
-# ==================== BOSS直聘（4）====================
+# ==================== BOSS直聘（稳定版：保留验证码/风控）====================
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,geetest.com
 DOMAIN-SUFFIX,geevisit.com
 DOMAIN-SUFFIX,gsensebot.com
 
-# ==================== 拼多多（5）====================
+# ==================== 拼多多（稳定版）====================
 DOMAIN-SUFFIX,pinduoduo.com
 DOMAIN-SUFFIX,yangkeduo.com
 DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pinduoduo.net
 DOMAIN-SUFFIX,pdd.net
 
-# ==================== 多邻国（2）====================
+# ==================== 多邻国====================
 DOMAIN-SUFFIX,duolingo.com
 DOMAIN-SUFFIX,duolingo.cn
 
-# ==================== 七猫小说（3）====================
+# ==================== 七猫小说====================
 DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
 DOMAIN-SUFFIX,qm989.com
 
-# ==================== 铁路12306（1）====================
+# ==================== 铁路12306====================
 DOMAIN-SUFFIX,12306.cn
