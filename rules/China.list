@@ -76,17 +76,6 @@ DOMAIN-SUFFIX,smtcdns.net
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,biliapi.com
 
-# --- 游戏 ---
-DOMAIN-SUFFIX,biligame.com
-DOMAIN-SUFFIX,biligame.net
-DOMAIN-SUFFIX,biligame.cn
-DOMAIN-SUFFIX,biligame.co
-DOMAIN-SUFFIX,bilibiligame.cn
-DOMAIN-SUFFIX,bilibiligame.co
-DOMAIN-SUFFIX,bilibiligame.net
-DOMAIN-SUFFIX,dyhgames.com
-DOMAIN-SUFFIX,sharejoytech.com
-
 # --- 漫画 / 大会员 / 国际 ---
 DOMAIN-SUFFIX,bilicomic.com
 DOMAIN-SUFFIX,bilicomics.com
