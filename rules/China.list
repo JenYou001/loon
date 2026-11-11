@@ -119,12 +119,6 @@ DOMAIN-SUFFIX,aliimg.com
 DOMAIN-SUFFIX,alibabausercontent.com
 DOMAIN-SUFFIX,alikunlun.com
 
-# --- 阿里云 ---
-DOMAIN-SUFFIX,alibabacloud.com
-DOMAIN-SUFFIX,aliyun.com
-DOMAIN-SUFFIX,aliyuncdn.com
-DOMAIN-SUFFIX,aliyuncs.com
-
 # --- 支付宝 / 蚂蚁 ---
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipay.com.cn
@@ -151,8 +145,6 @@ DOMAIN-SUFFIX,aliapp.org
 DOMAIN-SUFFIX,alibaba.com
 DOMAIN-SUFFIX,amap.com
 DOMAIN-SUFFIX,autonavi.com
-DOMAIN-SUFFIX,cainiao.com
-DOMAIN-SUFFIX,cainiao.com.cn
 
 # ==================== 京东 ====================
 
