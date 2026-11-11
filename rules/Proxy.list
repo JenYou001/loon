@@ -1,4 +1,5 @@
 # ========== AdGuard ==========
+DOMAIN-SUFFIX,adguard.com
 DOMAIN-SUFFIX,adguard-dns.com
 DOMAIN-SUFFIX,adguard-dns.io
 DOMAIN-SUFFIX,adguardaccount.com
@@ -27,8 +28,6 @@ DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,youtube-nocookie.com
 DOMAIN-SUFFIX,youtubeeducation.com
 DOMAIN-SUFFIX,youtubekids.com
-DOMAIN,wide-youtube.l.google.com
-DOMAIN,youtube-ui.l.google.com
 
 # ========== DuckDuckGo ==========
 DOMAIN-SUFFIX,duckduckgo.com
@@ -43,6 +42,7 @@ DOMAIN-SUFFIX,quack-dns.com
 # ========== Brave ==========
 DOMAIN-SUFFIX,brave.com
 DOMAIN-SUFFIX,bravesoftware.com
+DOMAIN-SUFFIX,bravecdn.com
 
 # ========== Telegram ==========
 DOMAIN-SUFFIX,telegram.org
@@ -56,7 +56,12 @@ DOMAIN-SUFFIX,graph.org
 DOMAIN-SUFFIX,telesco.pe
 DOMAIN-SUFFIX,telegram-cdn.org
 DOMAIN-SUFFIX,cdn-telegram.org
-DOMAIN-SUFFIX,telegramdownload.com
+DOMAIN-SUFFIX,telega.one
+DOMAIN-SUFFIX,telegram.space
+DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,fragment.com
+DOMAIN-SUFFIX,contest.com
+DOMAIN-SUFFIX,ton.org
 DOMAIN-SUFFIX,stel.com
 DOMAIN-SUFFIX,tg.dev
 DOMAIN-SUFFIX,comments.app
