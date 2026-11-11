@@ -8,7 +8,7 @@
 
 [Rule]
 # ═══════════════════════════════════════════════════════
-# 第一层：关键词通配（兜底）
+# 第一层：关键词通配（兜底，覆盖所有含关键词的域名）
 # ═══════════════════════════════════════════════════════
 DOMAIN-KEYWORD,httpdns,REJECT
 DOMAIN-KEYWORD,httpsdns,REJECT
@@ -37,56 +37,29 @@ USER-AGENT,amdc*,REJECT
 # ═══════════════════════════════════════════════════════
 # 第三层：公共 DoH/DoT/DoQ 端点
 # ═══════════════════════════════════════════════════════
-# Google
 DOMAIN-SUFFIX,dns.google,REJECT
-
-# Cloudflare
 DOMAIN-SUFFIX,one.one.one.one,REJECT
 DOMAIN-SUFFIX,cloudflare-dns.com,REJECT
 DOMAIN-SUFFIX,dns.cloudflare.com,REJECT
-
-# Quad9
 DOMAIN-SUFFIX,dns.quad9.net,REJECT
-
-# OpenDNS
 DOMAIN-SUFFIX,doh.opendns.com,REJECT
 DOMAIN-SUFFIX,doh.familyshield.opendns.com,REJECT
-
-# Mozilla
 DOMAIN-SUFFIX,doh.mozillafoundation.net,REJECT
-
-# Mullvad
 DOMAIN-SUFFIX,dns.mullvad.net,REJECT
 DOMAIN-SUFFIX,adblock.doh.mullvad.net,REJECT
-
-# NextDNS
 DOMAIN-SUFFIX,nextdns.io,REJECT
-
-# 阿里 DNS
 DOMAIN-SUFFIX,dns.alidns.com,REJECT
-
-# 腾讯 DNSPod
 DOMAIN-SUFFIX,doh.pub,REJECT
 DOMAIN-SUFFIX,dns.pub,REJECT
 DOMAIN-SUFFIX,dot.pub,REJECT
 DOMAIN-SUFFIX,sm2.doh.pub,REJECT
 DOMAIN-SUFFIX,doh.onedns.net,REJECT
-
-# 360
 DOMAIN-SUFFIX,doh.360.cn,REJECT
 DOMAIN-SUFFIX,dot.360.cn,REJECT
-
-# 百度
 DOMAIN-SUFFIX,dns.baidu.com,REJECT
 DOMAIN-SUFFIX,pub-dns.baidu.com,REJECT
-
-# CNNIC
 DOMAIN-SUFFIX,dns.cnnic.cn,REJECT
-
-# Yandex
 DOMAIN-SUFFIX,dns.yandex.net,REJECT
-
-# 其他
 DOMAIN-SUFFIX,doh.dns.sb,REJECT
 DOMAIN-SUFFIX,dns.aa.net.uk,REJECT
 DOMAIN-SUFFIX,doh.umbrella.com,REJECT
@@ -98,22 +71,7 @@ DOMAIN-SUFFIX,dns.arnor.org,REJECT
 DOMAIN-SUFFIX,doh.dns.apple.com,REJECT
 
 # ═══════════════════════════════════════════════════════
-# 第四层：阿里/腾讯 HTTPDNS 通配 SUFFIX
-# ═══════════════════════════════════════════════════════
-DOMAIN-SUFFIX,httpdns.aliyuncs.com,REJECT
-DOMAIN-SUFFIX,httpdns.alicdn.com,REJECT
-DOMAIN-SUFFIX,amdc.m.taobao.com,REJECT
-DOMAIN-SUFFIX,amdcopen.m.taobao.com,REJECT
-DOMAIN-SUFFIX,umengacs.m.taobao.com,REJECT
-DOMAIN-SUFFIX,amdcopen.m.umeng.com,REJECT
-DOMAIN-SUFFIX,amdc.alipay.com,REJECT
-DOMAIN-SUFFIX,amdc-sibling.alipay.com.cn,REJECT
-DOMAIN-SUFFIX,httpdns.qcloud.com,REJECT
-DOMAIN-SUFFIX,httpdns.start.qcloud.com,REJECT
-DOMAIN-SUFFIX,httpdns.pro,REJECT
-
-# ═══════════════════════════════════════════════════════
-# 第五层：各 App 精确域名（不含关键词的）
+# 第四层：精确域名（仅保留不含上述关键词的）
 # ═══════════════════════════════════════════════════════
 # 微信/QQ
 DOMAIN,dns.weixin.qq.com,REJECT
@@ -124,40 +82,16 @@ DOMAIN,hkextshort.weixin.qq.com,REJECT
 DOMAIN,twns.p2ptun.qq.com,REJECT
 DOMAIN,tp2p.kg.qq.com,REJECT
 
-# 百度
-DOMAIN,httpdns.baidubce.com,REJECT
-DOMAIN,httpdns.bcelive.com,REJECT
-
-# 阿里
-DOMAIN,httpdns.danuoyi.tbcache.com,REJECT
-
-# 美团
-DOMAIN,httpdns.calorietech.com,REJECT
-
 # 京东
 DOMAIN,dns.jd.com,REJECT
 
-# 网易
-DOMAIN,httpdns-sdk.n.netease.com,REJECT
-
 # 小米
-DOMAIN,httpdns.browser.miui.com,REJECT
 DOMAIN,resolver.msg.xiaomi.net,REJECT
-
-# 华为
-DOMAIN,httpdns.c.cdnhwc2.com,REJECT
-DOMAIN,httpdns1.cc.cdnhwc5.com,REJECT
 
 # 爱奇艺
 DOMAIN,doh.iqiyi.com,REJECT
 DOMAIN,dns.iqiyi.com,REJECT
 DOMAIN,dns.qiyipic.iqiyi.com,REJECT
-
-# OPPO/HeyTap
-DOMAIN,httpdns.ocloud.oppomobile.com,REJECT
-DOMAIN,httpdns.push.oppomobile.com,REJECT
-DOMAIN,httpdns.ocloud.heytapmobi.com,REJECT
-DOMAIN,httpdns.push.heytapmobi.com,REJECT
 
 # 微博
 DOMAIN,dns.weibo.cn,REJECT
@@ -165,13 +99,7 @@ DOMAIN,dns.weibo.cn,REJECT
 # 快手
 DOMAIN,apidns.kwd.inkuai.com,REJECT
 DOMAIN,apidns-js.kwd.inkuai.com,REJECT
-DOMAIN,hdns.k-dyn.com,REJECT
 DOMAIN,cdndns.kwd.inkuai.com,REJECT
-DOMAIN,kuaishou.httpdns.pro,REJECT
-DOMAIN,hdns.ksyun.com,REJECT
-
-# B站
-DOMAIN,httpdns.bilivideo.com,REJECT
 
 # 优酷
 DOMAIN,xpis-xcdn.youku.com,REJECT
@@ -179,41 +107,24 @@ DOMAIN,pre-xpis-xcdn.youku.com,REJECT
 DOMAIN,xpis-tel-xcdn.youku.com,REJECT
 DOMAIN,xpis-mob-xcdn.youku.com,REJECT
 
-# YY
-DOMAIN,yyapp-httpdns.gslb.yy.com,REJECT
-DOMAIN,union-httpdns.gslb.yy.com,REJECT
-DOMAIN,yuyin-httpdns.gslb.yy.com,REJECT
-DOMAIN,httpdns-v6.gslb.yy.com,REJECT
-
 # 小红书
 DOMAIN,gslb.xiaohongshu.com,REJECT
-DOMAIN,httpdns.xiaohongshu.com,REJECT
 
-# 字节/抖音
-DOMAIN,httpdns.volcengineapi.com,REJECT
+# 友盟
+DOMAIN,umengacs.m.taobao.com,REJECT
 
 # 其他
-DOMAIN,httpdns.n.shifen.com,REJECT
-DOMAIN,httpdns.immomo.com,REJECT
-DOMAIN,httpdns.yunxinfw.com,REJECT
-DOMAIN,httpdns.yunxindns.com,REJECT
-DOMAIN,httpdns.cctv.com,REJECT
-DOMAIN,doh.ptqy.gitv.tv,REJECT
-DOMAIN,httpdns.zybang.com,REJECT
 DOMAIN,hd.xiaojukeji.com,REJECT
 DOMAIN,serveraddr.service.kugou.com,REJECT
 DOMAIN,ucdc.upaas.quark.cn,REJECT
 DOMAIN,dotserver.douyucdn.cn,REJECT
 DOMAIN,dns2.q2cdn.com,REJECT
+DOMAIN,doh.ptqy.gitv.tv,REJECT
 
 # ═══════════════════════════════════════════════════════
-# 第六层：URL-REGEX（IP 直连 + 特殊路径）
+# 第五层：URL-REGEX（IP 直连 + 特殊路径）
 # ═══════════════════════════════════════════════════════
 URL-REGEX,^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/,REJECT
-URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/amdcopen\.m\.taobao\.com\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/amdcopen\.m\.umeng\.com\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/umengacs\.m\.taobao\.com\/amdc\/mobileDispatch,REJECT
 URL-REGEX,^http:\/\/\d+\.\d+\.\d+\.\d+\/amdc\/mobileDispatch,REJECT
 URL-REGEX,^http:\/\/103\.37\.155\.60\/fetch,REJECT
 URL-REGEX,^http:\/\/api\.weibo\.cn\/\d+\/httpdns\/config,REJECT
@@ -221,7 +132,7 @@ URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT
 URL-REGEX,^http:\/\/103\.44\.58\.64\/md\?,REJECT
 
 # ═══════════════════════════════════════════════════════
-# 第七层：IP-CIDR
+# 第六层：IP-CIDR
 # ═══════════════════════════════════════════════════════
 # 公共 DNS
 IP-CIDR,1.1.1.1/32,REJECT,no-resolve
