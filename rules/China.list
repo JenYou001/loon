@@ -69,11 +69,8 @@ DOMAIN-SUFFIX,bilicdn2.com
 DOMAIN-SUFFIX,bilicdn3.com
 DOMAIN-SUFFIX,bilicdn4.com
 DOMAIN-SUFFIX,bilicdn5.com
-DOMAIN-SUFFIX,maoercdn.com
 DOMAIN-SUFFIX,mincdn.com
 DOMAIN-SUFFIX,smtcdns.net
-DOMAIN-SUFFIX,akamaized.net
-DOMAIN-SUFFIX,yfcdn.net
 
 # --- API ---
 DOMAIN-SUFFIX,biliapi.net
@@ -104,21 +101,13 @@ DOMAIN-SUFFIX,anitama.cn
 DOMAIN-SUFFIX,bigfun.cn
 DOMAIN-SUFFIX,bigfunapp.cn
 
-# --- 音频 / 语音 ---
-DOMAIN-SUFFIX,missevan.com
-DOMAIN-SUFFIX,maoer.com
-DOMAIN-SUFFIX,huasheng.cn
-
 # --- 支付 ---
 DOMAIN-SUFFIX,bilibilipay.com
 DOMAIN-SUFFIX,bilibilipay.cn
 
-# --- 其他关联 ---
+# --- 资源 ---
 DOMAIN-SUFFIX,im9.com
-DOMAIN-SUFFIX,corari.com
-DOMAIN-SUFFIX,dreamcast.hk
 DOMAIN-SUFFIX,yo9.com
-DOMAIN-SUFFIX,mcbbs.net
 
 # ==================== 阿里系 ====================
 
