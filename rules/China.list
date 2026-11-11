@@ -44,6 +44,7 @@ DOMAIN-SUFFIX,bilibili.cn
 
 # ==================== 阿里系（稳定版）====================
 DOMAIN-SUFFIX,taobao.com
+DOMAIN-SUFFIX,taobaocdn.com
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,alipay.com
