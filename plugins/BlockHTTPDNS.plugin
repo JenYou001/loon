@@ -20,6 +20,8 @@ DOMAIN-KEYWORD,apdns,REJECT
 DOMAIN-KEYWORD,apipdns,REJECT
 DOMAIN-KEYWORD,doq-,REJECT
 DOMAIN-KEYWORD,dot-dns,REJECT
+DOMAIN-KEYWORD,dns-query,REJECT
+DOMAIN-KEYWORD,traffic-route,REJECT
 
 # ═══════════════════════════════════════════════════════
 # 第二层：USER-AGENT（SDK 自标识）
@@ -41,6 +43,7 @@ DOMAIN-SUFFIX,dns.google,REJECT
 # Cloudflare
 DOMAIN-SUFFIX,one.one.one.one,REJECT
 DOMAIN-SUFFIX,cloudflare-dns.com,REJECT
+DOMAIN-SUFFIX,dns.cloudflare.com,REJECT
 
 # Quad9
 DOMAIN-SUFFIX,dns.quad9.net,REJECT
@@ -49,9 +52,15 @@ DOMAIN-SUFFIX,dns.quad9.net,REJECT
 DOMAIN-SUFFIX,doh.opendns.com,REJECT
 DOMAIN-SUFFIX,doh.familyshield.opendns.com,REJECT
 
+# Mozilla
+DOMAIN-SUFFIX,doh.mozillafoundation.net,REJECT
+
 # Mullvad
 DOMAIN-SUFFIX,dns.mullvad.net,REJECT
 DOMAIN-SUFFIX,adblock.doh.mullvad.net,REJECT
+
+# NextDNS
+DOMAIN-SUFFIX,nextdns.io,REJECT
 
 # 阿里 DNS
 DOMAIN-SUFFIX,dns.alidns.com,REJECT
@@ -61,6 +70,7 @@ DOMAIN-SUFFIX,doh.pub,REJECT
 DOMAIN-SUFFIX,dns.pub,REJECT
 DOMAIN-SUFFIX,dot.pub,REJECT
 DOMAIN-SUFFIX,sm2.doh.pub,REJECT
+DOMAIN-SUFFIX,doh.onedns.net,REJECT
 
 # 360
 DOMAIN-SUFFIX,doh.360.cn,REJECT
@@ -77,7 +87,6 @@ DOMAIN-SUFFIX,dns.cnnic.cn,REJECT
 DOMAIN-SUFFIX,dns.yandex.net,REJECT
 
 # 其他
-DOMAIN-SUFFIX,dns.onedns.net,REJECT
 DOMAIN-SUFFIX,doh.dns.sb,REJECT
 DOMAIN-SUFFIX,dns.aa.net.uk,REJECT
 DOMAIN-SUFFIX,doh.umbrella.com,REJECT
@@ -205,16 +214,8 @@ URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,REJECT
 URL-REGEX,^http:\/\/amdcopen\.m\.taobao\.com\/amdc\/mobileDispatch,REJECT
 URL-REGEX,^http:\/\/amdcopen\.m\.umeng\.com\/amdc\/mobileDispatch,REJECT
 URL-REGEX,^http:\/\/umengacs\.m\.taobao\.com\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/47\.246\.103\.9\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/47\.246\.103\.10\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/59\.82\.113\.219\/amdc\/mobileDispatch,REJECT
+URL-REGEX,^http:\/\/\d+\.\d+\.\d+\.\d+\/amdc\/mobileDispatch,REJECT
 URL-REGEX,^http:\/\/103\.37\.155\.60\/fetch,REJECT
-URL-REGEX,^http:\/\/103\.37\.155\.60\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/47\.89\.88\.77\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/203\.119\.214\.17\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/203\.119\.286\.64\/amdc\/mobileDispatch,REJECT
-URL-REGEX,^http:\/\/203\.119\.205\.153\/amdc\/mobileDispatch,REJECT
 URL-REGEX,^http:\/\/api\.weibo\.cn\/\d+\/httpdns\/config,REJECT
 URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT
 URL-REGEX,^http:\/\/103\.44\.58\.64\/md\?,REJECT
