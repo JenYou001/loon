@@ -60,6 +60,7 @@ DOMAIN-SUFFIX,tb.cn
 
 # ==================== 京东（稳定版）====================
 DOMAIN-SUFFIX,jd.com
+DOMAIN-SUFFIX,jdcdn.com
 DOMAIN-SUFFIX,360buyimg.com
 DOMAIN-SUFFIX,3.cn
 DOMAIN-SUFFIX,jd.hk
