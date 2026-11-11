@@ -1,22 +1,37 @@
-# ==================== Apple（21）====================
+# ========== Apple ==========
+
+# --- 主站 & 短链 ---
 DOMAIN-SUFFIX,apple.com
-DOMAIN-SUFFIX,cdn-apple.com
-DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,icloud-content.com
-DOMAIN-SUFFIX,mzstatic.com
-DOMAIN-SUFFIX,itunes.com
-DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-SUFFIX,me.com
-DOMAIN-SUFFIX,mac.com
-DOMAIN-SUFFIX,iwork.com
-DOMAIN-SUFFIX,apple-mapkit.com
-DOMAIN-SUFFIX,apple-cloudkit.com
-DOMAIN-SUFFIX,apple-livephotoskit.com
-DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,apple.tv
+
+# --- iCloud ---
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-dns.net
+
+# --- CDN ---
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,aaplimg.com
+DOMAIN-SUFFIX,phicdn.net
+
+# --- App Store / iTunes ---
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,appsto.re
-DOMAIN,app-site-association.networking.apple
-DOMAIN,token.safebrowsing.apple
+DOMAIN-SUFFIX,itunes.com
+
+# --- 邮件 & 办公 ---
+DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,mac.com
+DOMAIN-SUFFIX,iwork.com
+
+# --- SDK ---
+DOMAIN-SUFFIX,apple-mapkit.com
+DOMAIN-SUFFIX,apple-livephotoskit.com
+
+# --- .apple TLD ---
+DOMAIN-SUFFIX,networking.apple
+DOMAIN-SUFFIX,safebrowsing.apple
