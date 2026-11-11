@@ -44,6 +44,15 @@ DOMAIN-SUFFIX,brave.com
 DOMAIN-SUFFIX,bravesoftware.com
 DOMAIN-SUFFIX,bravecdn.com
 
+# ===== duolingo =====
+DOMAIN-SUFFIX,duolingo.com,PROXY
+DOMAIN,d35aaqx5ub95lt.cloudfront.net
+DOMAIN,d1vq87e9lcf771.cloudfront.net
+DOMAIN,d2pur3iezf4d1j.cloudfront.net
+DOMAIN,d3gq3s1iyyx31w.cloudfront.net
+DOMAIN,d7mj4aqfscim2.cloudfront.net
+DOMAIN,d3kwyfyztuo0xs.cloudfront.net
+
 # ========== Telegram ==========
 DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,telegram.me
