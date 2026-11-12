@@ -1,9 +1,4 @@
-# ========== Apple ==========
-# 遥测屏蔽（放在 apple.com 白名单之前）
-DOMAIN-SUFFIX,metrics.apple.com,REJECT
-DOMAIN-SUFFIX,xp.apple.com,REJECT
-DOMAIN-SUFFIX,mesu.apple.com,REJECT  
-
+# ========== Apple ==========  
 # --- 主站 & 短链 ---
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,apple.co
