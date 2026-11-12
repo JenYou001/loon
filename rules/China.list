@@ -30,10 +30,9 @@ DOMAIN-SUFFIX,tenpay.com
 DOMAIN-SUFFIX,wechatpay.cn
 DOMAIN-SUFFIX,wechatpay.com
 
-# --- 地图 & IoT ---
+# --- 地图 & 位置 ---
 DOMAIN-SUFFIX,map.qq.com
 DOMAIN-SUFFIX,lbs.gtimg.com
-DOMAIN-SUFFIX,iot-tencent.com
 
 # --- 其他 ---
 DOMAIN-SUFFIX,imtt.qq.com
@@ -41,7 +40,6 @@ DOMAIN-SUFFIX,dldir1.qq.com
 DOMAIN-SUFFIX,btrace.qq.com
 DOMAIN-SUFFIX,slife.xy-asia.com
 DOMAIN-SUFFIX,soup.v.qq.com
-DOMAIN-SUFFIX,teg.tencent-cloud.net
 
 # ==================== Bilibili ====================
 
@@ -69,8 +67,6 @@ DOMAIN-SUFFIX,bilicdn2.com
 DOMAIN-SUFFIX,bilicdn3.com
 DOMAIN-SUFFIX,bilicdn4.com
 DOMAIN-SUFFIX,bilicdn5.com
-DOMAIN-SUFFIX,mincdn.com
-DOMAIN-SUFFIX,smtcdns.net
 
 # --- API ---
 DOMAIN-SUFFIX,biliapi.net
@@ -93,10 +89,6 @@ DOMAIN-SUFFIX,bigfunapp.cn
 # --- 支付 ---
 DOMAIN-SUFFIX,bilibilipay.com
 DOMAIN-SUFFIX,bilibilipay.cn
-
-# --- 资源 ---
-DOMAIN-SUFFIX,im9.com
-DOMAIN-SUFFIX,yo9.com
 
 # ==================== 阿里系 ====================
 
@@ -127,16 +119,8 @@ DOMAIN-SUFFIX,alipay.net
 DOMAIN-SUFFIX,alipay.hk
 DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,alipaydns.com
-DOMAIN-SUFFIX,alipaylog.com
 DOMAIN-SUFFIX,alipaymo.com
 DOMAIN-SUFFIX,alipayplus.com
-DOMAIN-SUFFIX,alipay-eco.com
-DOMAIN-SUFFIX,alipay-corp.com
-DOMAIN-SUFFIX,alipay-inc.com
-DOMAIN-SUFFIX,alipay-traffic.com
-DOMAIN-SUFFIX,alipaydesign.com
-DOMAIN-SUFFIX,alipaydev.com
-DOMAIN-SUFFIX,alipayeshop.com
 DOMAIN-SUFFIX,ifaa.org.cn
 DOMAIN-SUFFIX,sinopayment.com.cn
 DOMAIN-SUFFIX,aliapp.org
@@ -152,7 +136,7 @@ DOMAIN-SUFFIX,autonavi.com
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,jd.hk
 DOMAIN-SUFFIX,360buy.com
-DOMAIN-SUFFIX,3.cn
+DOMAIN,3.cn
 
 # --- CDN ---
 DOMAIN-SUFFIX,jdcdn.com
@@ -170,7 +154,7 @@ DOMAIN-SUFFIX,isvjcloud.com
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,bosszhipin.com
 
-# --- 极验（第三方验证码） ---
+# --- 极验（第三方验证码，验证流程必需） ---
 DOMAIN-SUFFIX,geetest.com
 DOMAIN-SUFFIX,geevisit.com
 DOMAIN-SUFFIX,gsensebot.com
