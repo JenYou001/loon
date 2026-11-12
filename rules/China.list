@@ -30,17 +30,6 @@ DOMAIN-SUFFIX,tenpay.com
 DOMAIN-SUFFIX,wechatpay.cn
 DOMAIN-SUFFIX,wechatpay.com
 
-# --- 地图 & 位置 ---
-DOMAIN-SUFFIX,map.qq.com
-DOMAIN-SUFFIX,lbs.gtimg.com
-
-# --- 其他 ---
-DOMAIN-SUFFIX,imtt.qq.com
-DOMAIN-SUFFIX,dldir1.qq.com
-DOMAIN-SUFFIX,btrace.qq.com
-DOMAIN-SUFFIX,slife.xy-asia.com
-DOMAIN-SUFFIX,soup.v.qq.com
-
 # ==================== Bilibili ====================
 
 # --- 主站 ---
@@ -125,10 +114,6 @@ DOMAIN-SUFFIX,ifaa.org.cn
 DOMAIN-SUFFIX,sinopayment.com.cn
 DOMAIN-SUFFIX,aliapp.org
 
-# --- 其他（高德、菜鸟、阿里巴巴） ---
-DOMAIN-SUFFIX,alibaba.com
-DOMAIN-SUFFIX,amap.com
-DOMAIN-SUFFIX,autonavi.com
 
 # ==================== 京东 ====================
 
