@@ -62,33 +62,24 @@ DOMAIN-SUFFIX,im9.com
 DOMAIN-SUFFIX,yo9.com
 
 # ==================== 阿里系 ====================
-# --- 淘宝 / 天猫 ---
+# --- 主站 ---
 DOMAIN-SUFFIX,taobao.com
+DOMAIN-SUFFIX,taobao.cn
 DOMAIN-SUFFIX,tmall.com
-DOMAIN-SUFFIX,taobaocdn.com
-DOMAIN-SUFFIX,tbcache.com
-DOMAIN-SUFFIX,tbcdn.cn
-DOMAIN-SUFFIX,tbcdn.com
+DOMAIN-SUFFIX,1688.com            
+DOMAIN-SUFFIX,alibaba.cn           
+DOMAIN-SUFFIX,goofish.com          
 
-# --- 1688 / 闲鱼 ---
-DOMAIN-SUFFIX,1688.com
-DOMAIN-SUFFIX,goofish.com
+# --- CDN ---
+DOMAIN-SUFFIX,alicdn.com           
+DOMAIN-SUFFIX,alibabausercontent.com  
+DOMAIN-SUFFIX,taobaocdn.com        
+DOMAIN-SUFFIX,alipayobjects.com    
 
-# --- CDN & 图片 ---
-DOMAIN-SUFFIX,alicdn.com
-DOMAIN-SUFFIX,alicdn.net
-DOMAIN-SUFFIX,aliimg.com
-DOMAIN-SUFFIX,alibabausercontent.com
-DOMAIN-SUFFIX,alikunlun.com
-
-# --- 支付宝 / 蚂蚁 ---
+# --- 支付 ---
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipay.com.cn
 DOMAIN-SUFFIX,alipay.cn
-DOMAIN-SUFFIX,alipay.hk
-DOMAIN-SUFFIX,alipayobjects.com
-DOMAIN-SUFFIX,alipaydns.com
-DOMAIN-SUFFIX,alipaymo.com
 DOMAIN-SUFFIX,alipayplus.com
 
 # ==================== 京东 ====================
