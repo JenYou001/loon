@@ -1,5 +1,4 @@
 # ==================== 微信 / 腾讯 ====================
-
 # --- 主站 & 核心服务 ---
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
@@ -28,7 +27,6 @@ DOMAIN-SUFFIX,wechatpay.cn
 DOMAIN-SUFFIX,wechatpay.com
 
 # ==================== Bilibili ====================
-
 # --- 主站 ---
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,bilibili.net
@@ -65,7 +63,6 @@ DOMAIN-SUFFIX,im9.com
 DOMAIN-SUFFIX,yo9.com
 
 # ==================== 阿里系 ====================
-
 # --- 淘宝 / 天猫 ---
 DOMAIN-SUFFIX,taobao.com
 DOMAIN-SUFFIX,tmall.com
@@ -96,25 +93,40 @@ DOMAIN-SUFFIX,alipaymo.com
 DOMAIN-SUFFIX,alipayplus.com
 
 # ==================== 京东 ====================
-
 # --- 主站 ---
 DOMAIN-SUFFIX,jd.com
-DOMAIN-SUFFIX,jd.hk
+DOMAIN-SUFFIX,jd.com.cn
+DOMAIN-SUFFIX,jd.cn
+DOMAIN-SUFFIX,jd.shop
+DOMAIN-SUFFIX,3.cn
 DOMAIN-SUFFIX,360buy.com
-DOMAIN,3.cn
+DOMAIN-SUFFIX,360buy.cn
+DOMAIN-SUFFIX,360buy.com.cn
+DOMAIN-SUFFIX,jdemall.com
+DOMAIN-SUFFIX,jingdong.com
 
 # --- CDN ---
 DOMAIN-SUFFIX,jdcdn.com
 DOMAIN-SUFFIX,jdcache.com
 DOMAIN-SUFFIX,360buyimg.com
 
-# --- 云 & 支付 ---
-DOMAIN-SUFFIX,jcloudcs.com
+# --- 京东云 ---
+DOMAIN-SUFFIX,jcloud.com
 DOMAIN-SUFFIX,jdcloud.com
+DOMAIN-SUFFIX,jdcloudcs.com
+DOMAIN-SUFFIX,jdcloud-api.com
+DOMAIN-SUFFIX,jdcloudcache.com
+DOMAIN-SUFFIX,jdcloudsite.com
+DOMAIN-SUFFIX,jdcloud-mail.com
+
+# --- 京东海外 ---
+DOMAIN-SUFFIX,joybuy.com
+DOMAIN-SUFFIX,joybuy.cn
+
+# --- 支付（独立主体：网银在线）---
 DOMAIN-SUFFIX,jdpay.com
 
 # ==================== BOSS直聘 ====================
-
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,bosszhipin.com
 
@@ -124,7 +136,6 @@ DOMAIN-SUFFIX,geevisit.com
 DOMAIN-SUFFIX,gsensebot.com
 
 # ==================== 拼多多 ====================
-
 DOMAIN-SUFFIX,pinduoduo.com
 DOMAIN-SUFFIX,pinduoduo.net
 DOMAIN-SUFFIX,yangkeduo.com
@@ -132,11 +143,9 @@ DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pdd.net
 
 # ==================== 七猫小说 ====================
-
 DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
 DOMAIN-SUFFIX,qm989.com
 
 # ==================== 铁路12306 ====================
-
 DOMAIN-SUFFIX,12306.cn
