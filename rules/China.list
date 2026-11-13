@@ -110,21 +110,9 @@ DOMAIN-SUFFIX,jdcdn.com
 DOMAIN-SUFFIX,jdcache.com
 DOMAIN-SUFFIX,360buyimg.com
 
-# --- 京东云 ---
-DOMAIN-SUFFIX,jcloud.com
-DOMAIN-SUFFIX,jdcloud.com
-DOMAIN-SUFFIX,jdcloudcs.com
-DOMAIN-SUFFIX,jdcloud-api.com
-DOMAIN-SUFFIX,jdcloudcache.com
-DOMAIN-SUFFIX,jdcloudsite.com
-DOMAIN-SUFFIX,jdcloud-mail.com
-
 # --- 京东海外 ---
 DOMAIN-SUFFIX,joybuy.com
 DOMAIN-SUFFIX,joybuy.cn
-
-# --- 支付（独立主体：网银在线）---
-DOMAIN-SUFFIX,jdpay.com
 
 # ==================== BOSS直聘 ====================
 DOMAIN-SUFFIX,zhipin.com
