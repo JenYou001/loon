@@ -24,7 +24,7 @@ DOMAIN-SUFFIX,weixinc2c.tc.qq.com
 DOMAIN-SUFFIX,up-hl.3g.qq.com
 DOMAIN-SUFFIX,yun-hl.3g.qq.com
 
-# --- 支付（腾讯主体）---
+# --- 支付 ---
 DOMAIN-SUFFIX,wechatpay.cn
 DOMAIN-SUFFIX,wechatpay.com
 
