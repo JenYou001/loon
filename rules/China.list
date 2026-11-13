@@ -11,14 +11,11 @@ DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,wxapp.tc.qq.com
 DOMAIN-SUFFIX,wx.gtimg.com
 DOMAIN-SUFFIX,wximg.qq.com
-DOMAIN-SUFFIX,weixinsxy.com
 DOMAIN-SUFFIX,wechatos.net
-DOMAIN-SUFFIX,wechatlegal.net
 DOMAIN-SUFFIX,weixin110.qq.com
 
 # --- CDN & 图片 ---
 DOMAIN-SUFFIX,qpic.cn
-DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,vweixinthumb.tc.qq.com
 DOMAIN-SUFFIX,vweixinf.tc.qq.com
 DOMAIN-SUFFIX,weixinc2c.tc.qq.com
@@ -92,16 +89,11 @@ DOMAIN-SUFFIX,alikunlun.com
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipay.com.cn
 DOMAIN-SUFFIX,alipay.cn
-DOMAIN-SUFFIX,alipay.net
 DOMAIN-SUFFIX,alipay.hk
 DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,alipaydns.com
 DOMAIN-SUFFIX,alipaymo.com
 DOMAIN-SUFFIX,alipayplus.com
-DOMAIN-SUFFIX,ifaa.org.cn
-DOMAIN-SUFFIX,sinopayment.com.cn
-DOMAIN-SUFFIX,aliapp.org
-
 
 # ==================== 京东 ====================
 
