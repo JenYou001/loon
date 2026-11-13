@@ -37,16 +37,18 @@ DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,bilibili.net
 DOMAIN-SUFFIX,bilibili.cn
 DOMAIN-SUFFIX,bilibili.cc
-DOMAIN-SUFFIX,bilibili.co
 DOMAIN-SUFFIX,bilibili.tv
-DOMAIN-SUFFIX,b23.tv
+
+# --- 视频 CDN ---
 DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,bilivideo.cn
-DOMAIN-SUFFIX,bilivideo.net
-DOMAIN-SUFFIX,acgvideo.com
-DOMAIN-SUFFIX,acg.tv
+DOMAIN,upos-hz-mirrorakam.akamaized.net
+DOMAIN,upos-sz-mirrorakam.akamaized.net
+DOMAIN,upos-bstar-mirrorakam.akamaized.net
+DOMAIN,upos-bstar1-mirrorakam.akamaized.net
+DOMAIN,p-bstarstatic.akamaized.net
 
-# --- CDN & 镜像 ---
+# --- CDN & 图片 ---
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,hdslb.net
 DOMAIN-SUFFIX,hdslb.org
@@ -61,23 +63,9 @@ DOMAIN-SUFFIX,bilicdn5.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,biliapi.com
 
-# --- 漫画 / 大会员 / 国际 ---
-DOMAIN-SUFFIX,bilicomic.com
-DOMAIN-SUFFIX,bilicomics.com
-DOMAIN-SUFFIX,biligo.com
-DOMAIN-SUFFIX,biliintl.com
-DOMAIN-SUFFIX,biliintl.co
-DOMAIN-SUFFIX,biliplus.com
-DOMAIN-SUFFIX,animetamashi.com
-DOMAIN-SUFFIX,animetamashi.cn
-DOMAIN-SUFFIX,anitama.net
-DOMAIN-SUFFIX,anitama.cn
-DOMAIN-SUFFIX,bigfun.cn
-DOMAIN-SUFFIX,bigfunapp.cn
-
-# --- 支付 ---
-DOMAIN-SUFFIX,bilibilipay.com
-DOMAIN-SUFFIX,bilibilipay.cn
+# --- 弹幕 ---
+DOMAIN-SUFFIX,im9.com
+DOMAIN-SUFFIX,yo9.com
 
 # ==================== 阿里系 ====================
 
