@@ -35,6 +35,7 @@ DOMAIN-SUFFIX,bilibili.net
 DOMAIN-SUFFIX,bilibili.cn
 DOMAIN-SUFFIX,bilibili.cc
 DOMAIN-SUFFIX,bilibili.tv
+DOMAIN-SUFFIX,b23.tv
 
 # --- 视频 CDN ---
 DOMAIN-SUFFIX,bilivideo.com
