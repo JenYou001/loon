@@ -1,0 +1,96 @@
+# ═══════════════════════════════════════════════════════
+# Apple 原生追踪 / 遥测 / 广告拦截
+# 来源: hagezi/dns-blocklists (2026.1106.2251.26)
+# 共 104 条原始条目，合并后约 60 条规则
+# ═══════════════════════════════════════════════════════
+
+# ─── aaplimg.com CDN 端点 ───
+DOMAIN-SUFFIX,cstat.g.aaplimg.com,REJECT
+DOMAIN-SUFFIX,diagassets.g.aaplimg.com,REJECT
+DOMAIN-SUFFIX,cdn-xp-ingest-ab.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,iphonesubmissions.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,prod-app-analytics-event-gateway.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,prod-event-relay-api.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,prod-event-relay-books-api.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,prod-event-relay-notes-api.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,prod-event-relay-sports-api.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,prod-event-relay-stocks-api.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,prod-event-relay-weather-api.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,prod-iwork-events.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,prod-news-notification-events.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,securemetrics.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,securemetrics-cn.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,securemvt.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,smoot-feedback.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,supportmetrics.v.aaplimg.com,REJECT
+DOMAIN-SUFFIX,xp.v.aaplimg.com,REJECT
+
+# ─── Akamai CNAME 目标（Apple 内部负载均衡） ───
+DOMAIN-SUFFIX,ab.apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,cstat-lb.apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,diagassets-lb.apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,diagnostics.apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,iadcontent-lb.apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,iadsdk.apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,idiagnostics.apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,iphonesubmissions.apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,radarsubmissions.apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,iad-apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,partiality.itunes-apple.com.akadns.net,REJECT
+DOMAIN-SUFFIX,searchads.lb-apple.com.akadns.net,REJECT
+
+# ─── apple.com 主域追踪/遥测 ───
+DOMAIN-SUFFIX,aios-otel-collector.g.apple.com,REJECT
+DOMAIN-SUFFIX,ads.apple.com,REJECT
+DOMAIN-SUFFIX,advertising.apple.com,REJECT
+DOMAIN-SUFFIX,advp.apple.com,REJECT
+DOMAIN-SUFFIX,analytics-events.apple.com,REJECT
+DOMAIN-SUFFIX,api-adservices.apple.com,REJECT
+DOMAIN-SUFFIX,app-events.infoapps.apple.com,REJECT
+DOMAIN-SUFFIX,books-analytics-events.apple.com,REJECT
+DOMAIN-SUFFIX,cstat.apple.com,REJECT
+DOMAIN-SUFFIX,cstat-origin.apple.com,REJECT
+DOMAIN-SUFFIX,databeacon.apple.com,REJECT
+DOMAIN-SUFFIX,datacollection.apple.com,REJECT
+DOMAIN-SUFFIX,diagassets.apple.com,REJECT
+DOMAIN-SUFFIX,diagnostics.apple.com,REJECT
+DOMAIN-SUFFIX,dz1dt3wqswdezgx4j2ryem5iad.apple.com,REJECT
+DOMAIN-SUFFIX,experiments.apple.com,REJECT
+DOMAIN-SUFFIX,fbs.smoot.apple.com,REJECT
+DOMAIN-SUFFIX,flirfvysba2opz0zmzqs5iuiad.apple.com,REJECT
+DOMAIN-SUFFIX,freeform-events.apple.com,REJECT
+DOMAIN-SUFFIX,graffiti-tags.apple.com,REJECT
+DOMAIN-SUFFIX,iad.apple.com,REJECT
+DOMAIN-SUFFIX,iadcontent.apple.com,REJECT
+DOMAIN-SUFFIX,iadmoo.apple.com,REJECT
+DOMAIN-SUFFIX,iadsdk.apple.com,REJECT
+DOMAIN-SUFFIX,iadworkbench.apple.com,REJECT
+DOMAIN-SUFFIX,idiagnostics.apple.com,REJECT
+DOMAIN-SUFFIX,idiagnostics-mdn1.apple.com,REJECT
+DOMAIN-SUFFIX,iphonesubmissions.apple.com,REJECT
+DOMAIN-SUFFIX,launch.apple.com,REJECT
+DOMAIN-SUFFIX,msc-dct-prod.msc.apple.com,REJECT
+DOMAIN-SUFFIX,news-analytics-events.apple.com,REJECT
+DOMAIN-SUFFIX,news-app-events.apple.com,REJECT
+DOMAIN-SUFFIX,news-events.apple.com,REJECT
+DOMAIN-SUFFIX,news-notification-events.apple.com,REJECT
+DOMAIN-SUFFIX,news-sports-events.apple.com,REJECT
+DOMAIN-SUFFIX,notes-analytics-events.apple.com,REJECT
+DOMAIN-SUFFIX,odin-signals.apple.com,REJECT
+DOMAIN-SUFFIX,partiality.itunes.apple.com,REJECT
+DOMAIN-SUFFIX,performance-partners.apple.com,REJECT
+DOMAIN-SUFFIX,phonesubmissions.apple.com,REJECT
+DOMAIN-SUFFIX,podcasts-analytics-events.apple.com,REJECT
+DOMAIN-SUFFIX,prd-usw2-requestattribution-iad.apple.com,REJECT
+DOMAIN-SUFFIX,proxy-skadnetwork.apple.com,REJECT
+DOMAIN-SUFFIX,radarsubmissions.apple.com,REJECT
+DOMAIN-SUFFIX,searchads.apple.com,REJECT
+DOMAIN-SUFFIX,securemetrics.apple.com,REJECT
+DOMAIN-SUFFIX,securemvt.apple.com,REJECT
+DOMAIN-SUFFIX,stocks-analytics-events.apple.com,REJECT
+DOMAIN-SUFFIX,weather-analytics-events.apple.com,REJECT
+
+# ─── iCloud / 其他 Apple 服务 ───
+DOMAIN-SUFFIX,feedbackws.icloud.com,REJECT
+DOMAIN-SUFFIX,metrics.icloud.com,REJECT
+DOMAIN-SUFFIX,metrics.mzstatic.com,REJECT   
