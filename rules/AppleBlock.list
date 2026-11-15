@@ -1,7 +1,7 @@
 # ═══════════════════════════════════════════════════════
-# Apple 原生追踪 / 遥测 / 广告拦截（完整修正版）
-# 来源: hagezi/dns-blocklists (2026.1106.2251.26)
-# 共 104+ 条，已合并去重
+# Apple 原生追踪 / 遥测 / 广告拦截（整合版）
+# 来源: hagezi/dns-blocklists (2026.1113.2228.18)
+# 共 117 条
 # ═══════════════════════════════════════════════════════
 
 # ─── aaplimg.com CDN ───
@@ -43,6 +43,7 @@ DOMAIN-SUFFIX,searchads.lb-apple.com.akadns.net,REJECT
 
 # ─── apple.com 主域 ───
 DOMAIN-SUFFIX,aios-otel-collector.g.apple.com,REJECT
+DOMAIN-SUFFIX,ads.apple.com,REJECT                    # ← 新增
 DOMAIN-SUFFIX,advertising.apple.com,REJECT
 DOMAIN-SUFFIX,advp.apple.com,REJECT
 DOMAIN-SUFFIX,analytics-events.apple.com,REJECT
@@ -68,8 +69,11 @@ DOMAIN-SUFFIX,iadsdk.apple.com,REJECT
 DOMAIN-SUFFIX,iadworkbench.apple.com,REJECT
 DOMAIN-SUFFIX,idiagnostics.apple.com,REJECT
 DOMAIN-SUFFIX,idiagnostics-mdn1.apple.com,REJECT
+DOMAIN-SUFFIX,internalcheck.apple.com,REJECT          # ← 新增
 DOMAIN-SUFFIX,iphonesubmissions.apple.com,REJECT
+DOMAIN-SUFFIX,iphonesubmissions-old.apple.com,REJECT  # ← 新增
 DOMAIN-SUFFIX,launch.apple.com,REJECT
+DOMAIN-SUFFIX,metrics.apple.com,REJECT                # ← 新增
 DOMAIN-SUFFIX,msc-dct-prod.msc.apple.com,REJECT
 DOMAIN-SUFFIX,news-analytics-events.apple.com,REJECT
 DOMAIN-SUFFIX,news-app-events.apple.com,REJECT
@@ -114,8 +118,17 @@ DOMAIN-SUFFIX,feedbackws.fe.apple-dns.cn,REJECT
 DOMAIN-SUFFIX,feedbackws.fe.apple-dns.net,REJECT
 DOMAIN-SUFFIX,feedbackws.fe2.apple-dns.net,REJECT
 DOMAIN-SUFFIX,me.apple-dns.net,REJECT
+DOMAIN-SUFFIX,books-analytics-events.news.apple-dns.net,REJECT  # ← 新增
+DOMAIN-SUFFIX,notes-analytics-events.news.apple-dns.net,REJECT  # ← 新增
+DOMAIN-SUFFIX,stocks-analytics-events.news.apple-dns.net,REJECT  # ← 新增
+DOMAIN-SUFFIX,weather-analytics-events.news.apple-dns.net,REJECT # ← 新增
 DOMAIN-SUFFIX,applemediaservices.com,REJECT
 DOMAIN-SUFFIX,cstat.cdn-apple.com,REJECT
+DOMAIN-SUFFIX,marketing.services.apple,REJECT          # ← 新增
 DOMAIN-SUFFIX,securemetrics.apple.com.cn,REJECT
 DOMAIN-SUFFIX,qwapi.com,REJECT
 DOMAIN-SUFFIX,www.qwapi.com,REJECT
+
+# ─── 其他 ───
+DOMAIN-SUFFIX,beacon.shazam.com,REJECT                # ← 新增
+DOMAIN-SUFFIX,h4g3z1-native-apple.web.app,REJECT      # ← 新增   
