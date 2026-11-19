@@ -22,12 +22,18 @@ DOMAIN-SUFFIX,1e100.net
 DOMAIN-SUFFIX,g.co
 
 # ========== YouTube ==========
-DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,withyoutube.com
 DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,youtubeeducation.com
+DOMAIN-SUFFIX,youtubegaming.com
 DOMAIN-SUFFIX,youtubekids.com
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,yt.be
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN,youtubei.googleapis.com
+DOMAIN,yt3.ggpht.com
 
 # ========== DuckDuckGo ==========
 DOMAIN-SUFFIX,duckduckgo.com
