@@ -1,7 +1,7 @@
 #!name = YouTube Enhance
 #!desc = 拦截广告。支持后台播放、画中画（PiP）及最高 4 倍速播放。
 #!author = Maasea[https://github.com/Maasea/sgmodule], gholts[https://github.com/gholts/surge], RuCu6[https://github.com/RuCu6]
-#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/youtube.png
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YouTube.png
 #!openUrl = https://apps.apple.com/app/id544007664
 #!homepage = https://github.com/Tartarus2014/Loon-Script
 #!system = iOS, iPadOS
