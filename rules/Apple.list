@@ -50,16 +50,8 @@ DOMAIN-SUFFIX,apple-livephotoskit.com
 DOMAIN-SUFFIX,networking.apple
 DOMAIN-SUFFIX,safebrowsing.apple
 
-# --- USER-AGENT ---
-USER-AGENT,com.apple.appstored*
-USER-AGENT,FindMyiPhone*
-USER-AGENT,FindMyFriends*
-USER-AGENT,Maps*
-USER-AGENT,Music*
-USER-AGENT,AppleTV*
-USER-AGENT,geod*
-USER-AGENT,locationd*
-USER-AGENT,passd*
-USER-AGENT,com.apple.trustd*
-USER-AGENT,com.apple.tv*
-USER-AGENT,com.apple.news*
+# --- IP-CIDR ---
+IP-CIDR,139.178.128.0/18,no-resolve
+IP-CIDR,144.178.0.0/19,no-resolve
+IP-CIDR,63.92.224.0/19,no-resolve
+IP-CIDR,65.199.22.0/23,no-resolve
