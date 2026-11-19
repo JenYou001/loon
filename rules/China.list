@@ -60,37 +60,96 @@ DOMAIN,vweixinf.tc.qq.com
 DOMAIN,slife.xy-asia.com
 
 # ==================== Bilibili ====================
-# --- 主站 ---
+# --- 主域名 & API ---
 DOMAIN-SUFFIX,bilibili.com
-DOMAIN-SUFFIX,bilibili.net
 DOMAIN-SUFFIX,bilibili.cn
+DOMAIN-SUFFIX,bilibili.co
 DOMAIN-SUFFIX,bilibili.cc
+DOMAIN-SUFFIX,bilibili.net
 DOMAIN-SUFFIX,bilibili.tv
-
-# --- 视频 CDN ---
-DOMAIN-SUFFIX,bilivideo.com
-DOMAIN-SUFFIX,bilivideo.cn
-DOMAIN-SUFFIX,bilivideo.net
-DOMAIN,upos-hz-mirrorakam.akamaized.net
-
-# --- CDN & 图片 ---
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,hdslb.net
 DOMAIN-SUFFIX,hdslb.org
-DOMAIN-SUFFIX,biliimg.com
+DOMAIN-SUFFIX,biliapi.com
+DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,im9.com
+DOMAIN-SUFFIX,yo9.com
+
+# --- 短链 & 跳转 ---
+DOMAIN-SUFFIX,b23.tv
+DOMAIN-SUFFIX,bili22.cn
+DOMAIN-SUFFIX,bili2233.cn
+DOMAIN-SUFFIX,bili23.cn
+DOMAIN-SUFFIX,bili33.cn
+DOMAIN-SUFFIX,baka.im
+
+# --- CDN & 图片 & 静态资源 ---
+DOMAIN-SUFFIX,hdslb.com.w.kunlunhuf.com
+DOMAIN-SUFFIX,hdslb.com.w.kunlunpi.com
 DOMAIN-SUFFIX,bilicdn1.com
 DOMAIN-SUFFIX,bilicdn2.com
 DOMAIN-SUFFIX,bilicdn3.com
 DOMAIN-SUFFIX,bilicdn4.com
 DOMAIN-SUFFIX,bilicdn5.com
+DOMAIN-SUFFIX,biliimg.com
+DOMAIN-SUFFIX,maoercdn.com
+DOMAIN-SUFFIX,mincdn.com
+DOMAIN-SUFFIX,smtcdns.net
+DOMAIN-SUFFIX,sharejoytech.com
+DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net
+DOMAIN-SUFFIX,uposdash-302-bilivideo.yfcdn.net
 
-# --- API ---
-DOMAIN-SUFFIX,biliapi.net
-DOMAIN-SUFFIX,biliapi.com
+# --- 视频 & 直播 ---
+DOMAIN-SUFFIX,bilivideo.cn
+DOMAIN-SUFFIX,bilivideo.com
+DOMAIN-SUFFIX,bilivideo.net
 
-# --- 弹幕 ---
-DOMAIN-SUFFIX,im9.com
-DOMAIN-SUFFIX,yo9.com
+# --- 漫画 & 轻小说 ---
+DOMAIN-SUFFIX,bilicomics.com
+DOMAIN-SUFFIX,animetamashi.cn
+DOMAIN-SUFFIX,animetamashi.com
+DOMAIN-SUFFIX,anitama.cn
+DOMAIN-SUFFIX,anitama.net
+
+# --- 支付 ---
+DOMAIN-SUFFIX,bilibilipay.cn
+DOMAIN-SUFFIX,bilibilipay.com
+
+# --- 国际版 ---
+DOMAIN-SUFFIX,biliintl.co
+DOMAIN-SUFFIX,biliintl.com
+
+# --- CDN 混淆域名（53条） ---
+DOMAIN,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com
+DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com
+DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3z.ourdvsss.com
+DOMAIN,0gr4uqmtt8y41hcjsgrzdrctt.ourdvsss.com
+DOMAIN,0gr4uqmtt8y41hcjsgrzdrctu.ourdvsss.com
+DOMAIN,0gr4uqmtt8y41hcjz8yzdnc31.ourdvsss.com
+DOMAIN,0gr4uqmtt8y41hcjz8yzdnc3t.ourdvsss.com
+DOMAIN,0gr4uqmtt8y41hcjzgazdrpba.ourdvsss.com
+DOMAIN,0gr4uqmtt8y41hcjzgazdrpbz.ourdvsss.com
+DOMAIN,0gr4uqmtt8y41hcjzgazdrpjt.ourdvsss.com
+DOMAIN,0gr5dgmttgha1hcj38yzdncb3.ourdvsss.com
+DOMAIN,112-81-125-43.dhost.00cdn.com
+DOMAIN,113-219-145-1.ksyungslb.com
+DOMAIN,114-236-92-129.ksyungslb.com
+DOMAIN,180-101-74-1.ksyungslb.com
+DOMAIN,1geadrmttge3nhcjwgazdope.ourdvsss.com
+DOMAIN,1geadrmttge3nhcjwgwzdqqe.ourdvsss.com
+DOMAIN,1gr3uomttgr31hcjo8yzdnco.ourdvsss.com
+DOMAIN,1gr3uomttgr31hcjo8yzdnpy.ourdvsss.com
+DOMAIN,1gr3uomttgr31hcjtgezdkcy.ourdvsss.com
+DOMAIN,1gr4uqmtt8y41hcjigazdqca.ourdvsss.com
+DOMAIN,1gr4uqmtt8y41hcjigazdqce.ourdvsss.com
+DOMAIN,1gr4uqmtt8y41hcjigazdqco.ourdvsss.com
+DOMAIN,1gr4uqmtt8y41hcjigazdqpo.ourdvsss.com
+DOMAIN,1gr4uqmtt8y41hcjzgwzdkqe.ourdvsss.com
+DOMAIN,1gr5dgmttgha1hcj38yzdcca.ourdvsss.com
+DOMAIN,1gr5dgmttgha1hcj38yzdcco.ourdvsss.com
+DOMAIN,1gr5dgmttgha1hcj38yzdkca.ourdvsss.com
+DOMAIN,1gr5dgmttgha1hcj38yzdkco.ourdvsss.com
+
 
 # ==================== 阿里系 ====================
 # ===== 核心主站 =====
