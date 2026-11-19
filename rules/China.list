@@ -152,57 +152,93 @@ DOMAIN,1gr5dgmttgha1hcj38yzdkco.ourdvsss.com
 
 
 # ==================== 阿里系 ====================
-# ===== 核心主站 =====
+# --- 主域名 & API ---
 DOMAIN-SUFFIX,alibaba.com
-DOMAIN-SUFFIX,alibaba.com.cn
 DOMAIN-SUFFIX,alibaba.cn
-DOMAIN-SUFFIX,alibaba.net
+DOMAIN-SUFFIX,alibaba.com.cn
 DOMAIN-SUFFIX,alibaba-inc.com
-DOMAIN-SUFFIX,alibabacloud.com
-DOMAIN-SUFFIX,alibabadns.com
-DOMAIN-SUFFIX,alibabadns.cn
-DOMAIN-SUFFIX,alibabaonline.com
 DOMAIN-SUFFIX,alibabagroup.com
-DOMAIN-SUFFIX,aliregistry.cn
-
-# ===== 淘宝 =====
 DOMAIN-SUFFIX,taobao.com
 DOMAIN-SUFFIX,taobao.cn
-DOMAIN-SUFFIX,taobaocdn.com
-DOMAIN-SUFFIX,taobaocdn.net
-DOMAIN-SUFFIX,alicdn.com
-DOMAIN-SUFFIX,alicdn.net
-DOMAIN-SUFFIX,gslb.taobao.com
-
-# ===== 天猫 =====
+DOMAIN-SUFFIX,taobao.com.cn
 DOMAIN-SUFFIX,tmall.com
-DOMAIN-SUFFIX,tmall.hk
-DOMAIN-SUFFIX,tmallcdn.com
-
-# ===== 1688 =====
+DOMAIN-SUFFIX,tmall.cn
 DOMAIN-SUFFIX,1688.com
-DOMAIN-SUFFIX,1688.cn
+DOMAIN-SUFFIX,aliexpress.com
+DOMAIN-SUFFIX,aliapp.com
+DOMAIN-SUFFIX,aliapp-inc.com
 
-# ===== 阿里云 =====
-DOMAIN-SUFFIX,aliyun.com
+# --- 短链 & 跳转 ---
+DOMAIN-SUFFIX,taobao.cn
+DOMAIN-SUFFIX,tmall.hk
+DOMAIN-SUFFIX,tb.cn
+DOMAIN-SUFFIX,aliapp.org
+
+# --- CDN & 图片 & 静态资源 ---
+DOMAIN-SUFFIX,taobaocdn.com
+DOMAIN-SUFFIX,tbcdn.com
 DOMAIN-SUFFIX,aliyuncs.com
-DOMAIN-SUFFIX,aliyuncs.net
-DOMAIN-SUFFIX,aliyuncs.com.cn
-DOMAIN-SUFFIX,alibabacloud.com
-DOMAIN-SUFFIX,aliplus.com
-DOMAIN-SUFFIX,aliyungrtn.com
-DOMAIN-SUFFIX,dawnjs.com
-DOMAIN-SUFFIX,wuying.cloud
-DOMAIN-SUFFIX,qoder.com.cn
-DOMAIN-SUFFIX,cnzz.com
-DOMAIN-SUFFIX,cnzz.net
+DOMAIN-SUFFIX,alicdn.com
+DOMAIN-SUFFIX,mmcdn.cn
+DOMAIN-SUFFIX,mmstat.com
+DOMAIN-SUFFIX,alibabausercontent.com
+DOMAIN-SUFFIX,aliappcdn.com
+DOMAIN-SUFFIX,alimama.com
 
-# ===== 支付宝/蚂蚁 =====
+# --- 物流（菜鸟） ---
+DOMAIN-SUFFIX,cainiao.com
+DOMAIN-SUFFIX,cainiao.com.cn
+DOMAIN-SUFFIX,cainiao-inc.com
+
+# --- 支付（支付宝/蚂蚁） ---
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipay.cn
-DOMAIN-SUFFIX,antgroup.com
+DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,antfin.com
-DOMAIN-SUFFIX,mybank.cn
+DOMAIN-SUFFIX,antgroup.com
+
+# --- 阿里云 & 云基础设施 ---
+DOMAIN-SUFFIX,aliyun.com
+DOMAIN-SUFFIX,aliyun.com.cn
+DOMAIN-SUFFIX,aliyun.net
+DOMAIN-SUFFIX,aliyun-inc.com
+DOMAIN-SUFFIX,aliyuncs.com
+DOMAIN-SUFFIX,aliyunidaas.com
+DOMAIN-SUFFIX,aliyuniot.com
+DOMAIN-SUFFIX,aliyunrtc.com
+DOMAIN-SUFFIX,aliyunvcs.cn
+DOMAIN-SUFFIX,aliyunvpc.com
+DOMAIN-SUFFIX,aliyunwaf.com
+DOMAIN-SUFFIX,aliyunbaas.com
+DOMAIN-SUFFIX,aliyuncc.com
+DOMAIN-SUFFIX,aliyun-iot-share.com
+DOMAIN-SUFFIX,aliyun-znfhq.net
+DOMAIN-SUFFIX,aliyun.xin
+DOMAIN-SUFFIX,aliypc.com
+DOMAIN-SUFFIX,alyns.cn
+DOMAIN-SUFFIX,alyms.cn
+DOMAIN-SUFFIX,alysm.cn
+DOMAIN-SUFFIX,cloudeagle.cn
+DOMAIN-SUFFIX,cloudhost.link
+DOMAIN-SUFFIX,cdngslb.com
+DOMAIN-SUFFIX,yunduncc.com
+DOMAIN-SUFFIX,yundunddos.com
+DOMAIN-SUFFIX,yundunwaf.com
+DOMAIN-SUFFIX,tsm-yuntrust.com
+DOMAIN-SUFFIX,mpcloudapp.com
+DOMAIN-SUFFIX,mpserverless.com
+DOMAIN-SUFFIX,umeng.com
+DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,umtrack.com
+DOMAIN-SUFFIX,cnzz.com
+DOMAIN-SUFFIX,cnzz.net
+DOMAIN-SUFFIX,dawnjs.com
+DOMAIN-SUFFIX,teambition.com
+DOMAIN-SUFFIX,teambition.net
+DOMAIN-SUFFIX,teambitionapis.com
+DOMAIN-SUFFIX,tianchi.com
+DOMAIN-SUFFIX,atatech.org
+DOMAIN-SUFFIX,dotwe.org
 
 # ===== 闲鱼 =====
 DOMAIN-SUFFIX,goofish.com
@@ -426,18 +462,22 @@ DOMAIN-SUFFIX,geevisit.com
 DOMAIN-SUFFIX,gsensebot.com
 
 # ==================== 拼多多 ====================
+# --- 主域名 & API ---
 DOMAIN-SUFFIX,pinduoduo.com
 DOMAIN-SUFFIX,pinduoduo.net
 DOMAIN-SUFFIX,yangkeduo.com
-DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pdd.net
 
-# ==================== 七猫小说 ====================
-DOMAIN-SUFFIX,qimao.com
-DOMAIN-SUFFIX,wtzw.com
-DOMAIN-SUFFIX,qm989.com
+# --- CDN & 图片 ---
+DOMAIN-SUFFIX,pddpic.com
+DOMAIN-SUFFIX,pddcdn.com
 
-# ==================== 滴滴 ====================
+# --- UGC & 内容 ---
+DOMAIN-SUFFIX,pddugc.com
+
+# --- IM / 即时通讯 ---
+DOMAIN-SUFFIX,pddim.com
+
 # ==================== 滴滴 ====================
 # --- 主站 & 品牌 ---
 DOMAIN-SUFFIX,didiglobal.com
