@@ -63,18 +63,28 @@ DOMAIN-SUFFIX,yo9.com
 
 # ==================== 阿里系 ====================
 # --- 主站 ---
+DOMAIN-SUFFIX,alibaba.com
+DOMAIN-SUFFIX,aliyun.com
+DOMAIN-SUFFIX,alicloud.com
+DOMAIN-SUFFIX,alibabagroup.com
 DOMAIN-SUFFIX,taobao.com
 DOMAIN-SUFFIX,taobao.cn
 DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,1688.com            
 DOMAIN-SUFFIX,alibaba.cn           
 DOMAIN-SUFFIX,goofish.com          
+DOMAIN-SUFFIX,amap.com
+DOMAIN-SUFFIX,alibaba.com
+DOMAIN-SUFFIX,aliyun.com
+DOMAIN-SUFFIX,alicloud.com
 
 # --- CDN ---
 DOMAIN-SUFFIX,alicdn.com           
 DOMAIN-SUFFIX,alibabausercontent.com  
 DOMAIN-SUFFIX,taobaocdn.com        
-DOMAIN-SUFFIX,alipayobjects.com    
+DOMAIN-SUFFIX,alipayobjects.com
+DOMAIN-SUFFIX,aliyuncs.com
+DOMAIN-SUFFIX,alibabacloud.com
 
 # --- 支付 ---
 DOMAIN-SUFFIX,alipay.com
@@ -125,11 +135,31 @@ DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
 DOMAIN-SUFFIX,qm989.com
 
-# ==================== DiDi出行 ====================
+# ==================== 滴滴 ====================
+# ==================== 滴滴 ====================
+# --- 主站 & 品牌 ---
+DOMAIN-SUFFIX,didiglobal.com
 DOMAIN-SUFFIX,didi.cn
-DOMAIN-SUFFIX,diditaxi.com.cn
 DOMAIN-SUFFIX,xiaojukeji.com
+DOMAIN-SUFFIX,didichuxing.com
+DOMAIN-SUFFIX,diditaxi.com.cn
+DOMAIN-SUFFIX,didi.xin
+
+# --- 业务线 ---
+DOMAIN-SUFFIX,didialift.com
+DOMAIN-SUFFIX,didiapp.net.cn
+DOMAIN-SUFFIX,dokit.cn
+DOMAIN-SUFFIX,rlab.net.cn
+DOMAIN-SUFFIX,dditu.cn
+DOMAIN-SUFFIX,uber.com.cn
+DOMAIN-SUFFIX,didi-labs.com
+
+# --- CDN & 静态资源 ---
 DOMAIN-SUFFIX,udache.com
+DOMAIN-SUFFIX,didistatic.com
+
+# --- DNS 基础设施 ---
+DOMAIN-SUFFIX,didiwuxian.com
 
 # ==================== 铁路12306 ====================
 DOMAIN-SUFFIX,12306.cn
