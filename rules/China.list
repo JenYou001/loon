@@ -125,5 +125,11 @@ DOMAIN-SUFFIX,qimao.com
 DOMAIN-SUFFIX,wtzw.com
 DOMAIN-SUFFIX,qm989.com
 
+# ==================== DiDi出行 ====================
+DOMAIN-SUFFIX,didi.cn
+DOMAIN-SUFFIX,diditaxi.com.cn
+DOMAIN-SUFFIX,xiaojukeji.com
+DOMAIN-SUFFIX,udache.com
+
 # ==================== 铁路12306 ====================
 DOMAIN-SUFFIX,12306.cn
