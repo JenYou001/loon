@@ -1,4 +1,3 @@
-# ========== Apple ==========  
 # --- 主站 & 短链 ---
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,apple.co
@@ -10,17 +9,33 @@ DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-KEYWORD,icloud.com.akadns.net
 
 # --- CDN ---
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,phicdn.net
+DOMAIN-KEYWORD,apple.com.akadns.net
+DOMAIN-KEYWORD,apple.com.edgekey.net
 
 # --- App Store / iTunes ---
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,itunes.com
+DOMAIN,lookup-api.apple.com.edgekey.net
+DOMAIN-KEYWORD,testflight
+
+# --- 推送 & 系统事件 ---
+DOMAIN,edge.apple
+DOMAIN,apple-events.akamaized.net
+DOMAIN,p-events-delivery.akamaized.net
+DOMAIN,icons.axm-usercontent-apple.com
+
+# --- Apple Music ---
+DOMAIN-SUFFIX,applemusic.com
+DOMAIN-SUFFIX,applemusicconnect.com
+DOMAIN-KEYWORD,smp-device
 
 # --- 邮件 & 办公 ---
 DOMAIN-SUFFIX,me.com
@@ -34,3 +49,17 @@ DOMAIN-SUFFIX,apple-livephotoskit.com
 # --- .apple TLD ---
 DOMAIN-SUFFIX,networking.apple
 DOMAIN-SUFFIX,safebrowsing.apple
+
+# --- USER-AGENT ---
+USER-AGENT,com.apple.appstored*
+USER-AGENT,FindMyiPhone*
+USER-AGENT,FindMyFriends*
+USER-AGENT,Maps*
+USER-AGENT,Music*
+USER-AGENT,AppleTV*
+USER-AGENT,geod*
+USER-AGENT,locationd*
+USER-AGENT,passd*
+USER-AGENT,com.apple.trustd*
+USER-AGENT,com.apple.tv*
+USER-AGENT,com.apple.news*
