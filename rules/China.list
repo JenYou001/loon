@@ -126,10 +126,7 @@ DOMAIN-SUFFIX,antgroup.com
 
 # ===== 闲鱼 =====
 DOMAIN-SUFFIX,goofish.com
-DOMAIN-SUFFIX,goofish.cn
-DOMAIN-SUFFIX,xianyu.com
-DOMAIN-SUFFIX,xianyuapp.com
-DOMAIN-SUFFIX,xianyuapi.com 
+DOMAIN-SUFFIX,goofish.cn 
 
 # ===== 高德 =====
 DOMAIN-SUFFIX,amap.com
