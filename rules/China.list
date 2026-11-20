@@ -85,6 +85,7 @@ DOMAIN-SUFFIX,bilivideo.net
 
 # ==================== 阿里系 ====================
 # --- 主域名 & API ---
+DOMAIN-SUFFIX,alibaba.com
 DOMAIN-SUFFIX,alibaba.cn
 DOMAIN-SUFFIX,alibaba.com.cn
 DOMAIN-SUFFIX,taobao.com
@@ -94,6 +95,7 @@ DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,tmall.cn
 DOMAIN-SUFFIX,1688.com
 DOMAIN-SUFFIX,aliapp.com
+DOMAIN-SUFFIX,dingtalk.com
 
 # --- 短链 & 跳转 ---
 DOMAIN-SUFFIX,tb.cn
@@ -102,8 +104,10 @@ DOMAIN-SUFFIX,aliapp.org
 # --- CDN & 图片 & 静态资源 ---
 DOMAIN-SUFFIX,taobaocdn.com
 DOMAIN-SUFFIX,tbcdn.com
+DOMAIN-SUFFIX,tbcdn.cn
 DOMAIN-SUFFIX,aliyuncs.com
 DOMAIN-SUFFIX,alicdn.com
+DOMAIN-SUFFIX,aliimg.com
 DOMAIN-SUFFIX,mmcdn.cn
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,alibabausercontent.com
@@ -123,11 +127,13 @@ DOMAIN-SUFFIX,antgroup.com
 # ===== 闲鱼 =====
 DOMAIN-SUFFIX,goofish.com
 DOMAIN-SUFFIX,goofish.cn
+DOMAIN-SUFFIX,xianyu.com
+DOMAIN-SUFFIX,xianyuapp.com
+DOMAIN-SUFFIX,xianyuapi.com 
 
-# ===== 高德 ====
+# ===== 高德 =====
 DOMAIN-SUFFIX,amap.com
-DOMAIN-SUFFIX,is.autonavi.com
-
+DOMAIN-SUFFIX,autonavi.com
 # ==================== 京东 ====================
 # --- API ---
 DOMAIN-SUFFIX,jd-app.com
