@@ -124,6 +124,12 @@ DOMAIN-SUFFIX,antgroup.com
 DOMAIN-SUFFIX,goofish.com
 DOMAIN-SUFFIX,goofish.cn
 
+# ===== 高德 ====
+DOMAIN-SUFFIX,restapi.amap.com
+DOMAIN-SUFFIX,webapi.amap.com
+DOMAIN-SUFFIX,vdata.amap.com
+DOMAIN-SUFFIX,*.is.autonavi.com
+
 # ==================== 京东 ====================
 # --- API ---
 DOMAIN-SUFFIX,jd-app.com
