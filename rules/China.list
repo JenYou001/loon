@@ -108,8 +108,6 @@ DOMAIN-SUFFIX,tbcdn.cn
 DOMAIN-SUFFIX,aliyuncs.com
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,aliimg.com
-DOMAIN-SUFFIX,mmcdn.cn
-DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,alibabausercontent.com
 DOMAIN-SUFFIX,aliappcdn.com
 
@@ -121,8 +119,6 @@ DOMAIN-SUFFIX,cainiao.com.cn
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipay.cn
 DOMAIN-SUFFIX,alipayobjects.com
-DOMAIN-SUFFIX,antfin.com
-DOMAIN-SUFFIX,antgroup.com
 
 # ===== 闲鱼 =====
 DOMAIN-SUFFIX,goofish.com
