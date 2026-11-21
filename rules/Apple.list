@@ -1,3 +1,6 @@
+# === Apple 域名 & IP 规则 ===
+# 优化日期: 2026-11-21
+
 # --- 主站 & 短链 ---
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,apple.co
@@ -9,33 +12,25 @@ DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,apple-dns.net
-DOMAIN-KEYWORD,icloud.com.akadns.net
+DOMAIN-SUFFIX,apzones.com
 
 # --- CDN ---
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-SUFFIX,phicdn.net
-DOMAIN-KEYWORD,apple.com.akadns.net
-DOMAIN-KEYWORD,apple.com.edgekey.net
 
 # --- App Store / iTunes ---
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,itunes.com
-DOMAIN,lookup-api.apple.com.edgekey.net
-DOMAIN-KEYWORD,testflight
 
 # --- 推送 & 系统事件 ---
-DOMAIN,edge.apple
+DOMAIN-SUFFIX,edge.apple
 DOMAIN,apple-events.akamaized.net
 DOMAIN,p-events-delivery.akamaized.net
-DOMAIN,icons.axm-usercontent-apple.com
 
 # --- Apple Music ---
 DOMAIN-SUFFIX,applemusic.com
-DOMAIN-SUFFIX,applemusicconnect.com
-DOMAIN-KEYWORD,smp-device
 
 # --- 邮件 & 办公 ---
 DOMAIN-SUFFIX,me.com
@@ -51,7 +46,8 @@ DOMAIN-SUFFIX,networking.apple
 DOMAIN-SUFFIX,safebrowsing.apple
 
 # --- IP-CIDR ---
+IP-CIDR,17.0.0.0/8,no-resolve
 IP-CIDR,139.178.128.0/18,no-resolve
 IP-CIDR,144.178.0.0/19,no-resolve
 IP-CIDR,63.92.224.0/19,no-resolve
-IP-CIDR,65.199.22.0/23,no-resolve
+IP-CIDR,65.199.22.0/23,no-resolve   
