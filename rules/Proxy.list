@@ -43,14 +43,14 @@ DOMAIN-SUFFIX,brave.com
 DOMAIN-SUFFIX,bravesoftware.com
 DOMAIN-SUFFIX,bravecdn.com
 
-# ===== duolingo =====
+# ========== Duolingo ==========
 DOMAIN-SUFFIX,duolingo.com,PROXY
-DOMAIN,d35aaqx5ub95lt.cloudfront.net
-DOMAIN,d1vq87e9lcf771.cloudfront.net
-DOMAIN,d2pur3iezf4d1j.cloudfront.net
-DOMAIN,d3gq3s1iyyx31w.cloudfront.net
-DOMAIN,d7mj4aqfscim2.cloudfront.net
-DOMAIN,d3kwyfyztuo0xs.cloudfront.net
+DOMAIN,d35aaqx5ub95lt.cloudfront.net,PROXY
+DOMAIN,d1vq87e9lcf771.cloudfront.net,PROXY
+DOMAIN,d2pur3iezf4d1j.cloudfront.net,PROXY
+DOMAIN,d3gq3s1iyyx31w.cloudfront.net,PROXY
+DOMAIN,d7mj4aqfscim2.cloudfront.net,PROXY
+DOMAIN,d3kwyfyztuo0xs.cloudfront.net,PROXY
 
 # ========== Telegram ==========
 DOMAIN-SUFFIX,telegram.org
@@ -75,6 +75,7 @@ DOMAIN-SUFFIX,tg.dev
 DOMAIN-SUFFIX,comments.app
 DOMAIN-SUFFIX,usercontent.dev
 DOMAIN-SUFFIX,quiz.directory
+DOMAIN-SUFFIX,toncenter.com
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/22,no-resolve
@@ -132,10 +133,3 @@ DOMAIN-SUFFIX,spoti.fi
 DOMAIN-SUFFIX,spotifycdn.com
 DOMAIN-SUFFIX,spotifycdn.net
 DOMAIN-SUFFIX,spotify.link
-DOMAIN,audio-ak-spotify-com.akamaized.net
-DOMAIN,audio4-ak-spotify-com.akamaized.net
-DOMAIN,heads-ak-spotify-com.akamaized.net
-DOMAIN,heads4-ak-spotify-com.akamaized.net
-DOMAIN,spotify.com.edgesuite.net
-DOMAIN,spotify.map.fastly.net
-DOMAIN,spotify.map.fastlylb.net
