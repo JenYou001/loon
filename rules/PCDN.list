@@ -1,14 +1,12 @@
 # ═══ PCDN 屏蔽 ═══
 
-# ── 特征词 ──
+# ── 特征词（安全，保留）──
 DOMAIN-KEYWORD,pcdn,REJECT
-DOMAIN-KEYWORD,p2p,REJECT
-DOMAIN-KEYWORD,mcdn,REJECT
-DOMAIN-KEYWORD,hcdn,REJECT
 DOMAIN-KEYWORD,302ppio,REJECT
 DOMAIN-KEYWORD,302kodo,REJECT
+DOMAIN-KEYWORD,mcdn,REJECT
 
-# ── 通用 PCDN 平台（不含特征词的混淆域名）──
+# ── 通用 PCDN 平台 ──
 DOMAIN-SUFFIX,bsccdn.net,REJECT
 DOMAIN-SUFFIX,bsclink.cn,REJECT
 DOMAIN-SUFFIX,bsgslb.cn,REJECT
@@ -27,21 +25,21 @@ DOMAIN-SUFFIX,ahdohpiechei.com,REJECT
 DOMAIN-SUFFIX,ppio.cloud,REJECT
 DOMAIN-SUFFIX,yirujs.com,REJECT
 DOMAIN-SUFFIX,xinqiucc.com,REJECT
+DOMAIN-SUFFIX,pplive-p2p.com,REJECT
+DOMAIN-SUFFIX,yfcloud.com,REJECT
+DOMAIN-SUFFIX,kspcdn.com,REJECT
+DOMAIN-SUFFIX,ws-p2p.com,REJECT
 
 # ── B站 ──
+DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
+DOMAIN-SUFFIX,mcdn.bilivideo.com,REJECT
 DOMAIN-SUFFIX,mountaintoys.cn,REJECT
-DOMAIN-SUFFIX,h2.smtcdns.net,REJECT
+DOMAIN,h2.smtcdns.net,REJECT
 DOMAIN,ppio.bilivideo.com,REJECT
 DOMAIN,kodo.bilivideo.com,REJECT
 
-# ── 腾讯 ──
-DOMAIN,p.tencentmusic.com,REJECT
-DOMAIN,isure6.stream.qqmusic.qq.com,REJECT
-DOMAIN,vodlive.qq.com,REJECT
-DOMAIN,iwan-s.video.qq.com,REJECT
-DOMAIN,cm.l.qq.com,REJECT
-
 # ── 爱奇艺 ──
+DOMAIN-SUFFIX,tpa-hcdn.iqiyi.com,REJECT
 DOMAIN,pdata.video.qiyi.com,REJECT
 DOMAIN,cachecdn.v.iqiyi.com,REJECT
 DOMAIN,meta-cdn.video.iq.com,REJECT
@@ -49,16 +47,45 @@ DOMAIN,data6.video.iqiyi.com,REJECT
 DOMAIN,data-qvs.iqiyi.com,REJECT
 
 # ── 优酷 ──
-DOMAIN-SUFFIX,atm.youku.com,REJECT
+DOMAIN,atm.youku.com,REJECT
 
 # ── 斗鱼 ──
 DOMAIN-SUFFIX,stun.douyucdn.cn,REJECT
 DOMAIN-SUFFIX,stun1.douyucdn.cn,REJECT
 DOMAIN-SUFFIX,stun.hitv.com,REJECT
+DOMAIN-SUFFIX,dyp2p-ali.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,dyp2p-hw.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,p2p-ali.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,p2pchunk-hw.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,p2pchunk-table.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,p2pchunk-ws.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,p2perrorlog.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,p2plive-ali.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,p2plive-ws.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,p2plog.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,p2pvod-ws.douyucdn.cn,REJECT
+
+# ── 虎牙 ──
+DOMAIN-SUFFIX,p2p.huya.com,REJECT
+
+# ── 腾讯 ──
+DOMAIN-SUFFIX,p2p.qq.com,REJECT
+DOMAIN-SUFFIX,p2ptun.qq.com,REJECT
+DOMAIN-SUFFIX,p2pupdate.gamedl.qq.com,REJECT
+DOMAIN-SUFFIX,p2pupgrade.gamedl.qq.com,REJECT
+DOMAIN,p.tencentmusic.com,REJECT
+DOMAIN,isure6.stream.qqmusic.qq.com,REJECT
+DOMAIN,iwan-s.video.qq.com,REJECT
 
 # ── 百度 ──
 DOMAIN,d.pcs.baidu.com,REJECT
 DOMAIN,p.bokecc.com,REJECT
 
 # ── 字节/抖音 ──
-DOMAIN,flive.douyincdn.com,REJECT   
+DOMAIN,flive.douyincdn.com,REJECT
+
+# ── 正则兜底 ──
+DOMAIN-REGEX,.*pcdn.*biliapi\.net,REJECT
+DOMAIN-REGEX,.*pcdn.*youku\.com,REJECT
+DOMAIN-REGEX,.*p2p.*douyucdn\.cn,REJECT
+DOMAIN-REGEX,.*p2p.*qq\.com,REJECT   
