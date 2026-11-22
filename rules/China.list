@@ -18,10 +18,6 @@ DOMAIN-SUFFIX,vweixinthumb.tc.qq.com
 DOMAIN-SUFFIX,tenpay.com
 DOMAIN-SUFFIX,wechatpay.com
 
-# --- 地图 & 定位 ---
-DOMAIN-SUFFIX,map.qq.com
-DOMAIN-SUFFIX,lbs.gtimg.com
-
 # --- 小程序 & H5 ---
 DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,wxapp.tc.qq.com
@@ -110,10 +106,6 @@ DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,aliimg.com
 DOMAIN-SUFFIX,alibabausercontent.com
 DOMAIN-SUFFIX,aliappcdn.com
-
-# --- 物流（菜鸟） ---
-DOMAIN-SUFFIX,cainiao.com
-DOMAIN-SUFFIX,cainiao.com.cn
 
 # --- 支付（支付宝/蚂蚁） ---
 DOMAIN-SUFFIX,alipay.com
