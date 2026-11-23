@@ -1,25 +1,21 @@
 # ============================================================
-# Apple 全面覆盖规则
-# 验证日期: 2026-11-21
-# 来源: Apple Support (101555), AS714 BGP, theapplewiki, v2fly
+# Apple Whitelist
+# Verified: 2026-11-23
+# Scope: AS714 / AS6185, excluding CN-specific & 3rd-party CDN
 # ============================================================
 
-# --- 主站 & 品牌 ---
+# --- Main & Brand ---
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,apple.tv
-
-# --- .apple TLD（Apple 独占，覆盖所有子域）---
 DOMAIN-SUFFIX,apple
 
 # --- iCloud ---
 DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,apple-dns.net
-DOMAIN-SUFFIX,apzones.com
 
 # --- CDN ---
 DOMAIN-SUFFIX,cdn-apple.com
@@ -35,7 +31,7 @@ DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,applemusic.com
 DOMAIN-SUFFIX,applemusicconnect.com
 
-# --- 邮件 & 办公 ---
+# --- Mail & Office ---
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mac.com
 DOMAIN-SUFFIX,iwork.com
@@ -44,31 +40,25 @@ DOMAIN-SUFFIX,iwork.com
 DOMAIN-SUFFIX,apple-mapkit.com
 DOMAIN-SUFFIX,apple-livephotoskit.com
 
-# --- Akamai CNAME 目标（兼容自行解析 DNS 的客户端）---
-DOMAIN,apple.com.akadns.net
-DOMAIN,push-apple.com.akadns.net
-DOMAIN,courier-push-apple.com.akadns.net
-
 # ============================================================
-# IP-CIDR（全部经 ARIN/BGP 确认归属 AS714 Apple Inc.）
+# IP-CIDR (AS714 / AS6185, BGP-verified)
 # ============================================================
 
-# Apple 主地址块（1990 年分配，16.7M IPs）
+# Primary block (1990, 16.7M IPs, includes AS6185 CDN)
 IP-CIDR,17.0.0.0/8,no-resolve
 
-# Apple 数据中心（Loyola, NJ / San Jose, CA）
+# Data centers
 IP-CIDR,139.178.128.0/18,no-resolve
 IP-CIDR,144.178.0.0/18,no-resolve
 
-# Apple 历史地址块
+# Active allocations (2021)
+IP-CIDR,57.112.0.0/12,no-resolve
+IP-CIDR,57.102.0.0/15,no-resolve
+
+# Legacy / scattered
 IP-CIDR,63.92.224.0/19,no-resolve
 IP-CIDR,65.199.22.0/23,no-resolve
-
-# Apple 零散 /24 /23 段（myip.ms / cam8001 确认）
 IP-CIDR,192.12.74.0/24,no-resolve
-IP-CIDR,192.35.50.0/24,no-resolve
 IP-CIDR,192.42.249.0/24,no-resolve
-IP-CIDR,198.183.16.0/23,no-resolve
 IP-CIDR,204.79.190.0/24,no-resolve
-IP-CIDR,204.179.120.0/24,no-resolve
-IP-CIDR,205.180.175.0/24,no-resolve
+IP-CIDR,198.183.16.0/23,no-resolve
