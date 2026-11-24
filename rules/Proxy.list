@@ -45,13 +45,15 @@ DOMAIN-SUFFIX,bravecdn.com
 
 # ========== Duolingo ==========
 DOMAIN-SUFFIX,duolingo.com
-DOMAIN-SUFFIX,recaptcha.net
+DOMAIN,recaptcha.net
 DOMAIN,d35aaqx5ub95lt.cloudfront.net
 DOMAIN,d1vq87e9lcf771.cloudfront.net
 DOMAIN,d2pur3iezf4d1j.cloudfront.net
 DOMAIN,d3gq3s1iyyx31w.cloudfront.net
 DOMAIN,d7mj4aqfscim2.cloudfront.net
 DOMAIN,d3kwyfyztuo0xs.cloudfront.net
+DOMAIN,d1b8nqdff6d679.cloudfront.net
+DOMAIN,dyvwhs7jlfw68.cloudfront.net
 
 # ========== Telegram ==========
 DOMAIN-SUFFIX,telegram.org
