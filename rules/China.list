@@ -148,8 +148,16 @@ DOMAIN-SUFFIX,jdl.com
 DOMAIN-SUFFIX,jdl.cn
 
 # ==================== BOSS直聘 ====================
+# Boss 直聘
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,bosszhipin.com
+DOMAIN-SUFFIX,dianzhangzhipin.com
+DOMAIN-SUFFIX,weizhipin.com
+
+# 百度地图
+DOMAIN-SUFFIX,map.baidu.com
+DOMAIN-SUFFIX,lbsyun.baidu.com
+DOMAIN-SUFFIX,lbs.baidu.com
 
 # --- 极验 ---
 DOMAIN-SUFFIX,geetest.com
