@@ -133,3 +133,34 @@ DOMAIN-SUFFIX,spoti.fi
 DOMAIN-SUFFIX,spotifycdn.com
 DOMAIN-SUFFIX,spotifycdn.net
 DOMAIN-SUFFIX,spotify.link
+
+# ========== Spotify ==========
+# ━━ 核心 ━━
+DOMAIN-SUFFIX,muse.ai
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,metaaivm.com
+DOMAIN-SUFFIX,museai.com
+
+# ━━ 认证 ━━
+DOMAIN-SUFFIX,meta.com
+
+# ━━ 用户内容 / CDN ━━
+DOMAIN-SUFFIX,metaaiusercontent.com
+DOMAIN-SUFFIX,ecto1usercontent.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,cdninstagram.com
+
+# ━━ 社交 / 登录 ━━
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,instagram.com
+
+# ━━ 模型 API ━━
+DOMAIN-SUFFIX,llama.com
+
+# ━━ WhatsApp 入口（可选） ━━
+DOMAIN-SUFFIX,cdn.whatsapp.net
+
+# ━━ Agent Apps（可选） ━━
+DOMAIN,meta-agents-apps.workers.dev
