@@ -2,17 +2,14 @@
 # --- 主域名 ---
 DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,weixin.com
-DOMAIN-SUFFIX,weixin.qq.com
-DOMAIN-SUFFIX,wx.qq.com
-DOMAIN-SUFFIX,wxs.qq.com
+DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,wechatos.net
 DOMAIN-SUFFIX,wechatlegal.net
 
 # --- CDN & 图片 ---
 DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qlogo.cn
-DOMAIN-SUFFIX,wx.gtimg.com
-DOMAIN-SUFFIX,vweixinthumb.tc.qq.com
+DOMAIN-SUFFIX,gtimg.com
 
 # --- 支付 ---
 DOMAIN-SUFFIX,tenpay.com
@@ -20,28 +17,12 @@ DOMAIN-SUFFIX,wechatpay.com
 
 # --- 小程序 & H5 ---
 DOMAIN-SUFFIX,servicewechat.com
-DOMAIN-SUFFIX,wxapp.tc.qq.com
 DOMAIN-SUFFIX,weixinbridge.com
 DOMAIN-SUFFIX,weixinsxy.com
 
-# --- 文件 & 传输 ---
-DOMAIN-SUFFIX,up-hl.3g.qq.com
-DOMAIN-SUFFIX,yun-hl.3g.qq.com
-DOMAIN,dldir1.qq.com
-DOMAIN,wup.imtt.qq.com
-
-# --- 视频 ---
-DOMAIN,soup.v.qq.com
-
-# --- 登录 & 安全 ---
-DOMAIN,weixin110.qq.com
+# --- 登录 & 传输 ---
 DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
-DOMAIN,btrace.qq.com
-
-# --- 其他 ---
-DOMAIN-SUFFIX,iot-tencent.com
-DOMAIN,vweixinf.tc.qq.com
-DOMAIN,slife.xy-asia.com
+DOMAIN,wup.imtt.qq.com
 
 # ==================== Bilibili ====================
 # --- 主域名 & API ---
@@ -49,14 +30,12 @@ DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,bilibili.cn
 DOMAIN-SUFFIX,bilibili.cc
 DOMAIN-SUFFIX,bilibili.net
-DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,hdslb.net
 DOMAIN-SUFFIX,hdslb.org
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,biliapi.net
-DOMAIN-SUFFIX,im9.com
-DOMAIN-SUFFIX,yo9.com
+DOMAIN-SUFFIX,biligame.com
 
 # --- 短链 & 跳转 ---
 DOMAIN-SUFFIX,b23.tv
@@ -65,19 +44,19 @@ DOMAIN-SUFFIX,bili2233.cn
 DOMAIN-SUFFIX,bili23.cn
 DOMAIN-SUFFIX,bili33.cn
 
-# --- CDN & 图片 & 静态资源 ---
+# --- CDN & 视频流 ---
 DOMAIN-SUFFIX,bilicdn1.com
 DOMAIN-SUFFIX,bilicdn2.com
 DOMAIN-SUFFIX,bilicdn3.com
 DOMAIN-SUFFIX,bilicdn4.com
 DOMAIN-SUFFIX,bilicdn5.com
 DOMAIN-SUFFIX,biliimg.com
-DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net
-
-# --- 视频 & 直播 ---
+DOMAIN-SUFFIX,acgvideo.com
 DOMAIN-SUFFIX,bilivideo.cn
 DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,bilivideo.net
+DOMAIN-SUFFIX,bilivideo.xyz
+DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net
 
 # ==================== 阿里系 ====================
 # --- 主域名 & API ---
@@ -89,6 +68,7 @@ DOMAIN-SUFFIX,taobao.cn
 DOMAIN-SUFFIX,taobao.com.cn
 DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,tmall.cn
+DOMAIN-SUFFIX,tmall.hk
 DOMAIN-SUFFIX,1688.com
 DOMAIN-SUFFIX,aliapp.com
 DOMAIN-SUFFIX,dingtalk.com
@@ -97,7 +77,7 @@ DOMAIN-SUFFIX,dingtalk.com
 DOMAIN-SUFFIX,tb.cn
 DOMAIN-SUFFIX,aliapp.org
 
-# --- CDN & 图片 & 静态资源 ---
+# --- CDN & 风控验证 ---
 DOMAIN-SUFFIX,taobaocdn.com
 DOMAIN-SUFFIX,tbcdn.com
 DOMAIN-SUFFIX,tbcdn.cn
@@ -106,6 +86,8 @@ DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,aliimg.com
 DOMAIN-SUFFIX,alibabausercontent.com
 DOMAIN-SUFFIX,aliappcdn.com
+DOMAIN-SUFFIX,alicloudccp.com
+DOMAIN-SUFFIX,mmstat.com
 
 # --- 支付（支付宝/蚂蚁） ---
 DOMAIN-SUFFIX,alipay.com
@@ -114,7 +96,7 @@ DOMAIN-SUFFIX,alipayobjects.com
 
 # ===== 闲鱼 =====
 DOMAIN-SUFFIX,goofish.com
-DOMAIN-SUFFIX,goofish.cn 
+DOMAIN-SUFFIX,goofish.cn
 
 # ===== 高德 =====
 DOMAIN-SUFFIX,amap.com
@@ -131,28 +113,31 @@ DOMAIN-SUFFIX,360buy.cn
 DOMAIN-SUFFIX,360buy.com.cn
 DOMAIN-SUFFIX,jd-app.com
 
+# --- 短链 ---
+DOMAIN-SUFFIX,3.cn
+
 # --- CDN & 图片 ---
 DOMAIN-SUFFIX,jdcache.com
 DOMAIN-SUFFIX,jdcdn.com
 DOMAIN-SUFFIX,360buyimg.com
+DOMAIN-SUFFIX,jdcloud.com
+DOMAIN-SUFFIX,jcloud.com
 
 # --- 视频 & 直播 ---
 DOMAIN-SUFFIX,jcloudvideo.com
 DOMAIN-SUFFIX,jcloudlive.com
 
-# --- 支付 ---
+# --- 支付 & 物流 ---
 DOMAIN-SUFFIX,jdpay.com
-
-# --- 物流 ---
 DOMAIN-SUFFIX,jdl.com
 DOMAIN-SUFFIX,jdl.cn
 
 # ==================== BOSS直聘 ====================
-# Boss 直聘
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,dianzhangzhipin.com
 DOMAIN-SUFFIX,weizhipin.com
+DOMAIN-SUFFIX,kanzhun.com
 
 # --- 极验 ---
 DOMAIN-SUFFIX,geetest.com
@@ -161,13 +146,13 @@ DOMAIN-SUFFIX,gsensebot.com
 
 # ==================== 拼多多 ====================
 DOMAIN-SUFFIX,pinduoduo.com
-DOMAIN-SUFFIX,pinduoduo.net
 DOMAIN-SUFFIX,yangkeduo.com
-DOMAIN-SUFFIX,pdd.net
+DOMAIN-SUFFIX,ddurl.to
 DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pddcdn.com
 DOMAIN-SUFFIX,pddugc.com
 DOMAIN-SUFFIX,pddim.com
+DOMAIN-SUFFIX,hutaojie.com
 
 # ==================== 滴滴 ====================
 DOMAIN-SUFFIX,didi.cn
@@ -177,14 +162,14 @@ DOMAIN-SUFFIX,diditaxi.com.cn
 DOMAIN-SUFFIX,didi.xin
 DOMAIN-SUFFIX,didialift.com
 DOMAIN-SUFFIX,didiapp.net.cn
-DOMAIN-SUFFIX,dokit.cn
-DOMAIN-SUFFIX,rlab.net.cn
 DOMAIN-SUFFIX,dditu.cn
 DOMAIN-SUFFIX,uber.com.cn
 DOMAIN-SUFFIX,didi-labs.com
 DOMAIN-SUFFIX,udache.com
 DOMAIN-SUFFIX,didistatic.com
 DOMAIN-SUFFIX,didiwuxian.com
+DOMAIN-SUFFIX,didiglobal.com
 
 # ==================== 铁路12306 ====================
 DOMAIN-SUFFIX,12306.cn
+DOMAIN-SUFFIX,95306.cn
