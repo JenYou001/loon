@@ -64,6 +64,7 @@ DOMAIN-SUFFIX,duck.ai
 # ========== Brave ==========
 # 主域名
 DOMAIN-SUFFIX,brave.com
+DOMAIN-SUFFIX,brave-com.jp
 # 软件
 DOMAIN-SUFFIX,bravesoftware.com
 # CDN
