@@ -1,16 +1,17 @@
 # ========== AdGuard ==========
-# 主域名
+# 主域名与官网
 DOMAIN-SUFFIX,adguard.com
-# DNS
+DOMAIN-SUFFIX,adguard.info
+# DNS 与 VPN
 DOMAIN-SUFFIX,adguard-dns.com
 DOMAIN-SUFFIX,adguard-dns.io
+DOMAIN-SUFFIX,adguard-vpn.com
 # 账号
 DOMAIN-SUFFIX,adguard.org
 DOMAIN-SUFFIX,adguardaccount.com
 # CDN
 DOMAIN-SUFFIX,adguardcdn.com
-# 资源
-DOMAIN-SUFFIX,filters.adtidy.org
+DOMAIN-SUFFIX,adtidy.org
 
 # ========== Google ==========
 # 主域名
@@ -27,15 +28,16 @@ DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,googlevideo.com
 # 短链
 DOMAIN-SUFFIX,g.co
-# 其他
+DOMAIN-SUFFIX,g.page
+# 其他与开发者
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,1e100.net
-# 机器人验证
-DOMAIN-SUFFIX,hcaptcha.com
+DOMAIN-SUFFIX,withgoogle.com
+DOMAIN-SUFFIX,google.dev
 
 # ========== YouTube ==========
 # 主域名
@@ -43,6 +45,7 @@ DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,youtube-nocookie.com
 # 短链
 DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,yt.be
 # CDN
 DOMAIN-SUFFIX,ytimg.com
 # 教育 / 儿童
@@ -64,9 +67,10 @@ DOMAIN-SUFFIX,duck.ai
 # ========== Brave ==========
 # 主域名
 DOMAIN-SUFFIX,brave.com
-DOMAIN-SUFFIX,brave-com.jp
-# 软件
+# 软件与帮助中心
 DOMAIN-SUFFIX,bravesoftware.com
+DOMAIN-SUFFIX,brave.software
+DOMAIN-SUFFIX,brave.app
 # CDN
 DOMAIN-SUFFIX,bravecdn.com
 
@@ -144,8 +148,9 @@ DOMAIN-SUFFIX,twttr.com
 DOMAIN-SUFFIX,twttr.net
 DOMAIN-SUFFIX,twtrdns.net
 DOMAIN-SUFFIX,twitteroauth.com
-# Grok
+# Grok & xAI（已补充 x.ai）
 DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
 
 # ========== GitHub ==========
 # 主域名
@@ -155,9 +160,11 @@ DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,githubassets.com
 # Pages
 DOMAIN-SUFFIX,github.io
-# 开发
+# 开发与依赖
 DOMAIN-SUFFIX,github.dev
-# 状态
+DOMAIN-SUFFIX,dependabot.com
+# 社区与状态
+DOMAIN-SUFFIX,githubcommunity.com
 DOMAIN-SUFFIX,githubstatus.com
 # App
 DOMAIN-SUFFIX,githubapp.com
@@ -183,44 +190,46 @@ DOMAIN-SUFFIX,reddithelp.com
 # ========== Spotify ==========
 # 主域名
 DOMAIN-SUFFIX,spotify.com
-# CDN
+# CDN 与音频流兜底
 DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,pscdn.co
 DOMAIN-SUFFIX,spotifycdn.com
 DOMAIN-SUFFIX,spotifycdn.net
-# 短链
+DOMAIN-KEYWORD,spotify
+# 短链与跳转
 DOMAIN-SUFFIX,spoti.fi
 DOMAIN-SUFFIX,spotify.link
+DOMAIN-SUFFIX,byspotify.com
+DOMAIN-SUFFIX,tospotify.com
+# 开发者
+DOMAIN-SUFFIX,spotify.dev
 
 # ========== Meta AI + Muse 全量 ==========
-
 # 主站
 DOMAIN-SUFFIX,meta.ai
 DOMAIN-SUFFIX,muse.ai
 DOMAIN-SUFFIX,museai.com
-
 # 认证 / 登录
 DOMAIN-SUFFIX,meta.com
-
 # VM（Muse 专属）
 DOMAIN-SUFFIX,metaaivm.com
-
-# CDN / 用户内容
+# CDN / 用户内容（已补充 fbcdn 与 fbsbx）
 DOMAIN-SUFFIX,metaaiusercontent.com
 DOMAIN-SUFFIX,ecto1usercontent.com
-
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
 # 原生 App 隐私网关
 DOMAIN-SUFFIX,atmeta.com
 DOMAIN,meta.privacy-gateway.cloudflare.com
 DOMAIN,meta.hpke-keys.privacy-gateway.cloudflare.com
 DOMAIN,meta-ohttp-relay-prod.fastly-edge.com
 DOMAIN,meta-ohttp-config-prod.fastly-edge.com
-
 # Agent Apps（Muse 专属）
 DOMAIN,meta-agents-apps.workers.dev
-
-# 开发者 / Llama（可选）
+# 开发者 / Llama
 DOMAIN-SUFFIX,llama.com
 DOMAIN,ai.developer.meta.com
 
-DOMAIN-SUFFIX,eporner.com
+# ========== 独立拆分项 ==========
+# 第三方人机验证
+DOMAIN-SUFFIX,hcaptcha.com
