@@ -31,6 +31,8 @@ DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,1e100.net
+# 机器人验证
+DOMAIN-SUFFIX,hcaptcha.com
 
 # ========== YouTube ==========
 # 主域名
