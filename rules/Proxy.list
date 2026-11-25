@@ -9,6 +9,8 @@ DOMAIN-SUFFIX,adguard.org
 DOMAIN-SUFFIX,adguardaccount.com
 # CDN
 DOMAIN-SUFFIX,adguardcdn.com
+# 资源
+DOMAIN-SUFFIX,filters.adtidy.org
 
 # ========== Google ==========
 # 主域名
