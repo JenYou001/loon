@@ -16,6 +16,7 @@ DOMAIN-SUFFIX,adtidy.org
 # ========== Google ==========
 # 主域名
 DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,google.jp
 DOMAIN-SUFFIX,google.co.jp
 DOMAIN-SUFFIX,gmail.com
 DOMAIN-SUFFIX,googlemail.com
@@ -42,6 +43,7 @@ DOMAIN-SUFFIX,google.dev
 # ========== YouTube ==========
 # 主域名
 DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtube.jp
 DOMAIN-SUFFIX,youtube-nocookie.com
 # 短链
 DOMAIN-SUFFIX,youtu.be
@@ -190,6 +192,7 @@ DOMAIN-SUFFIX,reddithelp.com
 # ========== Spotify ==========
 # 主域名
 DOMAIN-SUFFIX,spotify.com
+DOMAIN-SUFFIX,spotify.jp
 # CDN 与音频流兜底
 DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,pscdn.co
