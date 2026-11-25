@@ -7,15 +7,12 @@
 #!type = normal
 
 [Rule]
-# ═══════════════════════════════════════════════════════
-# 第一层：关键词通配（兜底，覆盖所有含关键词的域名）
-# ═══════════════════════════════════════════════════════
+# ─── 第一层：关键词通配 ───
 DOMAIN-KEYWORD,httpdns,REJECT
 DOMAIN-KEYWORD,httpsdns,REJECT
 DOMAIN-KEYWORD,http-dns,REJECT
 DOMAIN-KEYWORD,https-dns,REJECT
 DOMAIN-KEYWORD,amdc,REJECT
-DOMAIN-KEYWORD,hdns,REJECT
 DOMAIN-KEYWORD,apdns,REJECT
 DOMAIN-KEYWORD,apipdns,REJECT
 DOMAIN-KEYWORD,doq-,REJECT
@@ -23,9 +20,7 @@ DOMAIN-KEYWORD,dot-dns,REJECT
 DOMAIN-KEYWORD,dns-query,REJECT
 DOMAIN-KEYWORD,traffic-route,REJECT
 
-# ═══════════════════════════════════════════════════════
-# 第二层：USER-AGENT（SDK 自标识）
-# ═══════════════════════════════════════════════════════
+# ─── 第二层：USER-AGENT ───
 USER-AGENT,httpdns*,REJECT
 USER-AGENT,httpsdns*,REJECT
 USER-AGENT,Httpdns*,REJECT
@@ -34,9 +29,7 @@ USER-AGENT,http-dns*,REJECT
 USER-AGENT,AMDC*,REJECT
 USER-AGENT,amdc*,REJECT
 
-# ═══════════════════════════════════════════════════════
-# 第三层：公共 DoH/DoT/DoQ 端点
-# ═══════════════════════════════════════════════════════
+# ─── 第三层：公共 DoH/DoT/DoQ 端点 ───
 DOMAIN-SUFFIX,dns.google,REJECT
 DOMAIN-SUFFIX,one.one.one.one,REJECT
 DOMAIN-SUFFIX,cloudflare-dns.com,REJECT
@@ -68,38 +61,60 @@ DOMAIN-SUFFIX,doh.disconnect.app,REJECT
 DOMAIN-SUFFIX,dns.belnet.be,REJECT
 DOMAIN-SUFFIX,doh.dns4all.eu,REJECT
 DOMAIN-SUFFIX,dns.arnor.org,REJECT
-DOMAIN-SUFFIX,doh.dns.apple.com,REJECT
 
-# ═══════════════════════════════════════════════════════
-# 第四层：精确域名（仅保留不含上述关键词的）
-# ═══════════════════════════════════════════════════════
+# ─── 第四层：精确域名 ───
+# 百度 HTTPDNS 补充（不含关键词）
+DOMAIN,doh.baidu.com,REJECT
+DOMAIN,dns.baidubce.com,REJECT
+DOMAIN,180.76.76.76,REJECT
+
+# 阿里 / 高德 / 支付宝 HTTPDNS 补充（不含关键词）
+DOMAIN,dualstack-arestapi.amap.com,REJECT
+DOMAIN,dns.alipay.com,REJECT
+DOMAIN,mdap.alipay.com,REJECT
+
+# 网易 / B站 HTTPDNS 补充（不含关键词）
+DOMAIN,nstool.netease.com,REJECT
+DOMAIN,dns.bilibili.com,REJECT
+DOMAIN,dns.biliapi.com,REJECT
+
+# 腾讯系 HTTPDNS 补充（不含关键词）
+DOMAIN,dns.dnspod.cn,REJECT
+DOMAIN,doh.dnspod.cn,REJECT
+DOMAIN,dot.dnspod.cn,REJECT
+DOMAIN,dns.sparta.mig.tencent-cloud.net,REJECT
+DOMAIN,dns.tencent.com,REJECT
+DOMAIN,dns.tencentyun.com,REJECT
+DOMAIN,resolver.gslb.mi-idc.com,REJECT
+DOMAIN,p2p.v.qq.com,REJECT
+
 # 微信/QQ
 DOMAIN,dns.weixin.qq.com,REJECT
 DOMAIN,dns.weixin.qq.com.cn,REJECT
 DOMAIN,aedns.weixin.qq.com,REJECT
-DOMAIN,short.weixin.qq.com,REJECT
-DOMAIN,hkextshort.weixin.qq.com,REJECT
 DOMAIN,twns.p2ptun.qq.com,REJECT
 DOMAIN,tp2p.kg.qq.com,REJECT
+DOMAIN,dns.qq.com,REJECT
 
-# 京东
+# 字节跳动/抖音
+DOMAIN,dig.bdurl.net,REJECT
+DOMAIN,dns.bytedance.com,REJECT
+
+# 京东 & 小米
 DOMAIN,dns.jd.com,REJECT
-
-# 小米
 DOMAIN,resolver.msg.xiaomi.net,REJECT
 
-# 爱奇艺
+# 爱奇艺 & 微博
 DOMAIN,doh.iqiyi.com,REJECT
 DOMAIN,dns.iqiyi.com,REJECT
 DOMAIN,dns.qiyipic.iqiyi.com,REJECT
-
-# 微博
 DOMAIN,dns.weibo.cn,REJECT
 
 # 快手
 DOMAIN,apidns.kwd.inkuai.com,REJECT
 DOMAIN,apidns-js.kwd.inkuai.com,REJECT
 DOMAIN,cdndns.kwd.inkuai.com,REJECT
+DOMAIN,httpdns.kwd.inkuai.com,REJECT
 
 # 优酷
 DOMAIN,xpis-xcdn.youku.com,REJECT
@@ -107,13 +122,9 @@ DOMAIN,pre-xpis-xcdn.youku.com,REJECT
 DOMAIN,xpis-tel-xcdn.youku.com,REJECT
 DOMAIN,xpis-mob-xcdn.youku.com,REJECT
 
-# 小红书
-DOMAIN,gslb.xiaohongshu.com,REJECT
-
-# 友盟
+# 友盟 & 其他
 DOMAIN,umengacs.m.taobao.com,REJECT
-
-# 其他
+DOMAIN,hdns.ksyun.com,REJECT
 DOMAIN,hd.xiaojukeji.com,REJECT
 DOMAIN,serveraddr.service.kugou.com,REJECT
 DOMAIN,ucdc.upaas.quark.cn,REJECT
@@ -121,9 +132,7 @@ DOMAIN,dotserver.douyucdn.cn,REJECT
 DOMAIN,dns2.q2cdn.com,REJECT
 DOMAIN,doh.ptqy.gitv.tv,REJECT
 
-# ═══════════════════════════════════════════════════════
-# 第五层：URL-REGEX（IP 直连 + 特殊路径）
-# ═══════════════════════════════════════════════════════
+# ─── 第五层：URL-REGEX ───
 URL-REGEX,^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/,REJECT
 URL-REGEX,^http:\/\/\d+\.\d+\.\d+\.\d+\/amdc\/mobileDispatch,REJECT
 URL-REGEX,^http:\/\/103\.37\.155\.60\/fetch,REJECT
@@ -131,9 +140,7 @@ URL-REGEX,^http:\/\/api\.weibo\.cn\/\d+\/httpdns\/config,REJECT
 URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT
 URL-REGEX,^http:\/\/103\.44\.58\.64\/md\?,REJECT
 
-# ═══════════════════════════════════════════════════════
-# 第六层：IP-CIDR
-# ═══════════════════════════════════════════════════════
+# ─── 第六层：IP-CIDR ───
 # 公共 DNS
 IP-CIDR,1.1.1.1/32,REJECT,no-resolve
 IP-CIDR,1.0.0.1/32,REJECT,no-resolve
@@ -161,12 +168,16 @@ IP-CIDR,210.2.4.8/32,REJECT,no-resolve
 IP-CIDR,180.184.1.1/32,REJECT,no-resolve
 IP-CIDR,180.184.2.2/32,REJECT,no-resolve
 
-# 腾讯云 HTTPDNS
+# 腾讯云 HTTPDNS（含新增）
 IP-CIDR,43.132.43.43/32,REJECT,no-resolve
 IP-CIDR,43.132.55.55/32,REJECT,no-resolve
+IP-CIDR,119.29.29.98/32,REJECT,no-resolve
+IP-CIDR,119.29.29.99/32,REJECT,no-resolve
 
-# 阿里云 HTTPDNS 接入点
+# 阿里云 HTTPDNS 接入点（含新增）
 IP-CIDR,203.107.1.1/32,REJECT,no-resolve
+IP-CIDR,203.107.1.33/32,REJECT,no-resolve
+IP-CIDR,203.107.1.34/32,REJECT,no-resolve
 IP-CIDR,203.107.1.97/32,REJECT,no-resolve
 IP-CIDR,203.107.1.100/32,REJECT,no-resolve
 IP-CIDR,203.119.238.240/32,REJECT,no-resolve
@@ -181,7 +192,6 @@ IP-CIDR,101.35.204.35/32,REJECT,no-resolve
 IP-CIDR,101.35.212.35/32,REJECT,no-resolve
 IP-CIDR,47.89.88.77/32,REJECT,no-resolve
 IP-CIDR,203.119.214.17/32,REJECT,no-resolve
-IP-CIDR,203.119.286.64/32,REJECT,no-resolve
 IP-CIDR,203.119.205.153/32,REJECT,no-resolve
 IP-CIDR,103.41.167.237/32,REJECT,no-resolve
 IP-CIDR,114.110.96.26/32,REJECT,no-resolve
@@ -204,20 +214,8 @@ IP-CIDR,47.101.175.206/32,REJECT,no-resolve
 IP-CIDR,47.100.123.169/32,REJECT,no-resolve
 IP-CIDR,118.89.204.198/23,REJECT,no-resolve
 
-# IPv6
-IP-CIDR6,2001:4860:4860::8888/128,REJECT,no-resolve
-IP-CIDR6,2001:4860:4860::8844/128,REJECT,no-resolve
-IP-CIDR6,2606:4700:4700::1111/128,REJECT,no-resolve
-IP-CIDR6,2400:3200::1/128,REJECT,no-resolve
-IP-CIDR6,2400:da00::6666/128,REJECT,no-resolve
-IP-CIDR6,2402:4e00::/32,REJECT,no-resolve
-IP-CIDR6,240c:409f::/32,REJECT,no-resolve
-IP-CIDR6,2401:b180:7003::/48,REJECT,no-resolve
-IP-CIDR6,2401:b180:7001::31d/128,REJECT,no-resolve
-IP-CIDR6,240b:4000:f10::/48,REJECT,no-resolve
-
 [MITM]
-hostname = appconf.mail.163.com, msglb.91160.com, ucdc-upaas.uc.cn, ucdc2-upaas.uc.cn, gw-cn.jiaoliuqu.com, gslbali.ximalaya.com, cdn.wup.huya.com, amdcopen.m.taobao.com, umengacs.m.taobao.com, amdcopen.m.umeng.com
+hostname = appconf.mail.163.com, msglb.91160.com, ucdc-upaas.uc.cn, ucdc2-upaas.uc.cn, gw-cn.jiaoliuqu.com, gslbali.ximalaya.com, cdn.wup.huya.com
 
 [Script]
 http-response ^https:\/\/appconf\.mail\.163\.com\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
@@ -226,7 +224,4 @@ http-response ^https:\/\/ucdc-upaas\.uc\.cn\/.* script-path=https://raw.githubus
 http-response ^https:\/\/ucdc2-upaas\.uc\.cn\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
 http-response ^https:\/\/gw-cn\.jiaoliuqu\.com\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
 http-response ^https:\/\/gslbali\.ximalaya\.com\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
-http-response ^https:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
-http-response ^https:\/\/amdcopen\.m\.taobao\.com\/amdc\/mobileDispatch.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
-http-response ^https:\/\/umengacs\.m\.taobao\.com\/amdc\/mobileDispatch.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
-http-response ^https:\/\/amdcopen\.m\.umeng\.com\/amdc\/mobileDispatch.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true   
+http-response ^https:\/\/cdn\.wup\.huya\.com\/.* script-path=https://raw.githubusercontent.com/JenYou001/loon/main/scripts/emptyJson.js, requires-body=true
