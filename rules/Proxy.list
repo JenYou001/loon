@@ -185,24 +185,33 @@ DOMAIN-SUFFIX,spotifycdn.net
 DOMAIN-SUFFIX,spoti.fi
 DOMAIN-SUFFIX,spotify.link
 
-# ========== Muse ==========
-# 主域名
+# ========== Meta AI + Muse 全量 ==========
+
+# 主站
+DOMAIN-SUFFIX,meta.ai
 DOMAIN-SUFFIX,muse.ai
 DOMAIN-SUFFIX,museai.com
-# API / WebSocket 网关
-DOMAIN-SUFFIX,meta.ai
-# VM
-DOMAIN-SUFFIX,metaaivm.com
-# 认证
+
+# 认证 / 登录
 DOMAIN-SUFFIX,meta.com
+
+# VM（Muse 专属）
+DOMAIN-SUFFIX,metaaivm.com
+
 # CDN / 用户内容
 DOMAIN-SUFFIX,metaaiusercontent.com
 DOMAIN-SUFFIX,ecto1usercontent.com
+
 # 原生 App 隐私网关
 DOMAIN-SUFFIX,atmeta.com
 DOMAIN,meta.privacy-gateway.cloudflare.com
 DOMAIN,meta.hpke-keys.privacy-gateway.cloudflare.com
 DOMAIN,meta-ohttp-relay-prod.fastly-edge.com
 DOMAIN,meta-ohttp-config-prod.fastly-edge.com
-# Agent Apps
+
+# Agent Apps（Muse 专属）
 DOMAIN,meta-agents-apps.workers.dev
+
+# 开发者 / Llama（可选）
+DOMAIN-SUFFIX,llama.com
+DOMAIN,ai.developer.meta.com
