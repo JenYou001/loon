@@ -1,50 +1,72 @@
 # ========== AdGuard ==========
+# 主域名
 DOMAIN-SUFFIX,adguard.com
+# DNS
 DOMAIN-SUFFIX,adguard-dns.com
 DOMAIN-SUFFIX,adguard-dns.io
+# 账号
 DOMAIN-SUFFIX,adguardaccount.com
+# CDN
 DOMAIN-SUFFIX,adguardcdn.com
 
 # ========== Google ==========
+# 主域名
 DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,gmail.com
+DOMAIN-SUFFIX,googlemail.com
+# API
 DOMAIN-SUFFIX,googleapis.com
+# CDN / 静态
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,googleusercontent.com
+# 视频
 DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,googlemail.com
-DOMAIN-SUFFIX,gmail.com
+# 短链
+DOMAIN-SUFFIX,g.co
+# 其他
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,1e100.net
-DOMAIN-SUFFIX,g.co
 
 # ========== YouTube ==========
+# 主域名
 DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,youtube-nocookie.com
+# 短链
+DOMAIN-SUFFIX,youtu.be
+# CDN
+DOMAIN-SUFFIX,ytimg.com
+# 教育 / 儿童
 DOMAIN-SUFFIX,youtubeeducation.com
 DOMAIN-SUFFIX,youtubekids.com
 
 # ========== DuckDuckGo ==========
+# 主域名
 DOMAIN-SUFFIX,duckduckgo.com
 DOMAIN-SUFFIX,duckduckgo.org
+# 短链
 DOMAIN-SUFFIX,duck.com
 DOMAIN-SUFFIX,duck.co
 DOMAIN-SUFFIX,ddg.co
 DOMAIN-SUFFIX,ddg.gg
+# AI
 DOMAIN-SUFFIX,duck.ai
 
 # ========== Brave ==========
+# 主域名
 DOMAIN-SUFFIX,brave.com
+# 软件
 DOMAIN-SUFFIX,bravesoftware.com
+# CDN
 DOMAIN-SUFFIX,bravecdn.com
 
 # ========== Duolingo ==========
+# 主域名
 DOMAIN-SUFFIX,duolingo.com
+# CDN (CloudFront)
 DOMAIN,d35aaqx5ub95lt.cloudfront.net
 DOMAIN,d1vq87e9lcf771.cloudfront.net
 DOMAIN,d2pur3iezf4d1j.cloudfront.net
@@ -55,29 +77,37 @@ DOMAIN,d1b8nqdff6d679.cloudfront.net
 DOMAIN,dyvwhs7jlfw68.cloudfront.net
 
 # ========== Telegram ==========
+# 主域名
 DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,telegram.me
-DOMAIN-SUFFIX,telegram.dog
+# 短链
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tx.me
+# 文章
 DOMAIN-SUFFIX,telegra.ph
 DOMAIN-SUFFIX,legra.ph
-DOMAIN-SUFFIX,graph.org
-DOMAIN-SUFFIX,telesco.pe
+# CDN
 DOMAIN-SUFFIX,telegram-cdn.org
 DOMAIN-SUFFIX,cdn-telegram.org
-DOMAIN-SUFFIX,telega.one
-DOMAIN-SUFFIX,telegram.space
+DOMAIN-SUFFIX,telegramdownload.com
+# 桌面端
 DOMAIN-SUFFIX,tdesktop.com
-DOMAIN-SUFFIX,fragment.com
-DOMAIN-SUFFIX,contest.com
+# TON
 DOMAIN-SUFFIX,ton.org
 DOMAIN-SUFFIX,stel.com
+DOMAIN-SUFFIX,toncenter.com
+# 其他
+DOMAIN-SUFFIX,graph.org
+DOMAIN-SUFFIX,telesco.pe
+DOMAIN-SUFFIX,telega.one
+DOMAIN-SUFFIX,telegram.space
+DOMAIN-SUFFIX,fragment.com
+DOMAIN-SUFFIX,contest.com
 DOMAIN-SUFFIX,tg.dev
 DOMAIN-SUFFIX,comments.app
 DOMAIN-SUFFIX,usercontent.dev
 DOMAIN-SUFFIX,quiz.directory
-DOMAIN-SUFFIX,toncenter.com
+# IP
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/22,no-resolve
@@ -94,73 +124,85 @@ IP-CIDR,196.55.216.167/32,no-resolve
 IP-CIDR,5.28.192.0/18,no-resolve
 
 # ========== X / Twitter / Grok ==========
+# 主域名
 DOMAIN-SUFFIX,x.com
 DOMAIN-SUFFIX,twitter.com
+# 短链
 DOMAIN-SUFFIX,t.co
+# CDN
 DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twvid.com
+# API / 其他
 DOMAIN-SUFFIX,twttr.com
 DOMAIN-SUFFIX,twttr.net
 DOMAIN-SUFFIX,twtrdns.net
 DOMAIN-SUFFIX,twitteroauth.com
+# Grok
 DOMAIN-SUFFIX,grok.com
 
 # ========== GitHub ==========
+# 主域名
 DOMAIN-SUFFIX,github.com
+# CDN
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,githubassets.com
+# Pages
 DOMAIN-SUFFIX,github.io
+# 开发
 DOMAIN-SUFFIX,github.dev
+# 状态
 DOMAIN-SUFFIX,githubstatus.com
+# App
 DOMAIN-SUFFIX,githubapp.com
+# Copilot
 DOMAIN-SUFFIX,githubcopilot.com
+# 容器
 DOMAIN-SUFFIX,ghcr.io
+# 短链
 DOMAIN-SUFFIX,gh.io
 DOMAIN-SUFFIX,git.io
 
 # ========== Reddit ==========
+# 主域名
 DOMAIN-SUFFIX,reddit.com
+# CDN
 DOMAIN-SUFFIX,redditstatic.com
-DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,redditmedia.com
+# 短链
+DOMAIN-SUFFIX,redd.it
+# 帮助
 DOMAIN-SUFFIX,reddithelp.com
 
 # ========== Spotify ==========
+# 主域名
 DOMAIN-SUFFIX,spotify.com
+# CDN
 DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,pscdn.co
-DOMAIN-SUFFIX,spoti.fi
 DOMAIN-SUFFIX,spotifycdn.com
 DOMAIN-SUFFIX,spotifycdn.net
+# 短链
+DOMAIN-SUFFIX,spoti.fi
 DOMAIN-SUFFIX,spotify.link
 
-# ========== Spotify ==========
-# ━━ 核心 ━━
+# ========== Muse ==========
+# 主域名
 DOMAIN-SUFFIX,muse.ai
-DOMAIN-SUFFIX,meta.ai
-DOMAIN-SUFFIX,metaaivm.com
 DOMAIN-SUFFIX,museai.com
-
-# ━━ 认证 ━━
+# API / WebSocket 网关
+DOMAIN-SUFFIX,meta.ai
+# VM
+DOMAIN-SUFFIX,metaaivm.com
+# 认证
 DOMAIN-SUFFIX,meta.com
-
-# ━━ 用户内容 / CDN ━━
+# CDN / 用户内容
 DOMAIN-SUFFIX,metaaiusercontent.com
 DOMAIN-SUFFIX,ecto1usercontent.com
-DOMAIN-SUFFIX,fbcdn.net
-DOMAIN-SUFFIX,fbsbx.com
-DOMAIN-SUFFIX,cdninstagram.com
-
-# ━━ 社交 / 登录 ━━
-DOMAIN-SUFFIX,facebook.com
-DOMAIN-SUFFIX,facebook.net
-DOMAIN-SUFFIX,instagram.com
-
-# ━━ 模型 API ━━
-DOMAIN-SUFFIX,llama.com
-
-# ━━ WhatsApp 入口（可选） ━━
-DOMAIN-SUFFIX,cdn.whatsapp.net
-
-# ━━ Agent Apps（可选） ━━
+# 原生 App 隐私网关
+DOMAIN-SUFFIX,atmeta.com
+DOMAIN,meta.privacy-gateway.cloudflare.com
+DOMAIN,meta.hpke-keys.privacy-gateway.cloudflare.com
+DOMAIN,meta-ohttp-relay-prod.fastly-edge.com
+DOMAIN,meta-ohttp-config-prod.fastly-edge.com
+# Agent Apps
 DOMAIN,meta-agents-apps.workers.dev
