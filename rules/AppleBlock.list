@@ -1,37 +1,4 @@
-# ═══════════════════════════════════════════════════════
-# Apple 原生追踪 / 遥测 / 广告拦截（全面覆盖版）
-# 来源: hagezi/dns-blocklists + froggeric + celenityy/Phoenix + mypdns
-# 优化: 2026-11-21
-# 共 109 条
-# ═══════════════════════════════════════════════════════
-
-# ─── aaplimg.com CDN ───
-DOMAIN-SUFFIX,cstat.g.aaplimg.com
-DOMAIN-SUFFIX,diagassets.g.aaplimg.com
-DOMAIN-SUFFIX,cdn-xp-ingest-ab.v.aaplimg.com
-DOMAIN-SUFFIX,iphonesubmissions.v.aaplimg.com
-DOMAIN-SUFFIX,prod-app-analytics-event-gateway.v.aaplimg.com
-DOMAIN-SUFFIX,prod-event-relay-api.v.aaplimg.com
-DOMAIN-SUFFIX,prod-event-relay-books-api.v.aaplimg.com
-DOMAIN-SUFFIX,prod-event-relay-notes-api.v.aaplimg.com
-DOMAIN-SUFFIX,prod-event-relay-sports-api.v.aaplimg.com
-DOMAIN-SUFFIX,prod-event-relay-stocks-api.v.aaplimg.com
-DOMAIN-SUFFIX,prod-event-relay-weather-api.v.aaplimg.com
-DOMAIN-SUFFIX,prod-iwork-events.v.aaplimg.com
-DOMAIN-SUFFIX,prod-news-notification-events.v.aaplimg.com
-DOMAIN-SUFFIX,securemetrics.v.aaplimg.com
-DOMAIN-SUFFIX,securemetrics-cn.v.aaplimg.com
-DOMAIN-SUFFIX,securemvt.v.aaplimg.com
-DOMAIN-SUFFIX,smoot-feedback.v.aaplimg.com
-DOMAIN-SUFFIX,smoot.g.aaplimg.com
-DOMAIN-SUFFIX,smoot.v.aaplimg.com
-DOMAIN-SUFFIX,supportmetrics.v.aaplimg.com
-DOMAIN-SUFFIX,xp.v.aaplimg.com
-
-# ─── Apple iAd CDN ───
-DOMAIN-SUFFIX,iad-apple.com
-
-# ─── apple.com 主域 ───
+# ─── apple.com 主域 (1/4) ───
 DOMAIN-SUFFIX,aios-otel-collector.g.apple.com
 DOMAIN-SUFFIX,ads.apple.com
 DOMAIN-SUFFIX,advertising.apple.com
@@ -74,7 +41,30 @@ DOMAIN-SUFFIX,news-notification-events.apple.com
 DOMAIN-SUFFIX,news-sports-events.apple.com
 DOMAIN-SUFFIX,notes-analytics-events.apple.com
 DOMAIN-SUFFIX,odin-signals.apple.com
-DOMAIN-SUFFIX,partiality.itunes.apple.com
+DOMAIN-SUFFIX,performance-partners.apple.com
+DOMAIN-SUFFIX,phonesubmissions.apple.com
+DOMAIN-SUFFIX,podcasts-analytics-events.apple.com
+DOMAIN-SUFFIX,prd-usw2-requestattribution-iad.apple.com
+DOMAIN-SUFFIX,proxy-skadnetwork.apple.com
+DOMAIN-SUFFIX,qa-iad.apple.com
+DOMAIN-SUFFIX,qwapi.apple.com
+DOMAIN-SUFFIX,radarsubmissions.apple.com
+DOMAIN-SUFFIX,searchads.apple.com
+DOMAIN-SUFFIX,securemetrics.apple.com
+DOMAIN-SUFFIX,securemvt.apple.com
+DOMAIN-SUFFIX,sdkintg-iad.apple.com
+DOMAIN-SUFFIX,performance-partners.apple.com
+DOMAIN-SUFFIX,phonesubmissions.apple.com
+DOMAIN-SUFFIX,podcasts-analytics-events.apple.com
+DOMAIN-SUFFIX,prd-usw2-requestattribution-iad.apple.com
+DOMAIN-SUFFIX,proxy-skadnetwork.apple.com
+DOMAIN-SUFFIX,qa-iad.apple.com
+DOMAIN-SUFFIX,qwapi.apple.com
+DOMAIN-SUFFIX,radarsubmissions.apple.com
+DOMAIN-SUFFIX,searchads.apple.com
+DOMAIN-SUFFIX,securemetrics.apple.com
+DOMAIN-SUFFIX,securemvt.apple.com
+DOMAIN-SUFFIX,sdkintg-iad.apple.com
 DOMAIN-SUFFIX,performance-partners.apple.com
 DOMAIN-SUFFIX,phonesubmissions.apple.com
 DOMAIN-SUFFIX,podcasts-analytics-events.apple.com
@@ -88,42 +78,29 @@ DOMAIN-SUFFIX,securemetrics.apple.com
 DOMAIN-SUFFIX,securemvt.apple.com
 DOMAIN-SUFFIX,sdkintg-iad.apple.com
 DOMAIN-SUFFIX,sdkintgiad.apple.com
-DOMAIN-SUFFIX,smoot.apple.com
-DOMAIN-SUFFIX,smoot.apple.cn
-DOMAIN-SUFFIX,smoot.apple.com.cn
 DOMAIN-SUFFIX,stocks-analytics-events.apple.com
 DOMAIN-SUFFIX,supportmetrics.apple.com
 DOMAIN-SUFFIX,tv-analytics-events.apple.com
 DOMAIN-SUFFIX,weather-analytics-events.apple.com
-DOMAIN-SUFFIX,xp.apple.com
-DOMAIN-SUFFIX,xp-cdn.apple.com
 
 # ─── Apple News 广告 ───
 DOMAIN-SUFFIX,banners.itunes.apple.com
 
 # ─── iCloud / 其他 Apple 服务 ───
-DOMAIN-SUFFIX,acfeedbackws.icloud.com
-DOMAIN-SUFFIX,feedbackws.icloud.com
-DOMAIN-SUFFIX,feedbackws.icloud.com.cn
 DOMAIN-SUFFIX,metrics.icloud.com
 DOMAIN-SUFFIX,metrics.mzstatic.com
 
 # ─── Apple DNS / Edge CDN 端点 ───
-DOMAIN-SUFFIX,cdn-xp-ingest.edge.apple
-DOMAIN-SUFFIX,feedbackws.fe.apple-dns.cn
-DOMAIN-SUFFIX,feedbackws.fe.apple-dns.net
-DOMAIN-SUFFIX,feedbackws.fe2.apple-dns.net
 DOMAIN-SUFFIX,me.apple-dns.net
 DOMAIN-SUFFIX,books-analytics-events.news.apple-dns.net
 DOMAIN-SUFFIX,notes-analytics-events.news.apple-dns.net
 DOMAIN-SUFFIX,stocks-analytics-events.news.apple-dns.net
 DOMAIN-SUFFIX,weather-analytics-events.news.apple-dns.net
 DOMAIN-SUFFIX,cstat.cdn-apple.com
-DOMAIN-SUFFIX,marketing.services.apple
+DOMAIN,marketing.services.apple
 DOMAIN-SUFFIX,securemetrics.apple.com.cn
 DOMAIN-SUFFIX,qwapi.com
 
 # ─── 其他 ───
 DOMAIN-SUFFIX,apple.comscoreresearch.com
 DOMAIN-SUFFIX,beacon.shazam.com
-DOMAIN-SUFFIX,h4g3z1-native-apple.web.app
