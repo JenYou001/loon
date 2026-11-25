@@ -15,6 +15,7 @@ DOMAIN-SUFFIX,filters.adtidy.org
 # ========== Google ==========
 # 主域名
 DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,google.co.jp
 DOMAIN-SUFFIX,gmail.com
 DOMAIN-SUFFIX,googlemail.com
 # API
