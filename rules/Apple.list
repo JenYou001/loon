@@ -1,63 +1,48 @@
 # ============================================================
-# Apple Whitelist
-# Verified: 2026-11-23
-# Scope: AS714 / AS6185, excluding CN-specific & 3rd-party CDN
+# Apple Whitelist (Daily Use / Lite)
+# Scope: Core services, iCloud, App Store, Media & Active BGP
 # ============================================================
 
-# --- Main & Brand ---
+# --- Main & Account ---
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,apple.tv
-DOMAIN-SUFFIX,apple
+DOMAIN-SUFFIX,appleid.com
 
-# --- iCloud ---
+# --- iCloud & Relay ---
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
-DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com
 
 # --- CDN ---
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,aaplimg.com
 
-# --- App Store / iTunes ---
+# --- App Store & Media ---
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,itunes.com
-
-# --- Apple Music ---
 DOMAIN-SUFFIX,applemusic.com
-DOMAIN-SUFFIX,applemusicconnect.com
+DOMAIN-SUFFIX,shazam.com
+DOMAIN-SUFFIX,beatsbydre.com
 
-# --- Mail & Office ---
+# --- Mail & Legacy ---
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mac.com
-DOMAIN-SUFFIX,iwork.com
-
-# --- SDK ---
-DOMAIN-SUFFIX,apple-mapkit.com
-DOMAIN-SUFFIX,apple-livephotoskit.com
 
 # ============================================================
-# IP-CIDR (AS714 / AS6185, BGP-verified)
+# IP-CIDR (Core AS714 / AS6185)
 # ============================================================
 
-# Primary block (1990, 16.7M IPs, includes AS6185 CDN)
+# Primary block (Global & APAC core)
 IP-CIDR,17.0.0.0/8,no-resolve
 
-# Data centers
+# Data centers & Active allocations
+IP-CIDR,57.102.0.0/15,no-resolve
+IP-CIDR,57.112.0.0/12,no-resolve
+IP-CIDR,57.178.0.0/15,no-resolve
 IP-CIDR,139.178.128.0/18,no-resolve
 IP-CIDR,144.178.0.0/18,no-resolve
-
-# Active allocations (2021)
-IP-CIDR,57.112.0.0/12,no-resolve
-IP-CIDR,57.102.0.0/15,no-resolve
-
-# Legacy / scattered
-IP-CIDR,63.92.224.0/19,no-resolve
-IP-CIDR,65.199.22.0/23,no-resolve
-IP-CIDR,192.12.74.0/24,no-resolve
-IP-CIDR,192.42.249.0/24,no-resolve
-IP-CIDR,204.79.190.0/24,no-resolve
