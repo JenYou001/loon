@@ -1,91 +1,89 @@
-# ═══ PCDN 屏蔽 ═══
+# ═══ PCDN 屏蔽（Loon 零误杀优化版 1/2）═══
 
-# ── 特征词（安全，保留）──
-DOMAIN-KEYWORD,pcdn,REJECT
-DOMAIN-KEYWORD,302ppio,REJECT
-DOMAIN-KEYWORD,302kodo,REJECT
-DOMAIN-KEYWORD,mcdn,REJECT
+# ── 特征词与正则兜底 ──
+DOMAIN-KEYWORD,pcdn
+DOMAIN-KEYWORD,302ppio
+DOMAIN-KEYWORD,302kodo
+DOMAIN-REGEX,(^|\.)mcdn\.
+DOMAIN-REGEX,.*pcdn.*biliapi\.net
+DOMAIN-REGEX,.*pcdn.*youku\.com
+DOMAIN-REGEX,.*p2p.*douyucdn\.cn
+DOMAIN-REGEX,.*p2p.*qq\.com
 
-# ── 通用 PCDN 平台 ──
-DOMAIN-SUFFIX,bsccdn.net,REJECT
-DOMAIN-SUFFIX,bsclink.cn,REJECT
-DOMAIN-SUFFIX,bsgslb.cn,REJECT
-DOMAIN-SUFFIX,gjfzpt.cn,REJECT
-DOMAIN-SUFFIX,jomodns.cn,REJECT
-DOMAIN-SUFFIX,kuiniuca.com,REJECT
-DOMAIN-SUFFIX,pkoplink.com,REJECT
-DOMAIN-SUFFIX,saxysec.com,REJECT
-DOMAIN-SUFFIX,szbdyd.com,REJECT
-DOMAIN-SUFFIX,uhabo.com,REJECT
-DOMAIN-SUFFIX,xycdn.com,REJECT
-DOMAIN-SUFFIX,onethingpcs.com,REJECT
-DOMAIN-SUFFIX,nexusedgeio.com,REJECT
-DOMAIN-SUFFIX,ietheivaicai.com,REJECT
-DOMAIN-SUFFIX,ahdohpiechei.com,REJECT
-DOMAIN-SUFFIX,ppio.cloud,REJECT
-DOMAIN-SUFFIX,yirujs.com,REJECT
-DOMAIN-SUFFIX,xinqiucc.com,REJECT
-DOMAIN-SUFFIX,pplive-p2p.com,REJECT
-DOMAIN-SUFFIX,yfcloud.com,REJECT
-DOMAIN-SUFFIX,kspcdn.com,REJECT
-DOMAIN-SUFFIX,ws-p2p.com,REJECT
+# ── 通用 PCDN 平台（已将高连带风险的 bsccdn/bsgslb 移至观察区）──
+DOMAIN-SUFFIX,bsclink.cn
+DOMAIN-SUFFIX,gjfzpt.cn
+DOMAIN-SUFFIX,jomodns.cn
+DOMAIN-SUFFIX,kuiniuca.com
+DOMAIN-SUFFIX,pkoplink.com
+DOMAIN-SUFFIX,saxysec.com
+DOMAIN-SUFFIX,szbdyd.com
+DOMAIN-SUFFIX,uhabo.com
+DOMAIN-SUFFIX,xycdn.com
+DOMAIN-SUFFIX,onethingpcs.com
+DOMAIN-SUFFIX,peiluyou.com
+DOMAIN-SUFFIX,nexusedgeio.com
+DOMAIN-SUFFIX,ietheivaicai.com
+DOMAIN-SUFFIX,ahdohpiechei.com
+DOMAIN-SUFFIX,ppio.cloud
+DOMAIN-SUFFIX,yirujs.com
+DOMAIN-SUFFIX,xinqiucc.com
+DOMAIN-SUFFIX,pplive-p2p.com
+DOMAIN-SUFFIX,yfcloud.com
+DOMAIN-SUFFIX,kspcdn.com
+DOMAIN-SUFFIX,ws-p2p.com
+# ═══ PCDN 屏蔽（Loon 零误杀优化版 2/2）═══
 
 # ── B站 ──
-DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
-DOMAIN-SUFFIX,mcdn.bilivideo.com,REJECT
-DOMAIN-SUFFIX,mountaintoys.cn,REJECT
-DOMAIN,h2.smtcdns.net,REJECT
-DOMAIN,ppio.bilivideo.com,REJECT
-DOMAIN,kodo.bilivideo.com,REJECT
+DOMAIN-SUFFIX,mcdn.bilivideo.cn
+DOMAIN-SUFFIX,mcdn.bilivideo.com
+DOMAIN-SUFFIX,mcdn.bilivideo.xyz
+DOMAIN-SUFFIX,p2p.bilivideo.com
+DOMAIN-SUFFIX,p2p.bilivideo.cn
+DOMAIN-SUFFIX,mountaintoys.cn
+DOMAIN,h2.smtcdns.net
+DOMAIN,ppio.bilivideo.com
+DOMAIN,kodo.bilivideo.com
 
 # ── 爱奇艺 ──
-DOMAIN-SUFFIX,tpa-hcdn.iqiyi.com,REJECT
-DOMAIN,pdata.video.qiyi.com,REJECT
-DOMAIN,cachecdn.v.iqiyi.com,REJECT
-DOMAIN,meta-cdn.video.iq.com,REJECT
-DOMAIN,data6.video.iqiyi.com,REJECT
-DOMAIN,data-qvs.iqiyi.com,REJECT
+DOMAIN-SUFFIX,tpa-hcdn.iqiyi.com
+DOMAIN-SUFFIX,hcdn.qiyi.com
+DOMAIN-SUFFIX,p2p.qiyi.com
+DOMAIN,pdata.video.qiyi.com
+DOMAIN,cachecdn.v.iqiyi.com
+DOMAIN,meta-cdn.video.iq.com
+DOMAIN,data6.video.iqiyi.com
+DOMAIN,data-qvs.iqiyi.com
 
 # ── 优酷 ──
-DOMAIN,atm.youku.com,REJECT
+DOMAIN,atm.youku.com
 
 # ── 斗鱼 ──
-DOMAIN-SUFFIX,stun.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,stun1.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,stun.hitv.com,REJECT
-DOMAIN-SUFFIX,dyp2p-ali.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,dyp2p-hw.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,p2p-ali.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,p2pchunk-hw.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,p2pchunk-table.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,p2pchunk-ws.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,p2perrorlog.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,p2plive-ali.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,p2plive-ws.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,p2plog.douyucdn.cn,REJECT
-DOMAIN-SUFFIX,p2pvod-ws.douyucdn.cn,REJECT
+DOMAIN-SUFFIX,stun.douyucdn.cn
+DOMAIN-SUFFIX,stun1.douyucdn.cn
+DOMAIN-SUFFIX,stun.hitv.com
+DOMAIN-SUFFIX,dyp2p-ali.douyucdn.cn
+DOMAIN-SUFFIX,dyp2p-hw.douyucdn.cn
+DOMAIN-SUFFIX,p2p-ali.douyucdn.cn
+DOMAIN-SUFFIX,p2pchunk-hw.douyucdn.cn
+DOMAIN-SUFFIX,p2pchunk-table.douyucdn.cn
+DOMAIN-SUFFIX,p2pchunk-ws.douyucdn.cn
+DOMAIN-SUFFIX,p2perrorlog.douyucdn.cn
+DOMAIN-SUFFIX,p2plive-ali.douyucdn.cn
+DOMAIN-SUFFIX,p2plive-ws.douyucdn.cn
+DOMAIN-SUFFIX,p2plog.douyucdn.cn
+DOMAIN-SUFFIX,p2pvod-ws.douyucdn.cn
 
 # ── 虎牙 ──
-DOMAIN-SUFFIX,p2p.huya.com,REJECT
+DOMAIN-SUFFIX,p2p.huya.com
 
-# ── 腾讯 ──
-DOMAIN-SUFFIX,p2p.qq.com,REJECT
-DOMAIN-SUFFIX,p2ptun.qq.com,REJECT
-DOMAIN-SUFFIX,p2pupdate.gamedl.qq.com,REJECT
-DOMAIN-SUFFIX,p2pupgrade.gamedl.qq.com,REJECT
-DOMAIN,p.tencentmusic.com,REJECT
-DOMAIN,isure6.stream.qqmusic.qq.com,REJECT
-DOMAIN,iwan-s.video.qq.com,REJECT
+# ── 腾讯 ——
+DOMAIN-SUFFIX,p2p.qq.com
+DOMAIN-SUFFIX,p2ptun.qq.com
+DOMAIN-SUFFIX,p2pupdate.gamedl.qq.com
+DOMAIN-SUFFIX,p2pupgrade.gamedl.qq.com
+DOMAIN,p.tencentmusic.com
+DOMAIN,iwan-s.video.qq.com
 
-# ── 百度 ──
-DOMAIN,d.pcs.baidu.com,REJECT
-DOMAIN,p.bokecc.com,REJECT
-
-# ── 字节/抖音 ──
-DOMAIN,flive.douyincdn.com,REJECT
-
-# ── 正则兜底 ──
-DOMAIN-REGEX,.*pcdn.*biliapi\.net,REJECT
-DOMAIN-REGEX,.*pcdn.*youku\.com,REJECT
-DOMAIN-REGEX,.*p2p.*douyucdn\.cn,REJECT
-DOMAIN-REGEX,.*p2p.*qq\.com,REJECT   
+# ── 迅雷 ──
+DOMAIN-SUFFIX,p2p.xunlei.com
