@@ -5,6 +5,7 @@ DOMAIN-SUFFIX,adguard.com
 DOMAIN-SUFFIX,adguard-dns.com
 DOMAIN-SUFFIX,adguard-dns.io
 # 账号
+DOMAIN-SUFFIX,adguard.org
 DOMAIN-SUFFIX,adguardaccount.com
 # CDN
 DOMAIN-SUFFIX,adguardcdn.com
